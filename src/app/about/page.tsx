@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
-                src="/images/backgrounds/hero-robot.png"
+                src="/images/backgrounds/our-vision.png"
                 alt="Our Vision"
                 fill
                 className="object-cover object-center opacity-40 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
           <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
-                src="/images/backgrounds/hero-robot.png"
+                src="/images/backgrounds/our-mission.png"
                 alt="Our Mission"
                 fill
                 className="object-cover object-center opacity-40 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
@@ -124,7 +124,7 @@ export default function AboutPage() {
               <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-5">
                  Why Choose Us?
               </p>
-              <h2 className="text-2xl md:text-3xl font-medium text-white leading-tight">
+              <h2 className="text-xl font-regular text-white leading-tight">
                 We don&apos;t just deliver software, we deliver confidence. Our process is built on transparency, efficiency, and technical excellence.
               </h2>
            </div>
@@ -141,12 +141,6 @@ export default function AboutPage() {
                      <ArrowRight size={22} />
                    </Link>
                  </span>
-                 <button 
-                   className="w-12 h-12 bg-[#280566] hover:bg-[var(--color-accent)] rounded-full flex items-center justify-center transition-all border border-white/10"
-                   aria-label="Play Video"
-                 >
-                   <Play size={18} className="text-white ml-1" fill="currentColor" />
-                 </button>
               </div>
            </div>
 
@@ -154,9 +148,9 @@ export default function AboutPage() {
       </section>
 
       <section className="max-w-7xl mx-auto px-6 relative z-10">
-         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center justify-center">
+         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center">
             
-            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-full flex flex-col justify-center order-2 lg:order-1">
+            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-end order-2 lg:order-1">
                <div className="flex flex-col gap-10">
                   <div className="flex items-start gap-5">
                      <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
@@ -190,12 +184,12 @@ export default function AboutPage() {
                </div>
             </div>
 
-            <div className="relative w-full aspect-[3/4] lg:h-[600px] rounded-3xl overflow-hidden order-1 lg:order-2">
+            <div className="relative w-full aspect-[3/4] lg:h-[500px] rounded-3xl overflow-hidden order-1 lg:order-2">
                <Image
-                 src="/images/backgrounds/hero-robot.png"
+                 src="/images/backgrounds/about-choose-us.png"
                  alt="Robot Concept"
                  fill
-                 className="object-cover object-center"
+                 className="object-cover object-top"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent mix-blend-multiply" />
                
@@ -212,7 +206,7 @@ export default function AboutPage() {
                </div>
             </div>
 
-            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-full flex flex-col justify-center order-3">
+            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-start order-3">
                <div className="flex flex-col gap-10">
                   <div className="flex items-start gap-5">
                      <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">

@@ -26,50 +26,53 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
              Back to Projects
           </Link>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-end">
-            <div className="lg:col-span-8">
-              <div className="flex flex-wrap gap-2 mb-6">
-                 {project.tags.map(tag => (
-                   <span key={tag} className="px-3 py-1 rounded-full border border-[var(--color-accent)]/30 text-[10px] text-[var(--color-accent)] bg-[var(--color-accent)]/10 uppercase tracking-wider font-semibold">
-                      {tag}
-                   </span>
-                 ))}
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight text-white mb-6">
-                {project.title}
-              </h1>
-              <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-3xl">
-                {project.description}
-              </p>
-            </div>
-
-            <div className="lg:col-span-4 flex flex-col gap-6 lg:items-end">
-               <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
-                 <Link
-                   href={project.link}
-                   target="_blank"
-                   className="inline-flex items-center gap-4 px-6 py-3 bg-white text-black text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
-                 >
-                   Visit Live Site
-                   <ArrowUpRight size={20} className="text-[var(--color-accent)]" />
-                 </Link>
+          <div className="flex flex-wrap gap-2">
+             {project.tags.map(tag => (
+               <span key={tag} className="px-3 py-1 rounded-full border border-[var(--color-accent)]/30 text-[10px] text-[var(--color-accent)] bg-[var(--color-accent)]/10 uppercase tracking-wider font-semibold">
+                  {tag}
                </span>
-            </div>
+             ))}
+          </div>
+
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight text-white">
+              {project.title}
+            </h1>
+            <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shrink-0 w-fit">
+              <Link
+                href={project.link}
+                target="_blank"
+                className="inline-flex items-center gap-4 px-6 py-3 bg-white text-black text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
+              >
+                Visit Live Site
+                <ArrowUpRight size={20} className="text-[var(--color-accent)]" />
+              </Link>
+            </span>
           </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-20 mb-20">
-        <div className="w-full aspect-[21/9] md:aspect-[2.5/1] rounded-[2.5rem] overflow-hidden glass-card relative p-2 shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-           <div className="relative w-full h-full rounded-3xl overflow-hidden bg-[#0F0F13]">
-             <Image
-               src={project.image}
-               alt={project.title}
-               fill
-               className="object-cover object-center opacity-80 mix-blend-screen"
-             />
-           </div>
+      <section className="max-w-7xl mx-auto px-6 relative z-20 mb-12">
+        <div className="w-full flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 scrollbar-thin scrollbar-thumb-[var(--color-accent)] scrollbar-track-white/5">
+          {project.images.map((img, idx) => (
+            <div key={idx} className="w-full shrink-0 snap-center aspect-[21/9] md:aspect-[2.5/1] rounded-[2.5rem] overflow-hidden relative shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+               <div className="relative w-full h-full bg-[#0F0F13]">
+                 <Image
+                   src={img}
+                   alt={`${project.title} screenshot ${idx + 1}`}
+                   fill
+                   className="object-cover object-center opacity-80 mix-blend-screen"
+                 />
+               </div>
+            </div>
+          ))}
         </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 relative z-10 mb-20">
+        <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed whitespace-pre-line">
+          {project.description}
+        </p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24">

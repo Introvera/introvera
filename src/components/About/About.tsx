@@ -7,19 +7,19 @@ export default function About() {
     <section id="about" className="w-full bg-black text-white py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-6">
         
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-8 mb-24">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-8 mb-16">
           <div className="lg:w-1/2">
             <h4 className="text-[var(--color-accent)] font-semibold tracking-wider uppercase text-sm mb-6">
               About Us
             </h4>
-            <h2 className="text-5xl md:text-6xl lg:text-[64px] font-medium leading-[1.15] tracking-tight">
-              <span className="text-[var(--color-accent)]">Driven by<br/>innovation,</span> Built for<br/>the future.
+            <h2 className="text-5xl md:text-6xl lg:text-[50px] font-medium leading-[1.15] tracking-tight">
+              <span className="text-[var(--color-accent)]">Driven by innovation,</span> Built for the future.
             </h2>
           </div>
           
-          <div className="lg:w-5/12 bg-[#121214] rounded-[32px] p-8 md:p-10 flex flex-col justify-between h-full">
-            <p className="text-gray-300 text-lg leading-relaxed mb-10">
-              Introvera is a digital innovation studio where creativity meets technology. We design smart, scalable solutions that help businesses grow and people thrive.
+          <div className="lg:w-6/12 bg-[#121214] rounded-[32px] p-8 md:p-7 flex flex-col justify-between h-full">
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              Introvera is a digital innovation studio where creativity meets technology. We design smart, scalable solutions.
             </p>
             
             <div className="flex">
@@ -39,11 +39,10 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-5/12 h-[500px] relative rounded-[32px] overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop"
+              src="/images/backgrounds/about-us.jpg"
               alt="Team innovating"
               fill
               className="object-cover"
-              unoptimized
             />
           </div>
 

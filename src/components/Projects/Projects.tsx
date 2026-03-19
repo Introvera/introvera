@@ -37,9 +37,9 @@ export default function Projects() {
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Our Projects
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-medium leading-tight text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-white">
               Showcase of<br />
-              Innovation
+              <span className="text-[var(--color-accent)]">Innovation</span>
             </h2>
           </div>
           <div className="flex flex-col items-start md:items-end gap-6 shrink-0 md:pb-4">
@@ -57,7 +57,7 @@ export default function Projects() {
         </div>
 
         {/* 3D Offset Carousel */}
-        <div className="relative w-full h-[450px] md:h-[600px] flex justify-center items-center mt-12 md:mt-24">
+        <div className="relative w-full h-[450px] md:h-[600px] flex justify-center items-center mt-10 md:mt-16">
           {projectsData.map((project, idx) => {
             const shift = getSlideAdjustments(idx);
             const isCenter = shift === 0;
@@ -68,23 +68,23 @@ export default function Projects() {
 
             if (shift === 0) {
               transformClasses = "scale-100 translate-x-0";
-              zIndex = 50;
+              zIndex = 30;
               opacityBlur = "opacity-100 blur-0";
             } else if (shift === 1) {
               transformClasses = "scale-[0.85] translate-x-[45%] sm:translate-x-[50%] lg:translate-x-[65%]";
-              zIndex = 40;
+              zIndex = 20;
               opacityBlur = "opacity-70 blur-[1px]";
             } else if (shift === -1) {
               transformClasses = "scale-[0.85] -translate-x-[45%] sm:-translate-x-[50%] lg:-translate-x-[65%]";
-              zIndex = 40;
+              zIndex = 20;
               opacityBlur = "opacity-70 blur-[1px]";
             } else if (shift === 2) {
               transformClasses = "scale-[0.70] translate-x-[80%] sm:translate-x-[90%] lg:translate-x-[115%]";
-              zIndex = 30;
+              zIndex = 10;
               opacityBlur = "opacity-30 blur-[2px]";
             } else if (shift === -2) {
               transformClasses = "scale-[0.70] -translate-x-[80%] sm:-translate-x-[90%] lg:-translate-x-[115%]";
-              zIndex = 30;
+              zIndex = 10;
               opacityBlur = "opacity-30 blur-[2px]";
             } else {
               // Fallback for larger arrays
@@ -102,7 +102,7 @@ export default function Projects() {
                  {/* Card Wrapper with dynamic border/glow exclusively for active center item */}
                  <div className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-white/10'}`}>
                     <Image
-                      src={project.image}
+                      src={project.images[0]}
                       alt={project.title}
                       fill
                       className="object-cover object-center"

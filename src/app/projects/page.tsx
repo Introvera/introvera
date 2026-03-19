@@ -31,7 +31,7 @@ export default function ProjectsPage() {
            {projectsData.map((project) => (
               <div key={project.id} className="group relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#0F0F13] border border-white/5 transition-all duration-500 hover:border-[var(--color-accent)]/50 hover:shadow-[0_0_40px_rgba(153,0,255,0.15)] flex flex-col justify-end">
                  <Image
-                   src={project.image}
+                   src={project.images[0]}
                    alt={project.title}
                    fill
                    className="object-cover object-center opacity-60 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-80 mix-blend-screen"

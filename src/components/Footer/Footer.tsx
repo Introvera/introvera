@@ -1,13 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, MessageSquare } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { SiFiverr } from "react-icons/si";
+import { TbBrandFiverr } from "react-icons/tb";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0a0514] pt-20 pb-8 border-t border-white/10 relative overflow-hidden text-white" id="footer">
+    <footer className="w-full bg-[#0a0514] pt-20 pb-8 relative overflow-hidden text-white" id="footer">
       
-      <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none mix-blend-screen z-0">
-         <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[80%] bg-[radial-gradient(ellipse_at_center,rgba(40,5,102,0.6)_0%,transparent_70%)] blur-[100px]" />
+      <div className="absolute inset-0 pointer-events-none z-0">
+         <Image
+           src="/images/backgrounds/footer-bg.png"
+           alt=""
+           fill
+           className="object-cover object-center mix-blend-screen"
+         />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -31,14 +38,17 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-6">
-              <Link href="#" className="text-white hover:text-[var(--color-accent)] transition-colors">
+              <Link href="https://www.linkedin.com/company/introvera/" className="text-white hover:text-[var(--color-accent)] transition-colors">
+                <Linkedin size={24} strokeWidth={1.5} />
+              </Link>
+              <Link href="https://web.facebook.com/profile.php?id=61577711031531&_rdc=1&_rdr" className="text-white hover:text-[var(--color-accent)] transition-colors">
                 <Facebook size={24} strokeWidth={1.5} />
               </Link>
-              <Link href="#" className="text-white hover:text-[var(--color-accent)] transition-colors">
+              <Link href="https://www.instagram.com/team_introvera/" className="text-white hover:text-[var(--color-accent)] transition-colors">
                 <Instagram size={24} strokeWidth={1.5} />
               </Link>
-              <Link href="#" className="text-white hover:text-[var(--color-accent)] transition-colors">
-                <MessageSquare size={24} strokeWidth={1.5} />
+              <Link href="https://www.fiverr.com/s/XL5o0l2" className="text-white hover:text-[var(--color-accent)] transition-colors">
+                <TbBrandFiverr size={24} />
               </Link>
             </div>
           </div>
@@ -73,7 +83,7 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-medium mb-3">Location</h4>
               <p className="text-white/80 text-sm leading-relaxed max-w-[200px]">
-                275/3, New Kandy Road,<br />
+                Introvera Pvt Ltd,<br /> 275/3, New Kandy Road,<br />
                 Biyagama, Sri Lanka
               </p>
             </div>
@@ -81,9 +91,9 @@ export default function Footer() {
 
         </div>
 
-        <div className="w-full border-t border-white/20 pt-8 flex text-center justify-center">
+        <div className="w-full border-t border-white/40 pt-8 flex text-center justify-center">
             <p className="text-white/70 text-sm">
-              &copy; 2026 Introvera. All rights reserved.
+              &copy; 2026 Introvera Pvt Ltd. All rights reserved.
             </p>
         </div>
 
