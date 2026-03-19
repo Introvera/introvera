@@ -4,12 +4,10 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section id="about" className="w-full bg-black text-white pt-24 pb-16 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="w-full bg-black text-white py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-6">
         
-        {/* Top Row */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-8 mb-24">
-          {/* Left Side */}
           <div className="lg:w-1/2">
             <h4 className="text-[var(--color-accent)] font-semibold tracking-wider uppercase text-sm mb-6">
               About Us
@@ -19,7 +17,6 @@ export default function About() {
             </h2>
           </div>
           
-          {/* Right Side (Card) */}
           <div className="lg:w-5/12 bg-[#121214] rounded-[32px] p-8 md:p-10 flex flex-col justify-between h-full">
             <p className="text-gray-300 text-lg leading-relaxed mb-10">
               Introvera is a digital innovation studio where creativity meets technology. We design smart, scalable solutions that help businesses grow and people thrive.
@@ -39,9 +36,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Bottom Row */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-          {/* Image (Left) */}
           <div className="lg:w-5/12 h-[500px] relative rounded-[32px] overflow-hidden">
             <Image
               src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop"
@@ -52,12 +47,9 @@ export default function About() {
             />
           </div>
 
-          {/* Details & Features (Right) */}
           <div className="lg:w-7/12 flex flex-col justify-between pt-4">
             
-            {/* Core Values List */}
             <div className="space-y-12 mb-16 lg:mb-0">
-              {/* Item 1 */}
               <div className="flex items-start gap-5">
                 <div className="mt-1 w-7 h-7 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                   <ChevronRight size={14} className="text-white" strokeWidth={2} />
@@ -70,7 +62,6 @@ export default function About() {
                 </div>
               </div>
               
-              {/* Item 2 */}
               <div className="flex items-start gap-5">
                 <div className="mt-1 w-7 h-7 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                   <ChevronRight size={14} className="text-white" strokeWidth={2} />
@@ -83,7 +74,6 @@ export default function About() {
                 </div>
               </div>
 
-              {/* Item 3 */}
               <div className="flex items-start gap-5">
                 <div className="mt-1 w-7 h-7 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                   <ChevronRight size={14} className="text-white" strokeWidth={2} />
@@ -97,33 +87,30 @@ export default function About() {
               </div>
             </div>
 
-            {/* Bottom Features Row */}
-            <div className="pb-4 relative">
-              {/* Separators container overlay - for desktop */}
-              <div className="hidden md:flex absolute inset-0 pointer-events-none w-full justify-between px-6 pt-2">
-                <div className="w-[1px] h-10 bg-white/10 ml-[25%] mt-4"></div>
-                <div className="w-[1px] h-10 bg-white/10 ml-[25%] mt-4"></div>
-                <div className="w-[1px] h-10 bg-white/10 mr-[22%] mt-4"></div>
-              </div>
-
-              {/* Items container */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 relative z-10">
-                <div className="flex flex-col items-center gap-4 text-center">
+            <div className="pb-4">
+              <div className="grid grid-cols-2 md:flex md:items-center md:justify-between gap-y-10">
+                <div className="flex flex-col items-center gap-4 text-center flex-1">
                   <CloudLightning size={32} className="text-white" strokeWidth={1.5} />
                   <span className="text-[13px] font-medium text-gray-400">Fast Delivery</span>
                 </div>
 
-                <div className="flex flex-col items-center gap-4 text-center">
+                <div className="hidden md:block w-[1px] h-10 bg-white/25 shrink-0" />
+
+                <div className="flex flex-col items-center gap-4 text-center flex-1">
                   <Lock size={32} className="text-white" strokeWidth={1.5} />
                   <span className="text-[13px] font-medium text-gray-400">Secure & Reliable</span>
                 </div>
                 
-                <div className="flex flex-col items-center gap-4 text-center">
+                <div className="hidden md:block w-[1px] h-10 bg-white/25 shrink-0" />
+
+                <div className="flex flex-col items-center gap-4 text-center flex-1">
                   <Users size={32} className="text-white" strokeWidth={1.5} />
                   <span className="text-[13px] font-medium text-gray-400">Dedicated Team</span>
                 </div>
 
-                <div className="flex flex-col items-center gap-4 text-center">
+                <div className="hidden md:block w-[1px] h-10 bg-white/25 shrink-0" />
+
+                <div className="flex flex-col items-center gap-4 text-center flex-1">
                   <Clock size={32} className="text-white" strokeWidth={1.5} />
                   <span className="text-[13px] font-medium text-gray-400">24/7 Support</span>
                 </div>

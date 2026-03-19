@@ -8,12 +8,6 @@
   --color-accent-glow: rgba(115, 0, 255, 0.4);
   --color-accent-subtle: rgba(115, 0, 255, 0.1);
 
-  /* Backgrounds */
-  --color-bg: #000000;
-  --color-bg-surface: #0a0a0f;
-  --color-bg-elevated: #111118;
-  --color-bg-card: #16161d;
-
   /* Text */
   --color-text-primary: #ffffff;
   --color-text-secondary: #a0a0b0;
@@ -28,6 +22,30 @@
 
   /* Font */
   --font-poppins: var(--font-poppins-var);
+
+  /* Custom Animations */
+  --animate-marquee-left: marquee-left 40s linear infinite;
+  --animate-marquee-right: marquee-right 40s linear infinite;
+
+  --color-bg: #000000;
+  --color-bg-surface: #0a0a0f;
+  --color-bg-elevated: #111118;
+  --color-bg-card: #16161d;
+
+  /* Text */
+  /* --color-text-primary: #ffffff;
+  --color-text-secondary: #a0a0b0;
+  --color-text-muted: #6b6b7b; */
+
+  /* Borders */
+  /* --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(255, 255, 255, 0.15); */
+
+  /* Navbar */
+  /* --color-navbar-bg: rgba(0, 0, 0, 0.6); */
+
+  /* Font */
+  /* --font-poppins: var(--font-poppins-var); */
 }
 
 /* ===== GLOBAL RESET & BASE ===== */
@@ -118,3 +136,20 @@ body {
   background: rgba(255, 255, 255, 0.18);
 }
 
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}

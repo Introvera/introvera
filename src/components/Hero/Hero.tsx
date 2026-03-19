@@ -4,9 +4,8 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center pb-16">
-      {/* Background Layer - Absolute but no z-index to keep in same stacking context */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <section className="relative w-full min-h-screen bg-black">
+      <div className="absolute inset-x-0 top-0 bottom-0 pointer-events-none overflow-hidden [mask-image:linear-gradient(to_bottom,black_60%,transparent_90%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_90%)]">
         <Image
           src="/images/backgrounds/hero-bg.png"
           alt=""
@@ -15,63 +14,76 @@ export default function Hero() {
           priority
           quality={100}
         />
-        {/* Accent glow effect */}
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-accent)] rounded-full opacity-[0.07] blur-[150px]" />
         
-        {/* Ellipse Glow */}
         <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[50vw] h-[200px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.8)_17.05%,rgba(0,102,255,0.8)_83.46%)] blur-[63.65px]"
+          className="absolute top-2/3 left-1/2 -translate-x-1/2 w-[50vw] h-[200px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.8)_17.05%,rgba(0,102,255,0.8)_83.46%)] blur-[63.65px]"
         />
       </div>
 
-      {/* Content - No z-index so it shares stacking context with background */}
-      <div className="relative w-full max-w-7xl mx-auto px-6 pt-20">
-
-        {/* Heading */}
-        <h1
-          className="text-8xl font-regular w-fit mx-auto text-left"
-        >
-          Innovating Tomorrow,
-          One Line of Code at a Time
-        </h1>
-
-        {/* CTA Buttons */}
+      <div className="relative w-full min-h-screen flex flex-col justify-between max-w-7xl mx-auto px-6 pt-60 pb-8 md:pb-16">
         
-        <div
-          className="flex flex-col sm:flex-row items-center gap-4 pt-4"
-          style={{ animation: "fadeInUp 0.8s ease-out 0.3s both" }}
-        >
-          <span className="hidden md:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
-            <Link
-              href="#contact"
-              className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
-            >
-              Get Started
-              <ArrowUpRight size={22} />
-            </Link>
-          </span>
+        <div className="flex-1 flex flex-col justify-center mb-12 px-16">
+          <div className="relative w-fit flex flex-col items-start px-2 md:mt-16">
+            
+            <div className="absolute -top-[120px] -left-12 flex flex-col z-10 pointer-events-none scale-[0.85] md:scale-100 origin-bottom-left font-medium">
+              <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit">
+                Insight Beyond
+              </span>
+              <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit ml-8">
+                Intelligence
+              </span>
+              <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit -mt-2 rotate-[8deg] origin-top-left">
+                Secure AI
+              </span>
+            </div>
 
-          <span className="hidden md:inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
-            <Link
-              href="#contact"
-              className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
+            <h1
+              className="text-6xl md:text-8xl lg:text-[100px] font-medium leading-tight md:leading-none text-left tracking-tight"
             >
-              View Our Work
-              <ArrowUpRight size={22} />
-            </Link>
-          </span>
+              Build What Matters
+            </h1>
+            
+            <p className="mt-6 text-base md:text-lg text-white/70 max-w-3xl text-left leading-relaxed">
+              We transform ideas into impactful digital experiences that move the world forward, crafting solutions that are smart, scalable, and full of purpose.
+            </p>
+
+            <div
+              className="flex flex-col sm:flex-row items-center gap-4 pt-8"
+              style={{ animation: "fadeInUp 0.8s ease-out 0.3s both" }}
+            >
+              <span className="hidden md:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
+                <Link
+                  href="#contact"
+                  className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
+                >
+                  Get Started
+                  <ArrowUpRight size={22} />
+                </Link>
+              </span>
+
+              <span className="hidden md:inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
+                <Link
+                  href="#contact"
+                  className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
+                >
+                  View Our Work
+                  <ArrowUpRight size={22} />
+                </Link>
+              </span>
+            </div>
+          </div>
         </div>
 
-        {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-6 mt-12">
-          {/* Card 1 — Web & Mobile App Development */}
+        <div className="relative w-full mt-20">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] max-w-[1000px] h-[250px] md:h-[350px] bg-gradient-to-r from-[#5a1cff]/70 via-[#4000ff]/60 to-[#004cf3]/70 blur-[100px] md:blur-[130px] rounded-[100%] pointer-events-none z-0" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-6 relative z-10 w-full">
           <div className="glass-card relative rounded-2xl border border-[var(--color-accent)] p-6 flex flex-col gap-5 transition-all duration-300">
-            {/* Top Icons */}
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center">
                 <CalendarRange size={22} className="text-white" />
               </div>
-              {/* Overlapping Circles */}
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-[var(--color-accent)]" />
                 <div className="w-10 h-10 rounded-full bg-gray-400 border-2 border-[var(--color-accent)]" />
@@ -79,12 +91,10 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Title */}
-            <h3 className="text-2xl font-semibold leading-tight">
+            <h3 className="text-2xl font-regular leading-tight">
               Web &amp; Mobile App<br />Development
             </h3>
 
-            {/* Tags */}
             <div className="flex gap-3">
               <span className="px-4 py-1.5 rounded-full border border-white/30 text-sm text-white/80">
                 Websites
@@ -94,24 +104,21 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* CTA Button */}
             <div className="pt-2">
-              <span className="inline-flex rounded-full p-[5px] border border-[var(--color-accent)] bg-[var(--color-accent)]/15">
+              <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
                 <Link
                   href="#contact"
-                  className="inline-flex items-center gap-3 px-5 py-2 bg-white text-[var(--color-accent)] text-sm font-semibold rounded-full transition-all duration-300 hover:bg-gray-100"
+                  className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
                 >
                   Get Started
-                  <ArrowUpRight size={18} />
+                  <ArrowUpRight size={22} />
                 </Link>
               </span>
             </div>
           </div>
 
-          {/* Card 2 — Custom Software Development */}
-          <div className="relative rounded-2xl border border-[var(--color-accent)] min-h-[420px] transition-all duration-300 overflow-visible">
-            {/* Robot Image — overflows top of card */}
-            <div className="absolute inset-0 -top-16 overflow-hidden rounded-2xl">
+          <div className="glass-card relative rounded-2xl  min-h-[420px] transition-all duration-300 overflow-visible">
+            <div className="absolute inset-0 -top-32 overflow-hidden rounded-2xl">
               <Image
                 src="/images/backgrounds/hero-robot.png"
                 alt="Custom Software Development"
@@ -121,65 +128,46 @@ export default function Hero() {
               />
             </div>
 
-            {/* Overlay content on top of image */}
-            <div className="absolute inset-0 flex flex-col items-center justify-end bg-gradient-to-t from-black/70 via-transparent to-transparent rounded-2xl">
-              {/* Arrow Circle */}
-              <div className="mb-4 w-10 h-10 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-                <ArrowUpRight size={18} className="text-white" />
+            <div className="absolute inset-0 flex flex-col items-center justify-end rounded-2xl pb-8 z-10">
+              <div className="mb-6 w-12 h-12 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-md hover:bg-white/10 transition-colors cursor-pointer">
+                <ArrowUpRight size={20} className="text-white" />
               </div>
 
-              {/* Title */}
-              <h3 className="text-2xl font-semibold text-center leading-tight pb-6">
+              <h3 className="text-2xl font-regular text-center leading-tight">
                 Custom Software<br />Development
               </h3>
             </div>
           </div>
 
-          {/* Card 3 — DevOps & Cloud Services */}
           <div className="glass-card relative rounded-2xl border border-[var(--color-accent)] p-6 flex flex-col gap-4 transition-all duration-300">
-            {/* Stats Row */}
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-4xl font-bold">99.7%</p>
-                <p className="text-sm text-white/60 mt-1">Speed Optimize</p>
+                <p className="text-4xl font-light tracking-tight">99.9%</p>
+                <p className="text-xs text-white/50 mt-1 uppercase tracking-widest font-semibold">Guaranteed Uptime</p>
               </div>
-              <div className="w-10 h-10 rounded-full border border-[var(--color-accent)] flex items-center justify-center">
-                <Globe size={20} className="text-[var(--color-accent)]" />
-              </div>
-            </div>
-
-            {/* Chart Line */}
-            <div className="flex-1 flex flex-col justify-center">
-              <svg viewBox="0 0 300 80" className="w-full h-auto" fill="none">
-                {/* Grid line */}
-                <line x1="0" y1="60" x2="300" y2="60" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-                {/* Chart line */}
-                <polyline
-                  points="0,55 40,50 80,52 100,45 130,55 170,30 210,20 250,25 300,15"
-                  stroke="var(--color-accent)"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                {/* Dots */}
-                <circle cx="0" cy="55" r="4" fill="var(--color-accent)" />
-                <circle cx="80" cy="52" r="4" fill="var(--color-accent)" />
-                <circle cx="130" cy="55" r="4" fill="var(--color-accent)" />
-                <circle cx="210" cy="20" r="4" fill="var(--color-accent)" />
-                <circle cx="300" cy="15" r="4" fill="var(--color-accent)" />
-              </svg>
-
-              {/* Data Labels */}
-              <div className="flex items-center justify-between mt-3">
-                <p className="text-sm text-white/60">Data backup</p>
-                <p className="text-sm font-medium">75,6 GB</p>
+              <div className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <Globe size={20} className="text-[var(--color-accent)]" />
+                </div>
               </div>
             </div>
 
-            {/* Title */}
-            <h3 className="text-2xl font-semibold text-center leading-tight pt-2">
+            <div className="flex flex-col gap-3 flex-1 justify-center my-4">
+              <div className="w-full flex flex-col gap-2.5 bg-white/5 border border-white/10 rounded-xl p-3.5 transition-all hover:bg-white/10">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium text-white/90">API Response</span>
+                  <span className="text-sm font-semibold">24ms</span>
+                </div>
+                <div className="w-full h-1.5 bg-black/40 rounded-full overflow-hidden relative">
+                  <div className="absolute top-0 left-0 h-full bg-[var(--color-accent)] w-[85%] rounded-full shadow-[0_0_10px_var(--color-accent)]" />
+                </div>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-medium text-center leading-tight pt-2">
               DevOps &amp; Cloud<br />Services
             </h3>
+          </div>
           </div>
         </div>
       </div>
