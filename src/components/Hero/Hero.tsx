@@ -158,14 +158,40 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 flex-1 justify-center my-4">
-              <div className="w-full flex flex-col gap-2.5 bg-white/5 border border-white/10 rounded-xl p-3.5 transition-all hover:bg-white/10">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-medium text-white/90">API Response</span>
-                  <span className="text-sm font-semibold">24ms</span>
+            <div className="flex flex-col flex-1 justify-center my-2">
+              <div className="w-full flex-col flex">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-[11px] uppercase tracking-wider font-semibold text-white/60">System Status</span>
+                  <div className="flex items-center gap-1.5">
+                     <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] animate-pulse shadow-[0_0_8px_var(--color-accent)]" />
+                     <span className="text-xs font-semibold text-[var(--color-accent)]">Operational</span>
+                  </div>
                 </div>
-                <div className="w-full h-1.5 bg-black/40 rounded-full overflow-hidden relative">
-                  <div className="absolute top-0 left-0 h-full bg-[var(--color-accent)] w-[85%] rounded-full shadow-[0_0_10px_var(--color-accent)]" />
+                <div className="w-full h-[35px] flex items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+                  <svg 
+                    viewBox="0 0 200 40" 
+                    className="w-[200%] h-full fill-none overflow-visible stroke-[var(--color-accent)] flex-shrink-0"
+                    style={{ filter: "drop-shadow(0px 0px 4px rgba(153, 0, 255, 0.6))" }}
+                    preserveAspectRatio="none"
+                  >
+                    <g>
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        from="0 0"
+                        to="-200 0"
+                        dur="3.5s"
+                        repeatCount="indefinite"
+                      />
+                      <path 
+                        d="M0,20 L30,20 L40,5 L50,35 L60,20 L120,20 L130,10 L140,30 L150,20 L200,20 L230,20 L240,5 L250,35 L260,20 L320,20 L330,10 L340,30 L350,20 L400,20" 
+                        strokeWidth="2.5" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    </g>
+                  </svg>
                 </div>
               </div>
             </div>

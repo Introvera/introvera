@@ -1,4 +1,5 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 import ContactForm from "@/components/Contact/ContactForm";
@@ -75,7 +76,7 @@ export default function ContactPage() {
 
                   <a href="https://wa.me/94783640894" target="_blank" rel="noopener noreferrer" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 flex items-center gap-6 hover:bg-white/10 transition-colors group cursor-pointer">
                      <div className="shrink-0">
-                        <MessageCircle size={32} strokeWidth={1.5} className="text-white group-hover:text-[var(--color-accent)] transition-colors" />
+                        <FaWhatsapp size={32} className="text-white group-hover:text-[var(--color-accent)] transition-colors" />
                      </div>
                      <div className="flex flex-col gap-1">
                         <h4 className="text-white font-semibold text-base">WhatsApp</h4>
