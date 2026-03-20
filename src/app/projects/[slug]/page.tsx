@@ -1,8 +1,9 @@
+import { projectsData } from "@/data/projects";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projectsData } from "@/data/projects";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import ProjectCarousel from "@/components/Projects/ProjectCarousel";
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
@@ -53,20 +54,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       </section>
 
       <section className="max-w-7xl mx-auto px-6 relative z-20 mb-12">
-        <div className="w-full flex overflow-x-auto snap-x snap-mandatory gap-6 pb-4 scrollbar-thin scrollbar-thumb-[var(--color-accent)] scrollbar-track-white/5">
-          {project.images.map((img, idx) => (
-            <div key={idx} className="w-full shrink-0 snap-center aspect-[21/9] md:aspect-[2.5/1] rounded-[2.5rem] overflow-hidden relative shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-               <div className="relative w-full h-full bg-[#0F0F13]">
-                 <Image
-                   src={img}
-                   alt={`${project.title} screenshot ${idx + 1}`}
-                   fill
-                   className="object-cover object-center opacity-80 mix-blend-screen"
-                 />
-               </div>
-            </div>
-          ))}
-        </div>
+        <ProjectCarousel images={project.images} title={project.title} />
       </section>
 
       <section className="max-w-7xl mx-auto px-6 relative z-10 mb-20">
@@ -89,7 +77,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
              </div>
              <div className="w-full h-[1px] bg-white/5" />
              <div>
-               <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-4">Services Provided</p>
+               <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-4">Tech Stack</p>
                <ul className="flex flex-col gap-3">
                  {project.services.map(s => (
                    <li key={s} className="flex items-center gap-3">

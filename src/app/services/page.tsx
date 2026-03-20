@@ -73,7 +73,7 @@ const detailedServices = [
       "Cloud infrastructure setup and management",
       "CI/CD pipeline design and automation",
       "Containerization with Docker and Kubernetes",
-      "Infrastructure as Code (Terraform, CloudFormation)",
+      "Infrastructure as Code (Terraform, Pulumi)",
       "Monitoring, logging, and performance optimization",
       "Security, compliance, and backup strategies",
       "Auto-scaling and high availability architecture",

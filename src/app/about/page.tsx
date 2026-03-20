@@ -1,6 +1,6 @@
+import { ArrowRight, CheckCircle2, Clock, MessageSquare, ShieldCheck, Target, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Play, CheckCircle2, MessageSquare, ShieldCheck, Target, Clock, Users } from "lucide-react";
 
 export const metadata = {
   title: "About Us | Introvera",
@@ -69,49 +69,48 @@ export default function AboutPage() {
 
       <section className="max-w-7xl mx-auto px-6 relative z-10 mb-40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center">
-          <div className="lg:col-span-6 2xl:col-span-7 flex flex-col gap-6 text-[#A1A1AA] text-base lg:text-lg leading-relaxed font-light">
+          <div className="lg:col-span-6 2xl:col-span-6 flex flex-col gap-2 text-[#e5e7eb] text-base lg:text-lg leading-[1.8] font-light pr-0 lg:pr-8">
              <p>
-               <span className="text-white font-normal">At Introvera, innovation</span> is at the heart of everything we do. We are a team of thinkers, creators, and engineers dedicated to designing digital solutions that help <span className="text-white font-normal">businesses and individuals</span> thrive in a fast changing, connected world.
+               At Introvera, innovation is at the heart of everything we do. We are a team of thinkers, creators, and engineers dedicated to designing digital solutions that help businesses and individuals thrive in a fast changing, connected world.
              </p>
              <p>
-               Our strength lies in <span className="text-white font-normal">blending</span> creativity, strategy, and technology to build software that&apos;s not only functional <span className="text-white font-normal">but</span> also transformative. From scalable web platforms to intelligent digital tools, we focus on creating solutions that solve real problems, drive growth, and inspire progress.
+               Our strength lies in blending creativity, strategy, and technology to build software that&apos;s not only functional but also transformative. From scalable web platforms to intelligent digital tools, we focus on creating solutions that solve real problems, drive growth, and inspire progress.
              </p>
              <p>
-               We believe great technology starts with understanding people, their goals, their challenges, and their vision for the future. That&apos;s why every project at Introvera is <span className="text-white font-normal">guided by collaboration, innovation,</span> and a shared commitment to quality.
+               We believe great technology starts with understanding people, their goals, their challenges, and their vision for the future. That&apos;s why every project at Introvera is guided by collaboration, innovation, and a shared commitment to quality.
              </p>
              <p>
-               With a passion for <span className="text-white font-normal">progress</span> and a mindset for excellence, we&apos;re shaping a future where technology empowers possibility, one idea, one experience, and one solution at a time.
+               With a passion for progress and a mindset for excellence, we&apos;re shaping a future where technology empowers possibility, one idea, one experience, and one solution at a time.
              </p>
           </div>
 
-          <div className="lg:col-span-6 2xl:col-span-5 relative h-[500px] sm:h-[600px] w-full mt-10 lg:mt-0">
-             <div className="absolute top-0 right-0 w-[55%] h-[40%] rounded-2xl overflow-hidden glass-card">
+          <div className="lg:col-span-6 2xl:col-span-6 relative h-[500px] sm:h-[650px] w-full mt-10 lg:mt-0">
+             <div className="absolute top-0 right-0 w-[55%] h-[35%] rounded-[20px] overflow-hidden z-0">
                <Image 
-                 src="/images/backgrounds/services-uiux.jpg" 
+                 src="/images/backgrounds/services-consult.jpg" 
                  alt="Collaboration" 
                  fill 
-                 className="object-cover opacity-80"
+                 className="object-cover"
                />
              </div>
 
-             <div className="absolute top-[25%] left-0 w-[60%] h-[45%] rounded-2xl overflow-hidden glass-card z-10">
+             <div className="absolute top-[20%] left-0 w-[55%] h-[48%] rounded-[20px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.8)] z-10">
                <Image 
                  src="/images/backgrounds/services-backend.jpg" 
                  alt="Engineering" 
                  fill 
-                 className="object-cover opacity-80"
+                 className="object-cover"
                />
              </div>
 
-             <div className="absolute bottom-0 left-[20%] w-[55%] h-[45%] rounded-2xl overflow-hidden glass-card z-20">
+             <div className="absolute bottom-[2%] right-[2%] w-[50%] h-[38%] rounded-[20px] overflow-hidden z-0">
                <Image 
                  src="/images/backgrounds/services-mobile.jpg" 
                  alt="Development" 
                  fill 
-                 className="object-cover opacity-80"
+                 className="object-cover"
                />
              </div>
-
           </div>
 
         </div>
@@ -134,7 +133,7 @@ export default function AboutPage() {
               <div className="flex items-center gap-4">
                  <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
                    <Link 
-                     href="#contact" 
+                     href="/contact" 
                      className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
                    >
                      Get Started
@@ -189,7 +188,7 @@ export default function AboutPage() {
                  src="/images/backgrounds/about-choose-us.png"
                  alt="Robot Concept"
                  fill
-                 className="object-cover object-top"
+                 className="object-cover object-top -scale-x-100"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent mix-blend-multiply" />
                

@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { MessageCircleMore } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MessageCircleMore } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -44,7 +44,7 @@ export default function Navbar() {
             alt="Introvera"
             width={140}
             height={36}
-            className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             priority
           />
         </Link>

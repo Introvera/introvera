@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { projectsData } from "@/data/projects";
 
@@ -43,7 +43,7 @@ export default function Projects() {
             </h2>
           </div>
           <div className="flex flex-col items-start md:items-end gap-6 shrink-0 md:pb-4">
-            <h3 className="text-xl md:text-2xl font-medium text-white">What&apos;s Your Next Idea?</h3>
+            <h3 className="text-xl md:text-2xl font-medium text-white">Our Work Speaks for Itself</h3>
             <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
               <Link
                 href="/projects"
@@ -146,7 +146,7 @@ export default function Projects() {
         </div>
 
         {/* Dot Pagination */}
-        <div className="flex gap-2.5 justify-center mt-12 md:mt-20">
+        <div className="flex gap-2.5 justify-center mt-6 md:mt-8">
            {projectsData.map((_, i) => (
               <button 
                  key={i} 
