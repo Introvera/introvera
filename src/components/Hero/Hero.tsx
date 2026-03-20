@@ -167,9 +167,9 @@ export default function Hero() {
                      <span className="text-xs font-semibold text-[var(--color-accent)]">Operational</span>
                   </div>
                 </div>
-                <div className="w-full h-[35px] flex items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+                <div className="w-full h-[65px] flex items-center justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
                   <svg 
-                    viewBox="0 0 200 40" 
+                    viewBox="0 0 400 40" 
                     className="w-[200%] h-full fill-none overflow-visible stroke-[var(--color-accent)] flex-shrink-0"
                     style={{ filter: "drop-shadow(0px 0px 4px rgba(153, 0, 255, 0.6))" }}
                     preserveAspectRatio="none"
@@ -179,12 +179,12 @@ export default function Hero() {
                         attributeName="transform"
                         type="translate"
                         from="0 0"
-                        to="-200 0"
-                        dur="3.5s"
+                        to="-400 0"
+                        dur="8s"
                         repeatCount="indefinite"
                       />
                       <path 
-                        d="M0,20 L30,20 L40,5 L50,35 L60,20 L120,20 L130,10 L140,30 L150,20 L200,20 L230,20 L240,5 L250,35 L260,20 L320,20 L330,10 L340,30 L350,20 L400,20" 
+                        d="M0,20 L20,20 C25,20 25,12 30,12 C35,12 35,20 40,20 L70,20 C75,20 75,30 80,30 C85,30 85,5 95,5 C105,5 105,25 110,25 C115,25 115,20 120,20 L170,20 C175,20 175,10 180,10 C185,10 185,35 190,35 C195,35 195,20 200,20 L220,20 C230,20 240,15 250,15 C260,15 270,25 280,25 C290,25 295,20 300,20 L340,20 C345,20 345,8 350,8 C355,8 355,20 360,20 L400,20 L420,20 C425,20 425,12 430,12 C435,12 435,20 440,20 L470,20 C475,20 475,30 480,30 C485,30 485,5 495,5 C505,5 505,25 510,25 C515,25 515,20 520,20 L570,20 C575,20 575,10 580,10 C585,10 585,35 590,35 C595,35 595,20 600,20 L620,20 C630,20 640,15 650,15 C660,15 670,25 680,25 C690,25 695,20 700,20 L740,20 C745,20 745,8 750,8 C755,8 755,20 760,20 L800,20" 
                         strokeWidth="2.5" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
