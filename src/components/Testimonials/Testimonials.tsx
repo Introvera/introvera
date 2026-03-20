@@ -24,13 +24,6 @@ const testimonials = [
     role: "Senior System Engineer at Pristine Solutions",
     avatar: "/images/testimonials/rashen.png"
   },
-  {
-    id: 4,
-    quote: `"What I admire most is their mindset. They approach every idea like engineers test, iterate, refine but they also bring a creative energy that makes their work stand out."`,
-    name: "Anushka Eranga",
-    role: "Lead Software Engineer at Creative Software",
-    avatar: "/images/testimonials/anushka.png"
-  },
 ];
 
 export default function Testimonials() {
