@@ -5,6 +5,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ProjectCarousel from "@/components/Projects/ProjectCarousel";
 
+export const runtime = "edge";
+
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const project = projectsData.find(p => p.slug === resolvedParams.slug);
