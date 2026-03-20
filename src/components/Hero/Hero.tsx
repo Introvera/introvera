@@ -28,13 +28,13 @@ export default function Hero() {
             
             <div className="absolute -top-[120px] -left-12 flex flex-col z-10 pointer-events-none scale-[0.85] md:scale-100 origin-bottom-left font-medium">
               <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit">
-                Insight Beyond
+                Insight
               </span>
               <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit ml-8">
-                Intelligence
+                Innovation
               </span>
               <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit -mt-2 rotate-[8deg] origin-top-left">
-                Secure AI
+                Introvera
               </span>
             </div>
 
@@ -54,7 +54,7 @@ export default function Hero() {
             >
               <span className="hidden md:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
                 >
                   Get Started
@@ -64,7 +64,7 @@ export default function Hero() {
 
               <span className="hidden md:inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
                 <Link
-                  href="#contact"
+                  href="/projects"
                   className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
                 >
                   View Our Work
@@ -85,9 +85,15 @@ export default function Hero() {
                 <CalendarRange size={22} className="text-white" />
               </div>
               <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-[var(--color-accent)]" />
-                <div className="w-10 h-10 rounded-full bg-gray-400 border-2 border-[var(--color-accent)]" />
-                <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-[var(--color-accent)]" />
+                <div className="w-10 h-10 rounded-full border-2 border-[var(--color-accent)] overflow-hidden relative">
+                  <Image src="/images/projects/ultracraft/ultracraft-logo.png" alt="Ultracraft" fill className="object-cover" />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-[var(--color-accent)] overflow-hidden relative">
+                  <Image src="/images/projects/caffissimo/caffissimo-logo.png" alt="Caffissimo" fill className="object-cover" />
+                </div>
+                <div className="w-10 h-10 rounded-full border-2 border-[var(--color-accent)] overflow-hidden relative">
+                  <Image src="/images/projects/rainbow-color-sport/rainbow-logo.png" alt="Rainbow Color Sport" fill className="object-cover" />
+                </div>
               </div>
             </div>
 
@@ -107,7 +113,7 @@ export default function Hero() {
             <div className="pt-2">
               <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
                 >
                   Get Started
@@ -129,9 +135,9 @@ export default function Hero() {
             </div>
 
             <div className="absolute inset-0 flex flex-col items-center justify-end rounded-2xl pb-8 z-10">
-              <div className="mb-6 w-12 h-12 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-md hover:bg-white/10 transition-colors cursor-pointer">
+              <Link href="/services" className="mb-6 w-12 h-12 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-md hover:bg-white/10 transition-colors cursor-pointer">
                 <ArrowUpRight size={20} className="text-white" />
-              </div>
+              </Link>
 
               <h3 className="text-2xl font-regular text-center leading-tight">
                 Custom Software<br />Development

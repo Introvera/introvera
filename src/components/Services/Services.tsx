@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowUpRight, Play } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -18,7 +19,7 @@ const services = [
     id: "uiux",
     title: "UI/UX\nDesign",
     description: "Designing intuitive and engaging user experiences that turn ideas into meaningful digital products.",
-    image: "/images/backgrounds/services-uiux.jpg",
+    image: "/images/backgrounds/services-uiux.jpeg",
     colSpan: "col-span-1 border border-white/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square md:aspect-[4/3] lg:aspect-auto min-h-[280px]",
@@ -28,7 +29,7 @@ const services = [
     id: "web",
     title: "Web\nDevelopment",
     description: "Building fast, responsive, and modern websites that perform seamlessly across all devices.",
-    image: "/images/backgrounds/services-web.jpg",
+    image: "/images/backgrounds/services-web.png",
     colSpan: "col-span-1 border border-white/5",
     rowSpan: "row-span-2",
     aspectRatio: "aspect-[3/4] md:aspect-auto h-full",
@@ -38,7 +39,7 @@ const services = [
     id: "quality",
     title: "Quality\nAssurance",
     description: "Ensuring every product is reliable, polished, and ready for launch through careful testing and validation.",
-    image: "/images/backgrounds/services-qa.jpg",
+    image: "/images/backgrounds/services-qa.png",
     colSpan: "col-span-1 border border-white/5 flex-row", // Different visual layout
     rowSpan: "row-span-1",
     aspectRatio: "aspect-[2/1] md:aspect-[3/1] lg:aspect-auto min-h-[280px]",
@@ -68,7 +69,7 @@ const services = [
     id: "consulting",
     title: "Consulting &\nStrategy",
     description: "Helping businesses shape clear digital strategies and practical solutions that support long-term success.",
-    image: "/images/backgrounds/services-consulting.jpg",
+    image: "/images/backgrounds/services-consults.jpg",
     colSpan: "col-span-1 md:col-span-2 lg:col-span-1 border border-white/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-[2/1] md:aspect-[4/1] lg:aspect-auto min-h-[280px]",
@@ -96,10 +97,10 @@ export default function Services() {
             <h3 className="text-xl md:text-2xl font-medium">What&apos;s Your Next Idea?</h3>
             <div className="flex items-center gap-4">
               <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
-                <button className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]">
+                <Link href="/services" className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]">
                   Get Started
                   <ArrowUpRight size={22} />
-                </button>
+                </Link>
               </span>
             </div>
           </div>

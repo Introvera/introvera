@@ -60,7 +60,7 @@ export default function Footer() {
              <Link href="/services" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
                Service
              </Link>
-             <Link href="#projects" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
+             <Link href="/projects" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
                Projects
              </Link>
              <Link href="/about" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">

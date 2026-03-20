@@ -13,8 +13,8 @@ export default function AboutPage() {
       
       <section className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(0,102,255,0.25)_0%,transparent_70%)] blur-[40px]" />
-          <div className="absolute -top-10 right-0 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(153,0,255,0.2)_0%,transparent_70%)] blur-[50px]" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-accent)] rounded-full opacity-[0.04] blur-[150px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[40vw] h-[150px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.3)_17.05%,rgba(0,102,255,0.3)_83.46%)] blur-[80px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-left flex flex-col items-start">
@@ -193,17 +193,7 @@ export default function AboutPage() {
                />
                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent mix-blend-multiply" />
                
-               <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-                 <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shadow-[0_0_20px_rgba(0,0,0,0.8)]">
-                   <Link
-                     href="#contact"
-                     className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
-                   >
-                     Next
-                     <ArrowRight size={22} />
-                   </Link>
-                 </span>
-               </div>
+               
             </div>
 
             <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-start order-3">

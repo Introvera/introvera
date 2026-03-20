@@ -25,7 +25,7 @@ export default function About() {
             <div className="flex">
               <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/15 transition-all duration-300">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="group inline-flex items-center gap-3 px-6 py-2.5 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
                 >
                   Learn more

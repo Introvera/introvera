@@ -18,7 +18,37 @@ const detailedServices = [
       "Design systems",
       "Usability testing",
     ],
-    image: "/images/backgrounds/services-uiux.jpg", // Using existing placeholder images
+    image: "/images/backgrounds/services-uiux.jpeg",
+    imageFirst: false,
+  },
+  {
+    id: "web-development",
+    title: "Web Development",
+    description: "We design and develop modern, high-performance websites that elevate your brand and deliver seamless user experiences. From responsive landing pages to full-scale web applications, we ensure your site is fast, secure, and built to convert.",
+    features: [
+      "Custom website design and development",
+      "Responsive and mobile-first UI/UX",
+      "E-commerce solutions and integrations",
+      "SEO optimization and performance tuning",
+      "Content management systems (CMS)",
+      "Web app development with modern frameworks",
+    ],
+    image: "/images/backgrounds/services-web.png",
+    imageFirst: true,
+  },
+  {
+    id: "mobile-app-development",
+    title: "Mobile App Development",
+    description: "We build high-quality mobile applications that deliver smooth performance and exceptional user experiences across iOS and Android. From idea to deployment, we ensure your app is scalable, secure, and optimized for real-world usage.",
+    features: [
+      "Cross-platform app development (Flutter)",
+      "Intuitive UI/UX design for mobile",
+      "API integration and backend connectivity",
+      "Real-time features (chat, notifications, live updates)",
+      "App performance optimization and testing",
+      "App Store & Google Play deployment support",
+    ],
+    image: "/images/backgrounds/services-mobile.jpg",
     imageFirst: false,
   },
   {
@@ -36,17 +66,19 @@ const detailedServices = [
     imageFirst: true,
   },
   {
-    id: "consulting-strategy",
-    title: "Consulting & Strategy",
-    description: "Our consulting services help you make informed technology decisions. We analyze your current systems, identify opportunities for improvement, and create roadmaps that align technology with your business objectives.",
+    id: "devops-and-cloud-services",
+    title: "DevOps & Cloud Services",
+    description: "We implement scalable DevOps and cloud solutions that streamline your development workflow and ensure reliable, high-performance deployments. From infrastructure setup to continuous delivery, we help you build, deploy, and manage applications with speed, security, and efficiency.",
     features: [
-      "Technology audits",
-      "Architecture planning",
-      "Digital transformation strategy",
-      "Product roadmap planning",
-      "Team augmentation",
+      "Cloud infrastructure setup and management",
+      "CI/CD pipeline design and automation",
+      "Containerization with Docker and Kubernetes",
+      "Infrastructure as Code (Terraform, CloudFormation)",
+      "Monitoring, logging, and performance optimization",
+      "Security, compliance, and backup strategies",
+      "Auto-scaling and high availability architecture",
     ],
-    image: "/images/backgrounds/services-mobile.jpg",
+    image: "/images/backgrounds/services-devops.jpg",
     imageFirst: false,
   },
   {
@@ -60,21 +92,21 @@ const detailedServices = [
       "Cross-browser compatibility",
       "Continuous integration testing",
     ],
-    image: "/images/backgrounds/services-devops.jpg",
+    image: "/images/backgrounds/services-qa.png",
     imageFirst: true,
   },
   {
-    id: "consulting-strategy-2",
+    id: "consulting-strategy",
     title: "Consulting & Strategy",
     description: "Our consulting services help you make informed technology decisions. We analyze your current systems, identify opportunities for improvement, and create roadmaps that align technology with your business objectives.",
     features: [
       "Technology audits",
       "Architecture planning",
       "Digital transformation strategy",
-      "Product roadmap mapping",
+      "Product roadmap planning",
       "Team augmentation",
     ],
-    image: "/images/backgrounds/services-uiux.jpg",
+    image: "/images/backgrounds/services-consults.jpg",
     imageFirst: false,
   },
 ];
@@ -85,8 +117,8 @@ export default function ServicesPage() {
       
       <section className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(0,102,255,0.25)_0%,transparent_70%)] blur-[40px]" />
-          <div className="absolute -top-10 right-0 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(153,0,255,0.2)_0%,transparent_70%)] blur-[50px]" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-accent)] rounded-full opacity-[0.04] blur-[150px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[40vw] h-[150px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.3)_17.05%,rgba(0,102,255,0.3)_83.46%)] blur-[80px]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-left flex flex-col items-start">
@@ -132,16 +164,14 @@ export default function ServicesPage() {
             </div>
 
             <div className="flex-1 w-full relative">
-              <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden glass-card p-2 md:p-3 shadow-[0_0_40px_rgba(153,0,255,0.1)]">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-[#0F0F13]">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover object-center opacity-70 transition-transform duration-700 hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
+              <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-[#0F0F13]">
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover object-center opacity-70 transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
             </div>
 
