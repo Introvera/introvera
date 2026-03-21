@@ -10,7 +10,7 @@ export default function Footer() {
       
       <div className="absolute inset-0 pointer-events-none z-0">
          <Image
-           src="/images/backgrounds/footer-bg.png"
+           src="/images/backgrounds/footer-bg.webp"
            alt=""
            fill
            className="object-cover object-center mix-blend-screen"

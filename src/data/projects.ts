@@ -21,14 +21,14 @@ export const projectsData: Project[] = [
     slug: "ultracraft",
     title: "Ultracraft",
     images: [
-      "/images/projects/ultracraft/ultracraftmain.jpeg",
-      "/images/projects/ultracraft/ultracraft01.jpeg",
-      "/images/projects/ultracraft/ultracraft02.jpeg",
-      "/images/projects/ultracraft/ultracraft03.jpeg",
-      "/images/projects/ultracraft/ultracraft04.jpeg",
-      "/images/projects/ultracraft/ultracraft05.jpeg",
-      "/images/projects/ultracraft/ultracraft06.jpeg",
-      "/images/projects/ultracraft/ultracraft07.jpeg"
+      "/images/projects/ultracraft/ultracraftmain.webp",
+      "/images/projects/ultracraft/ultracraft01.webp",
+      "/images/projects/ultracraft/ultracraft02.webp",
+      "/images/projects/ultracraft/ultracraft03.webp",
+      "/images/projects/ultracraft/ultracraft04.webp",
+      "/images/projects/ultracraft/ultracraft05.webp",
+      "/images/projects/ultracraft/ultracraft06.webp",
+      "/images/projects/ultracraft/ultracraft07.webp"
     ],
     tags: ["Web", "Backend", "UI/UX"],
     link: "https://ultracraft.lk",
@@ -44,13 +44,13 @@ export const projectsData: Project[] = [
     slug: "adeaz",
     title: "ADEaZ",
     images: [
-      "/images/projects/adeaz/adeazmain.jpeg",
-      "/images/projects/adeaz/adeaz01.png",
-      "/images/projects/adeaz/adeaz02.png",
-      "/images/projects/adeaz/adeaz03.png",
-      "/images/projects/adeaz/adeaz04.png",
-      "/images/projects/adeaz/adeaz05.png",
-      "/images/projects/adeaz/adeaz06.png"
+      "/images/projects/adeaz/adeazmain.webp",
+      "/images/projects/adeaz/adeaz01.webp",
+      "/images/projects/adeaz/adeaz02.webp",
+      "/images/projects/adeaz/adeaz03.webp",
+      "/images/projects/adeaz/adeaz04.webp",
+      "/images/projects/adeaz/adeaz05.webp",
+      "/images/projects/adeaz/adeaz06.webp"
     ],
     tags: ["Web", "Backend"],
     link: "https://adeaz-website.vercel.app",
@@ -66,11 +66,11 @@ export const projectsData: Project[] = [
     slug: "meladetect",
     title: "MelaDetect",
     images: [
-      "/images/projects/mela-detect/meladetectmain.jpeg",
-      "/images/projects/mela-detect/meladetect01.jpeg",
-      "/images/projects/mela-detect/meladetect02.jpeg",
-      "/images/projects/mela-detect/meladetect03.jpeg",
-      "/images/projects/mela-detect/meladetect04.jpeg"
+      "/images/projects/mela-detect/meladetectmain.webp",
+      "/images/projects/mela-detect/meladetect01.webp",
+      "/images/projects/mela-detect/meladetect02.webp",
+      "/images/projects/mela-detect/meladetect03.webp",
+      "/images/projects/mela-detect/meladetect04.webp"
     ],
     tags: ["Web", "AI/ML", "Backend"],
     link: "#",
@@ -86,12 +86,12 @@ export const projectsData: Project[] = [
     slug: "rapid",
     title: "Rapid",
     images: [
-      "/images/projects/rapid/rapidmain.jpeg",
-      "/images/projects/rapid/rapid01.jpeg",
-      "/images/projects/rapid/rapid02.jpeg",
-      "/images/projects/rapid/rapid03.jpeg",
-      "/images/projects/rapid/rapid04.jpeg",
-      "/images/projects/rapid/rapid05.jpeg"
+      "/images/projects/rapid/rapidmain.webp",
+      "/images/projects/rapid/rapid01.webp",
+      "/images/projects/rapid/rapid02.webp",
+      "/images/projects/rapid/rapid03.webp",
+      "/images/projects/rapid/rapid04.webp",
+      "/images/projects/rapid/rapid05.webp"
     ],
     tags: ["Web"],
     link: "https://rapidtyredispatch.com",

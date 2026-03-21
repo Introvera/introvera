@@ -102,7 +102,7 @@ export default function ContactPage() {
                   className="relative w-full h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-2xl group cursor-pointer block"
                >
                   <Image
-                    src="/images/backgrounds/contact1.png" 
+                    src="/images/backgrounds/contact1.webp" 
                     alt="Our Location"
                     fill
                     className="object-cover object-center transition-transform duration-1000 group-hover:scale-110 opacity-60"

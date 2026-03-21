@@ -39,7 +39,7 @@ export default function About() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-5/12 h-[500px] relative rounded-[32px] overflow-hidden">
             <Image
-              src="/images/backgrounds/about-us.jpg"
+              src="/images/backgrounds/about-us.webp"
               alt="Team innovating"
               fill
               className="object-cover"

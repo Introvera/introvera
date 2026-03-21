@@ -18,7 +18,7 @@ const detailedServices = [
       "Design systems",
       "Usability testing",
     ],
-    image: "/images/backgrounds/services-uiux.jpeg",
+    image: "/images/backgrounds/services-uiux.webp",
     imageFirst: false,
   },
   {
@@ -33,7 +33,7 @@ const detailedServices = [
       "Content management systems (CMS)",
       "Web app development with modern frameworks",
     ],
-    image: "/images/backgrounds/services-web.png",
+    image: "/images/backgrounds/services-web.webp",
     imageFirst: true,
   },
   {
@@ -48,7 +48,7 @@ const detailedServices = [
       "App performance optimization and testing",
       "App Store & Google Play deployment support",
     ],
-    image: "/images/backgrounds/services-mobile.jpg",
+    image: "/images/backgrounds/services-mobile.webp",
     imageFirst: false,
   },
   {
@@ -62,7 +62,7 @@ const detailedServices = [
       "Microservices architecture",
       "Real-time systems with WebSockets",
     ],
-    image: "/images/backgrounds/services-backend.jpg",
+    image: "/images/backgrounds/services-backend.webp",
     imageFirst: true,
   },
   {
@@ -78,7 +78,7 @@ const detailedServices = [
       "Security, compliance, and backup strategies",
       "Auto-scaling and high availability architecture",
     ],
-    image: "/images/backgrounds/services-devops.jpg",
+    image: "/images/backgrounds/services-devops.webp",
     imageFirst: false,
   },
   {
@@ -92,7 +92,7 @@ const detailedServices = [
       "Cross-browser compatibility",
       "Continuous integration testing",
     ],
-    image: "/images/backgrounds/services-qa.png",
+    image: "/images/backgrounds/services-qa.webp",
     imageFirst: true,
   },
   {
@@ -106,7 +106,7 @@ const detailedServices = [
       "Product roadmap planning",
       "Team augmentation",
     ],
-    image: "/images/backgrounds/services-consults.jpg",
+    image: "/images/backgrounds/services-consults.webp",
     imageFirst: false,
   },
 ];

@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
-                src="/images/backgrounds/our-vision.png"
+                src="/images/backgrounds/our-vision.webp"
                 alt="Our Vision"
                 fill
                 className="object-cover object-center opacity-40 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
           <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
-                src="/images/backgrounds/our-mission.png"
+                src="/images/backgrounds/our-mission.webp"
                 alt="Our Mission"
                 fill
                 className="object-cover object-center opacity-40 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
@@ -87,7 +87,7 @@ export default function AboutPage() {
           <div className="lg:col-span-6 2xl:col-span-6 relative h-[500px] sm:h-[650px] w-full mt-10 lg:mt-0">
              <div className="absolute top-0 right-0 w-[55%] h-[35%] rounded-[20px] overflow-hidden z-0">
                <Image 
-                 src="/images/backgrounds/services-consult.jpg" 
+                 src="/images/backgrounds/services-consult.webp" 
                  alt="Collaboration" 
                  fill 
                  className="object-cover"
@@ -96,7 +96,7 @@ export default function AboutPage() {
 
              <div className="absolute top-[20%] left-0 w-[55%] h-[48%] rounded-[20px] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.8)] z-10">
                <Image 
-                 src="/images/backgrounds/services-backend.jpg" 
+                 src="/images/backgrounds/services-backend.webp" 
                  alt="Engineering" 
                  fill 
                  className="object-cover"
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
              <div className="absolute bottom-[2%] right-[2%] w-[50%] h-[38%] rounded-[20px] overflow-hidden z-0">
                <Image 
-                 src="/images/backgrounds/services-mobile.jpg" 
+                 src="/images/backgrounds/services-mobile.webp" 
                  alt="Development" 
                  fill 
                  className="object-cover"
@@ -185,7 +185,7 @@ export default function AboutPage() {
 
             <div className="relative w-full aspect-[3/4] lg:h-[500px] rounded-3xl overflow-hidden order-1 lg:order-2">
                <Image
-                 src="/images/backgrounds/about-choose-us.png"
+                 src="/images/backgrounds/about-choose-us.webp"
                  alt="Robot Concept"
                  fill
                  className="object-cover object-top -scale-x-100"

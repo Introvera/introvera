@@ -1,7 +1,7 @@
 "use client";
 
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import { ArrowUpRight, Play } from "lucide-react";
 import Link from "next/link";
 
 const services = [
@@ -9,7 +9,7 @@ const services = [
     id: "backend",
     title: "Backend/API\nDevelopment",
     description: "Developing secure and scalable backend systems with robust APIs that power seamless digital experiences.",
-    image: "/images/backgrounds/services-backend.jpg", // Placeholder until exact image is known/provided
+    image: "/images/backgrounds/services-backend.webp", // Placeholder until exact image is known/provided
     colSpan: "col-span-1 border border-white/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square md:aspect-[4/3] lg:aspect-auto min-h-[280px]",
@@ -19,7 +19,7 @@ const services = [
     id: "uiux",
     title: "UI/UX\nDesign",
     description: "Designing intuitive and engaging user experiences that turn ideas into meaningful digital products.",
-    image: "/images/backgrounds/services-uiux.jpeg",
+    image: "/images/backgrounds/services-uiux.webp",
     colSpan: "col-span-1 border border-white/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square md:aspect-[4/3] lg:aspect-auto min-h-[280px]",
@@ -29,50 +29,50 @@ const services = [
     id: "web",
     title: "Web\nDevelopment",
     description: "Building fast, responsive, and modern websites that perform seamlessly across all devices.",
-    image: "/images/backgrounds/services-web.png",
+    image: "/images/backgrounds/services-web.webp",
     colSpan: "col-span-1 border border-white/5",
     rowSpan: "row-span-2",
-    aspectRatio: "aspect-[3/4] md:aspect-auto h-full",
+    aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[3/4] lg:aspect-auto h-full",
     titleColor: "text-[var(--color-accent)]",
   },
   {
     id: "quality",
     title: "Quality\nAssurance",
     description: "Ensuring every product is reliable, polished, and ready for launch through careful testing and validation.",
-    image: "/images/backgrounds/services-qa.png",
+    image: "/images/backgrounds/services-qa.webp",
     colSpan: "col-span-1 border border-white/5 flex-row", // Different visual layout
     rowSpan: "row-span-1",
-    aspectRatio: "aspect-[2/1] md:aspect-[3/1] lg:aspect-auto min-h-[280px]",
+    aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[2/1] lg:aspect-[3/1] xl:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
   },
   {
     id: "mobile",
     title: "Mobile App\nDevelopment",
     description: "Creating user-friendly mobile applications that deliver smooth experiences on iOS and Android platforms.",
-    image: "/images/backgrounds/services-mobile.jpg",
+    image: "/images/backgrounds/services-mobile.webp",
     colSpan: "col-span-1 border border-white/5",
     rowSpan: "row-span-2",
-    aspectRatio: "aspect-[3/4] md:aspect-auto lg:aspect-auto min-h-[350px]", // Aligning correctly to cover specific area
+    aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[3/4] lg:aspect-auto min-h-[350px]", // Aligning correctly to cover specific area
     titleColor: "text-[var(--color-accent)]",
   },
   {
     id: "devops",
     title: "DevOps &\nCloud Services",
     description: "Optimizing deployment, infrastructure, and cloud environments for performance, reliability, and growth.",
-    image: "/images/backgrounds/services-devops.jpg",
+    image: "/images/backgrounds/services-devops.webp",
     colSpan: "col-span-1 md:col-span-2 border border-white/5",
     rowSpan: "row-span-1",
-    aspectRatio: "aspect-[2/1] md:aspect-[4/1] lg:aspect-auto min-h-[280px]",
+    aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[2/1] lg:aspect-[4/1] xl:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
   },
   {
     id: "consulting",
     title: "Consulting &\nStrategy",
     description: "Helping businesses shape clear digital strategies and practical solutions that support long-term success.",
-    image: "/images/backgrounds/services-consults.jpg",
+    image: "/images/backgrounds/services-consults.webp",
     colSpan: "col-span-1 md:col-span-2 lg:col-span-1 border border-white/5",
     rowSpan: "row-span-1",
-    aspectRatio: "aspect-[2/1] md:aspect-[4/1] lg:aspect-auto min-h-[280px]",
+    aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[2/1] lg:aspect-[4/1] xl:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
   }
 ];
@@ -107,32 +107,32 @@ export default function Services() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-min">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-min">
           
           {/* Column 1 */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:gap-6">
             <ServiceCard data={services[0]} className="flex-1" />
             <ServiceCard data={services[1]} className="flex-1" />
           </div>
 
           {/* Column 2 */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:gap-6">
             <ServiceCard data={services[2]} className="flex-1" />
           </div>
 
           {/* Column 3 */}
-          <div className="flex flex-col gap-4">
-            <ServiceCard data={services[3]} className="flex-1" />
-            <ServiceCard data={services[4]} className="flex-1" />
+          <div className="flex flex-col md:flex-row lg:flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1">
+            <ServiceCard data={services[3]} className="flex-1 w-full" />
+            <ServiceCard data={services[4]} className="flex-1 w-full" />
           </div>
 
           {/* Bottom Row spanning columns */}
-          <div className="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-4">
-             <div className="lg:col-span-2 h-full">
-               <ServiceCard data={services[5]} className="h-full" />
+          <div className="col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+             <div className="md:col-span-1 lg:col-span-2 h-full w-full">
+               <ServiceCard data={services[5]} className="h-full w-full" />
              </div>
-             <div className="lg:col-span-1 h-full">
-               <ServiceCard data={services[6]} className="h-full" />
+             <div className="md:col-span-1 lg:col-span-1 h-full w-full">
+               <ServiceCard data={services[6]} className="h-full w-full" />
              </div>
           </div>
 
@@ -156,7 +156,7 @@ type ServiceData = {
 function ServiceCard({ data, className = "" }: { data: ServiceData, className?: string }) {
   return (
     <div 
-      className={`group relative overflow-hidden rounded-2xl bg-[#0F0F13] ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-8`}
+      className={`group relative overflow-hidden rounded-2xl bg-[#0F0F13] ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
     >
       {/* Background Image layer with Masking Gradient */}
       {data.image && (

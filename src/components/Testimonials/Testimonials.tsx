@@ -8,21 +8,21 @@ const testimonials = [
     quote: `"What I admire most is their mindset. They approach every idea like engineers test, iterate, refine but they also bring a creative energy that makes their work stand out."`,
     name: "Anushka Eranga",
     role: "Lead Software Engineer at Creative Software",
-    avatar: "/images/testimonials/anushka.png"
+    avatar: "/images/testimonials/anushka.webp"
   },
   {
     id: 2,
     quote: `“They've always been the kind of team who learn fast and build things that actually work. It's been inspiring watching them grow as developers.”`,
     name: "Sachini Pathinayaka",
     role: "Lead Software Engineer at IFS",
-    avatar: "/images/testimonials/sachini.png"
+    avatar: "/images/testimonials/sachini.webp"
   },
   {
     id: 3,
     quote: `“I've seen how passionate they are about learning and improving. They always push themselves to create something better each time.”`,
     name: "Rashen Iddamalgoda",
     role: "Senior System Engineer at Pristine Solutions",
-    avatar: "/images/testimonials/rashen.png"
+    avatar: "/images/testimonials/rashen.webp"
   },
 ];
 

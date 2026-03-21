@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="relative w-full min-h-screen bg-black">
       <div className="absolute inset-x-0 top-0 bottom-0 pointer-events-none overflow-hidden [mask-image:linear-gradient(to_bottom,black_60%,transparent_90%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_90%)]">
         <Image
-          src="/images/backgrounds/hero-bg.png"
+          src="/images/backgrounds/hero-bg.webp"
           alt=""
           fill
           className="object-cover object-center"
@@ -126,7 +126,7 @@ export default function Hero() {
           <div className="glass-card relative rounded-2xl  min-h-[420px] transition-all duration-300 overflow-visible">
             <div className="absolute inset-0 -top-32 overflow-hidden rounded-2xl">
               <Image
-                src="/images/backgrounds/hero-robot.png"
+                src="/images/backgrounds/hero-robot.webp"
                 alt="Custom Software Development"
                 fill
                 className="object-cover object-top"
