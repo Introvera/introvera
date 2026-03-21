@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Check } from "lucide-react";
+import Image from "next/image";
 
 export const metadata = {
   title: "Our Services | Introvera",
@@ -108,7 +108,7 @@ const detailedServices = [
       "Continuous integration testing",
     ],
     image: "/images/backgrounds/services-qa.webp",
-    imageFirst: true,
+    imageFirst: false,
   },
   {
     id: "consulting-strategy",
@@ -122,7 +122,7 @@ const detailedServices = [
       "Team augmentation",
     ],
     image: "/images/backgrounds/services-consults.webp",
-    imageFirst: false,
+    imageFirst: true,
   },
 ];
 
