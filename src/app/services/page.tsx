@@ -81,6 +81,21 @@ const detailedServices = [
     image: "/images/backgrounds/services-devops.webp",
     imageFirst: false,
   },
+{
+    id: "auto",
+    title: "Business Process Automation",
+    description: " We help businesses save time, reduce manual work, and improve efficiency through smart automation.",
+    features: [
+      "Workflow Automation",
+      "⁠⁠n8n Integration",
+      "⁠⁠Legacy System Modernization",
+      "Replace Manual Excel Processes",
+      "AI-Driven Automation",
+    ],
+    image: "/images/backgrounds/service-automation.webp",
+    imageFirst: true,
+  },
+
   {
     id: "qa",
     title: "Quality Assurance",
