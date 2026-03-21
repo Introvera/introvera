@@ -33,7 +33,7 @@ export default function ProjectCarousel({ images, title }: ProjectCarouselProps)
   if (!displayImages || displayImages.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-[2.5rem] overflow-hidden bg-[#0F0F13] shadow-[0_20px_60px_rgba(0,0,0,0.6)] group">
+    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-[2.5rem] overflow-hidden group">
       {/* Images Container */}
       <div 
         className="flex w-full h-full transition-transform duration-700 ease-out"
@@ -57,7 +57,7 @@ export default function ProjectCarousel({ images, title }: ProjectCarouselProps)
          <>
             <button 
                onClick={handlePrevious}
-               className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/50 hover:bg-[var(--color-accent)] text-white/80 hover:text-white backdrop-blur-md border border-white/10 transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+               className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-black/50 hover:bg-[var(--color-accent)] text-white/80 hover:text-white backdrop-blur-md border border-white/10 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
                aria-label="Previous slide"
             >
                <ChevronLeft size={24} />
@@ -65,7 +65,7 @@ export default function ProjectCarousel({ images, title }: ProjectCarouselProps)
             
             <button 
                onClick={handleNext}
-               className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-black/50 hover:bg-[var(--color-accent)] text-white/80 hover:text-white backdrop-blur-md border border-white/10 transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+               className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-black/50 hover:bg-[var(--color-accent)] text-white/80 hover:text-white backdrop-blur-md border border-white/10 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
                aria-label="Next slide"
             >
                <ChevronRight size={24} />

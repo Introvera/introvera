@@ -29,7 +29,7 @@ export default function ProjectsPage() {
       <section className="max-w-7xl mx-auto px-6 relative z-20">
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
            {projectsData.map((project) => (
-              <div key={project.id} className="group relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#0F0F13] border border-white/5 transition-all duration-500 hover:border-[var(--color-accent)]/50 hover:shadow-[0_0_40px_rgba(153,0,255,0.15)] flex flex-col justify-end">
+               <Link href={`/projects/${project.slug}`} key={project.id} className="group relative block w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#0F0F13] border border-white/5 transition-all duration-500 hover:border-[var(--color-accent)]/50 hover:shadow-[0_0_40px_rgba(153,0,255,0.15)] flex flex-col justify-end">
                  <Image
                    src={project.images[0]}
                    alt={project.title}
@@ -38,17 +38,7 @@ export default function ProjectsPage() {
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
                  
-                 <div className="relative z-10 p-8 flex flex-col h-full justify-between">
-                   <div className="flex justify-end">
-                     <span className="inline-flex rounded-full p-[4px] border border-white/20 bg-black/40 backdrop-blur-md opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                       <Link
-                         href={`/projects/${project.slug}`}
-                         className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
-                       >
-                         <ArrowUpRight size={20} className="text-black" />
-                       </Link>
-                     </span>
-                   </div>
+                 <div className="relative z-10 p-8 flex flex-col h-full justify-end">
                    <div>
                      <h3 className="text-2xl font-medium text-white mb-3">
                        {project.title}
@@ -62,7 +52,7 @@ export default function ProjectsPage() {
                      </div>
                    </div>
                  </div>
-              </div>
+              </Link>
            ))}
          </div>
       </section>

@@ -1,9 +1,8 @@
+import ProjectCarousel from "@/components/Projects/ProjectCarousel";
 import { projectsData } from "@/data/projects";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import ProjectCarousel from "@/components/Projects/ProjectCarousel";
 
 export const runtime = "edge";
 
@@ -18,7 +17,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-32 overflow-hidden">
       
-      <section className="relative w-full pt-10 pb-20 mb-6 overflow-visible">
+      <section className="relative w-full pt-10 pb-8 mb-4 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-0 right-0 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(153,0,255,0.2)_0%,transparent_70%)] blur-[50px]" />
         </div>

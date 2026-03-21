@@ -49,7 +49,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <ul className="hidden md:flex items-center gap-1 lg:gap-2">
+        <ul className="hidden lg:flex items-center gap-1 xl:gap-2">
           {navLinks.map((link) => {
             const isActive = link.href === "/" 
                ? pathname === "/" 
@@ -72,7 +72,7 @@ export default function Navbar() {
         </ul>
         </div>
 
-        <span className="hidden md:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
+        <span className="hidden lg:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
           <Link
             href="https://wa.me/94783640894"
             className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
@@ -84,7 +84,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg transition-colors"
+          className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg transition-colors"
           aria-label="Toggle menu"
         >
           <div className="flex flex-col gap-1.5">
@@ -109,12 +109,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden grid transition-all duration-300 ease-in-out ${
+          mobileOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="px-6 pb-6 pt-2 bg-[var(--color-navbar-bg)] backdrop-blur-xl border-t border-[var(--color-border)]">
-          <ul className="flex flex-col gap-1">
+        <div className="overflow-hidden">
+          <div className="px-6 pb-6 pt-2 bg-[var(--color-navbar-bg)] backdrop-blur-xl border-t border-[var(--color-border)]">
+            <ul className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const isActive = link.href === "/" 
                  ? pathname === "/" 
@@ -142,6 +143,7 @@ export default function Navbar() {
           >
             Get Started
           </Link>
+        </div>
         </div>
       </div>
     </nav>
