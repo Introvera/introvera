@@ -23,10 +23,10 @@ export default function Hero() {
 
       <div className="relative w-full min-h-screen flex flex-col justify-between max-w-7xl mx-auto px-6 pt-60 pb-8 md:pb-16">
         
-        <div className="flex-1 flex flex-col justify-center mb-12 px-16">
+        <div className="flex-1 flex flex-col justify-center mb-12 px-0 md:px-16">
           <div className="relative w-fit flex flex-col items-start px-2 md:mt-16">
             
-            <div className="absolute -top-[120px] -left-12 flex flex-col z-10 pointer-events-none scale-[0.85] md:scale-100 origin-bottom-left font-medium">
+            <div className="absolute -top-[120px] left-0 md:-left-12 flex flex-col z-10 pointer-events-none scale-[0.85] md:scale-100 origin-bottom-left font-medium">
               <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit">
                 Insight
               </span>
