@@ -70,7 +70,7 @@ export default function ContactPage() {
                      </div>
                      <div className="flex flex-col gap-1">
                         <h4 className="text-white font-semibold text-base">Location</h4>
-                        <p className="text-white/70 text-sm leading-relaxed max-w-[200px]">275/3, New Kandy Road,<br/>Biyagama, Sri Lanka</p>
+                        <p className="text-white/70 text-sm leading-relaxed max-w-[200px]">Introvera Pvt Ltd, <br />275/3, New Kandy Road,<br/>Biyagama, Sri Lanka</p>
                      </div>
                   </div>
 
@@ -112,7 +112,7 @@ export default function ContactPage() {
                   <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 flex flex-col gap-2">
                      <div className="flex items-center gap-2 text-white font-medium text-sm md:text-base">
                         <MapPin size={16} className="text-[var(--color-accent)]" />
-                        275/3, New Kandy Road, Biyagama, Sri Lanka
+                        Introvera Pvt Ltd, 275/3, New Kandy Road, Biyagama, Sri Lanka
                      </div>
                      <p className="text-white/50 text-xs md:text-sm pl-6 group-hover:text-white/80 transition-colors">
                         Click to view on Google Maps

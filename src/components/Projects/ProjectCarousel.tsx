@@ -33,7 +33,7 @@ export default function ProjectCarousel({ images, title }: ProjectCarouselProps)
   if (!displayImages || displayImages.length === 0) return null;
 
   return (
-    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-[2.5rem] overflow-hidden group">
+    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden group">
       {/* Images Container */}
       <div 
         className="flex w-full h-full transition-transform duration-700 ease-out"

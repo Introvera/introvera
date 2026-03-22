@@ -29,29 +29,64 @@ export default function ProjectsPage() {
       <section className="max-w-7xl mx-auto px-6 relative z-20">
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
            {projectsData.map((project) => (
-               <Link href={`/projects/${project.slug}`} key={project.id} className="group relative block w-full aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#0F0F13] border border-white/5 transition-all duration-500 hover:border-[var(--color-accent)]/50 hover:shadow-[0_0_40px_rgba(153,0,255,0.15)] flex flex-col justify-end">
-                 <Image
-                   src={project.images[0]}
-                   alt={project.title}
-                   fill
-                   className="object-cover object-center opacity-60 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-80 mix-blend-screen"
-                 />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
-                 
-                 <div className="relative z-10 p-8 flex flex-col h-full justify-end">
-                   <div>
-                     <h3 className="text-2xl font-medium text-white mb-3">
-                       {project.title}
-                     </h3>
-                     <div className="flex flex-wrap gap-2">
-                       {project.tags.map(tag => (
-                         <span key={tag} className="px-3 py-1 rounded-full border border-white/20 text-[10px] text-white/80 bg-white/5 uppercase tracking-wider">
-                            {tag}
-                         </span>
-                       ))}
+               <Link 
+                 href={`/projects/${project.slug}`} 
+                 key={project.id} 
+                 className="group relative block w-full rounded-[2rem] overflow-hidden transition-all duration-500 hover:shadow-[0_0_50px_rgba(153,0,255,0.2)]"
+                 style={{
+                   background: 'linear-gradient(160deg, #2D1D4F 0%, #0C0123 100%)',
+                 }}
+               >
+                 {/* Top Content Area */}
+                 <div className="relative z-10 p-6 lg:p-8 pb-0">
+                   {/* Arrow Button - top right */}
+                   <div className="flex justify-between items-start mb-4">
+                     <div className="flex-1">
+                       <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2">
+                         {project.title} Website
+                       </h3>
+                       <p className="text-white/60 text-xs lg:text-sm leading-relaxed line-clamp-3">
+                         {project.description.split('\n')[0]}
+                       </p>
                      </div>
+                     <span className="shrink-0 ml-3 w-10 h-10 lg:w-12 lg:h-12 rounded-full border border-white/30 flex items-center justify-center transition-all duration-300 group-hover:bg-white/10 group-hover:border-white/50">
+                       <ArrowUpRight size={18} className="text-white" />
+                     </span>
+                   </div>
+
+                   {/* Tags */}
+                   <div className="flex flex-wrap gap-2">
+                     {project.tags.map(tag => (
+                       <span key={tag} className="px-3 py-1 rounded-full border border-white/25 text-[11px] text-white/80 bg-white/5 backdrop-blur-sm">
+                         {tag}
+                       </span>
+                     ))}
                    </div>
                  </div>
+
+                 {/* Mockup Image Area - no gradient overlay */}
+                 <div className="relative w-full h-[220px] sm:h-[260px] md:h-[280px] -mt-10 -mb-10">
+                   <Image
+                     src={project.mainImage}
+                     alt={`${project.title} mockup`}
+                     fill
+                     className="object-contain object-center px-4 lg:px-6 transition-transform duration-700 group-hover:scale-[1.03]"
+                   />
+                 </div>
+
+                 {/* Logo below the mockup image */}
+                 {project.logo && (
+                   <div className="relative z-10 flex items-center gap-2.5 px-6 lg:px-8 py-4 justify-end">
+                     <div className="w-10 h-10 lg:w-12 lg:h-12 relative shrink-0 rounded-lg overflow-hidden p-1.5">
+                       <Image
+                         src={project.logo}
+                         alt={`${project.title} logo`}
+                         fill
+                         className="object-contain p-0.5"
+                       />
+                     </div>
+                   </div>
+                 )}
               </Link>
            ))}
          </div>

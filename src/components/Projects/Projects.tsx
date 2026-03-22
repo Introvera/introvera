@@ -100,45 +100,69 @@ export default function Projects() {
                 style={{ zIndex }}
               >
                  {/* Card Wrapper with dynamic border/glow exclusively for active center item */}
-                 <div className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-white/10'}`}>
-                    <Image
-                      src={project.images[0]}
-                      alt={project.title}
-                      fill
-                      className="object-cover object-center"
-                    />
-                    
-                    {/* Shadow overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-700 ${isCenter ? 'opacity-100' : 'opacity-50'}`} />
+                 <div 
+                   className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 flex flex-col ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-white/10'}`}
+                   style={{
+                     background: 'linear-gradient(160deg, #2D1D4F 0%, #0C0123 100%)',
+                   }}
+                 >
+                   {/* Top Content Area */}
+                   <div className={`relative z-10 p-5 md:p-8 pb-0 transition-opacity duration-500 delay-100 ${!isCenter ? 'pointer-events-none' : ''}`}>
+                     {/* Arrow Button - top right */}
+                     <div className="flex justify-between items-start mb-3 md:mb-4">
+                       <div className="flex-1">
+                         <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 line-clamp-1">
+                           {project.title} Website
+                         </h3>
+                         <p className="text-white/60 text-[10px] md:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
+                           {project.description.split('\n')[0]}
+                         </p>
+                       </div>
+                       <Link 
+                         href={`/projects/${project.slug}`}
+                         onClick={(e) => { 
+                           if (!isCenter) e.preventDefault(); 
+                           e.stopPropagation(); 
+                         }}
+                         className="shrink-0 ml-3 w-8 h-8 md:w-12 md:h-12 rounded-full border border-white/30 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-white/50 pointer-events-auto"
+                       >
+                         <ArrowUpRight size={16} className="text-white" />
+                       </Link>
+                     </div>
 
-                    {/* Content Layer */}
-                    <div className={`absolute inset-0 flex flex-col justify-end items-center pb-10 px-6 transition-opacity duration-500 delay-100 ${isCenter ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                        {/* Project Detail Link */}
-                        <Link 
-                           href={`/projects/${project.slug}`}
-                           onClick={(e) => { 
-                             if (!isCenter) e.preventDefault(); 
-                             e.stopPropagation(); 
-                           }}
-                           className="w-14 h-14 rounded-full border-[2px] border-white flex items-center justify-center mb-6 hover:bg-white/20 transition-colors pointer-events-auto shadow-lg"
-                        >
-                           <ArrowUpRight size={24} className="text-white" />
-                        </Link>
-                        
-                        {/* Title */}
-                        <h3 className="text-2xl md:text-3xl font-medium text-white mb-4 text-center">
-                          {project.title}
-                        </h3>
+                     {/* Tags */}
+                     <div className="flex flex-wrap gap-2 mb-2 md:mb-6">
+                       {project.tags.slice(0, 3).map(tag => (
+                         <span key={tag} className="px-2 py-1 md:px-3 rounded-full border border-white/25 text-[9px] md:text-[11px] text-white/80 bg-white/5 backdrop-blur-sm">
+                           {tag}
+                         </span>
+                       ))}
+                     </div>
+                   </div>
 
-                        {/* Array mapped Tags */}
-                        <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-                           {project.tags.map(tag => (
-                             <span key={tag} className="px-4 py-1.5 rounded-full border border-white/40 text-xs text-white/90 bg-white/10 backdrop-blur-md shadow-sm">
-                                {tag}
-                             </span>
-                           ))}
-                        </div>
-                    </div>
+                   {/* Mockup Image Area */}
+                   <div className="relative w-full flex-1 -mt-2 md:-mt-6 mb-2 transition-all duration-700">
+                     <Image
+                       src={project.mainImage}
+                       alt={`${project.title} mockup`}
+                       fill
+                       className="object-contain object-center px-4 md:px-6 transition-transform duration-700"
+                     />
+                   </div>
+
+                   {/* Logo below the mockup image */}
+                   <div className="relative z-10 flex items-center gap-2 px-5 md:px-8 py-3 md:py-4 justify-end mt-auto h-[50px] md:h-[70px]">
+                     {project.logo && (
+                       <div className="w-8 h-8 md:w-12 md:h-12 relative shrink-0 rounded-lg overflow-hidden p-1 md:p-1.5 opacity-80">
+                         <Image
+                           src={project.logo}
+                           alt={`${project.title} logo`}
+                           fill
+                           className="object-contain p-0.5"
+                         />
+                       </div>
+                     )}
+                   </div>
                  </div>
               </div>
             );

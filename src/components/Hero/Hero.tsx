@@ -101,11 +101,11 @@ export default function Hero() {
               Web &amp; Mobile App<br />Development
             </h3>
 
-            <div className="flex gap-3">
-              <span className="px-4 py-1.5 rounded-full border border-white/30 text-sm text-white/80">
+            <div className="flex flex-wrap gap-2 lg:gap-3">
+              <span className="px-3 lg:px-4 py-1.5 rounded-full border border-white/30 text-xs lg:text-sm text-white/80 whitespace-nowrap">
                 Websites
               </span>
-              <span className="px-4 py-1.5 rounded-full border border-white/30 text-sm text-white/80">
+              <span className="px-3 lg:px-4 py-1.5 rounded-full border border-white/30 text-xs lg:text-sm text-white/80 whitespace-nowrap">
                 Mobile Apps
               </span>
             </div>
@@ -123,13 +123,14 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="glass-card relative rounded-2xl  min-h-[420px] transition-all duration-300 overflow-visible">
-            <div className="absolute inset-0 -top-32 overflow-hidden rounded-2xl">
+          <div className="glass-card relative rounded-2xl  min-h-[420px] transition-all duration-300 overflow-visible z-10">
+            <div className="absolute right-0 bottom-0 pointer-events-none z-0">
               <Image
                 src="/images/backgrounds/hero-robot.webp"
                 alt="Custom Software Development"
-                fill
-                className="object-cover object-top"
+                width={800}
+                height={1000}
+                className="w-auto h-[450px] md:h-[480px] lg:h-[520px] max-w-none"
                 quality={85}
               />
             </div>
