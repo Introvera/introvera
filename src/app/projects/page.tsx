@@ -38,7 +38,7 @@ export default function ProjectsPage() {
                  }}
                >
                  {/* Top Content Area */}
-                 <div className="relative z-10 p-6 lg:p-8 pb-0">
+                 <div className="relative z-10 p-6 lg:p-8">
                    {/* Arrow Button - top right */}
                    <div className="flex justify-between items-start mb-4">
                      <div className="flex-1">
@@ -64,13 +64,14 @@ export default function ProjectsPage() {
                    </div>
                  </div>
 
-                 {/* Mockup Image Area - no gradient overlay */}
-                 <div className="relative w-full h-[220px] sm:h-[260px] md:h-[280px] -mt-10 -mb-10">
+                 {/* Mockup Image Area - natural height */}
+                 <div className="relative w-full">
                    <Image
                      src={project.mainImage}
                      alt={`${project.title} mockup`}
-                     fill
-                     className="object-contain object-center px-4 lg:px-6 transition-transform duration-700 group-hover:scale-[1.03]"
+                     width={800}
+                     height={600}
+                     className="w-full h-auto object-contain object-center px-4 lg:px-6 transition-transform duration-700 group-hover:scale-[1.03]"
                    />
                  </div>
 
