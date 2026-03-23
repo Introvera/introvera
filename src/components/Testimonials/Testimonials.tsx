@@ -36,15 +36,38 @@ export default function Testimonials() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full mb-14">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div className="flex flex-col md:flex-row flex-wrap md:items-end justify-between gap-8">
           <div>
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Testimonials
             </p>
             <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-white mb-2">
-              Stories of Trust & <br />
+              Stories of Trust & <br className="hidden md:block"/>
               Transformation.
             </h2>
+          </div>
+
+          <div className="flex flex-col items-start md:items-end gap-3 shrink-0 pb-2">
+            <p className="text-white font-medium text-sm md:text-base tracking-wide">
+              Trusted by clients worldwide
+            </p>
+            <div className="flex -space-x-5">
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
+                <Image src="/images/backgrounds/countries/united-kingdom.png" alt="United Kingdom" fill className="object-cover" />
+              </div>
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
+                <Image src="/images/backgrounds/countries/sri-lanka.png" alt="Sri Lanka" fill className="object-cover" />
+              </div>
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
+                <Image src="/images/backgrounds/countries/qatar.png" alt="Qatar" fill className="object-cover" />
+              </div>
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
+                <Image src="/images/backgrounds/countries/australia.png" alt="Australia" fill className="object-cover" />
+              </div>
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full border-[3px] border-black bg-[var(--color-accent)] flex items-center justify-center text-white font-semibold text-sm duration-300 cursor-default">
+                4+
+              </div>
+            </div>
           </div>
         </div>
       </div>

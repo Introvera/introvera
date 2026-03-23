@@ -1,10 +1,11 @@
 "use client";
 
-import { MessageCircleMore } from "lucide-react";
+import { CalendarCheck2, MessageCircleMore } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { PopupModal } from "react-calendly";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -17,6 +18,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const pathname = usePathname() || "";
 
   useEffect(() => {
@@ -73,13 +75,13 @@ export default function Navbar() {
         </div>
 
         <span className="hidden lg:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
-          <Link
-            href="https://wa.me/94783640894"
+          <button
+            onClick={() => setIsCalendlyOpen(true)}
             className="inline-flex items-center gap-4 px-4 py-2 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
           >
-            Get Started
-            <MessageCircleMore size={22} />
-          </Link>
+            Free Consultation
+            <CalendarCheck2 size={18} />
+          </button>
         </span>
 
         <button
@@ -136,16 +138,27 @@ export default function Navbar() {
               );
             })}
           </ul>
-          <Link
-            href="https://wa.me/94783640894"
-            onClick={() => setMobileOpen(false)}
+          <button
+            onClick={() => {
+              setMobileOpen(false);
+              setIsCalendlyOpen(true);
+            }}
             className="mt-4 block w-full text-center px-6 py-3 bg-[var(--color-accent)] text-white text-sm font-semibold rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
           >
-            Get Started
-          </Link>
+            Free Consultation
+          </button>
         </div>
         </div>
       </div>
+
+      {isCalendlyOpen && typeof window !== 'undefined' && (
+        <PopupModal
+          url="https://calendly.com/teamintrovera/30min"
+          onModalClose={() => setIsCalendlyOpen(false)}
+          open={isCalendlyOpen}
+          rootElement={document.body}
+        />
+      )}
     </nav>
   );
 }
