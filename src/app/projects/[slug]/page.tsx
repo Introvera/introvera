@@ -3,6 +3,7 @@ import { projectsData } from "@/data/projects";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import FadeInSection from "@/components/ui/FadeInSection";
 
 export const runtime = "edge";
 
@@ -17,7 +18,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-32 overflow-hidden">
       
-      <section className="relative w-full pt-10 pb-8 mb-4 overflow-visible">
+      <FadeInSection className="relative w-full pt-10 pb-8 mb-4 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-0 right-0 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(153,0,255,0.2)_0%,transparent_70%)] blur-[50px]" />
         </div>
@@ -52,19 +53,19 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </span>
           </div>
         </div>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-20 mb-12">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20 mb-12">
         <ProjectCarousel images={project.images} title={project.title} />
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-10 mb-20">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-20">
         <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed whitespace-pre-line">
           {project.description}
         </p>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24">
          <div className="lg:w-1/3 flex flex-col gap-10">
            <div className="flex flex-col gap-6 bg-[#0F0F13] border border-white/5 rounded-3xl p-8 shadow-2xl">
              <div>
@@ -108,7 +109,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               </div>
             </div>
          </div>
-      </section>
+      </FadeInSection>
 
     </div>
   );

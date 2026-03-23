@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import FadeInSection from "@/components/ui/FadeInSection";
 
 const services = [
   {
@@ -79,7 +80,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section className="relative w-full bg-[#050505] py-16 sm:py-20 overflow-hidden" id="services">
+    <FadeInSection className="relative w-full bg-[#050505] py-16 sm:py-20 overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
@@ -138,7 +139,7 @@ export default function Services() {
 
         </div>
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

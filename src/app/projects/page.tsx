@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
+import FadeInSection from "@/components/ui/FadeInSection";
 import { ArrowUpRight } from "lucide-react";
 
 export default function ProjectsPage() {
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-20 overflow-hidden">
       
-      <section className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
+      <FadeInSection className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-accent)] rounded-full opacity-[0.04] blur-[150px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[40vw] h-[150px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.3)_17.05%,rgba(0,102,255,0.3)_83.46%)] blur-[80px]" />
@@ -24,9 +25,9 @@ export default function ProjectsPage() {
             Explore our diverse range of successful projects across industries. We combine flawless engineering and compelling design to deliver digital transformations.
           </p>
         </div>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-20">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20">
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
            {projectsData.map((project) => (
                <Link 
@@ -91,7 +92,7 @@ export default function ProjectsPage() {
               </Link>
            ))}
          </div>
-      </section>
+      </FadeInSection>
     </div>
   );
 }

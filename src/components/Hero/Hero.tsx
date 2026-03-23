@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { ArrowUpRight, CalendarRange, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +29,12 @@ export default function Hero() {
         <div className="flex-1 flex flex-col justify-center mb-12 px-0 md:px-16">
           <div className="relative w-fit flex flex-col items-start px-2 md:mt-16">
             
-            <div className="absolute -top-[120px] left-0 md:-left-12 flex flex-col z-10 pointer-events-none scale-[0.85] md:scale-100 origin-bottom-left font-medium">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="absolute -top-[120px] left-0 md:-left-12 flex flex-col z-10 pointer-events-none scale-[0.85] md:scale-100 origin-bottom-left font-medium"
+            >
               <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit">
                 Insight
               </span>
@@ -36,21 +44,31 @@ export default function Hero() {
               <span className="px-6 py-2 rounded-full border border-[var(--color-accent)] text-[15px] text-white bg-black/80 backdrop-blur-md w-fit -mt-2 rotate-[8deg] origin-top-left">
                 Introvera
               </span>
-            </div>
+            </motion.div>
 
-            <h1
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
               className="text-6xl md:text-8xl lg:text-[100px] font-medium leading-tight md:leading-none text-left tracking-tight"
             >
               Build What Matters
-            </h1>
+            </motion.h1>
             
-            <p className="mt-6 text-base md:text-lg text-white/70 max-w-3xl text-left leading-relaxed">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mt-6 text-base md:text-lg text-white/70 max-w-3xl text-left leading-relaxed"
+            >
               We transform ideas into impactful digital experiences that move the world forward, crafting solutions that are smart, scalable, and full of purpose.
-            </p>
+            </motion.p>
 
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="flex flex-col sm:flex-row items-center gap-4 pt-8"
-              style={{ animation: "fadeInUp 0.8s ease-out 0.3s both" }}
             >
               <span className="hidden md:inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
                 <Link
@@ -71,7 +89,7 @@ export default function Hero() {
                   <ArrowUpRight size={22} />
                 </Link>
               </span>
-            </div>
+            </motion.div>
           </div>
         </div>
 
@@ -79,7 +97,12 @@ export default function Hero() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] max-w-[1000px] h-[250px] md:h-[350px] bg-gradient-to-r from-[#5a1cff]/70 via-[#4000ff]/60 to-[#004cf3]/70 blur-[100px] md:blur-[130px] rounded-[100%] pointer-events-none z-0" />
           
           <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-6 relative z-10 w-full">
-          <div className="glass-card relative rounded-2xl border border-[var(--color-accent)] p-6 flex flex-col gap-5 transition-all duration-300">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="glass-card relative rounded-2xl border border-[var(--color-accent)] p-6 flex flex-col gap-5"
+          >
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center">
                 <CalendarRange size={22} className="text-white" />
@@ -121,9 +144,14 @@ export default function Hero() {
                 </Link>
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="glass-card relative rounded-2xl  min-h-[420px] transition-all duration-300 overflow-visible z-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="glass-card relative rounded-2xl min-h-[420px] overflow-visible z-10"
+          >
             <div className="absolute right-0 bottom-0 pointer-events-none z-0">
               <Image
                 src="/images/backgrounds/hero-robot.webp"
@@ -144,9 +172,14 @@ export default function Hero() {
                 Custom Software<br />Development
               </h3>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="glass-card relative rounded-2xl border border-[var(--color-accent)] p-6 flex flex-col gap-4 transition-all duration-300">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="glass-card relative rounded-2xl border border-[var(--color-accent)] p-6 flex flex-col gap-4"
+          >
             <div className="flex items-start justify-between">
               <div>
                 <p className="text-4xl font-light tracking-tight">99.9%</p>
@@ -200,7 +233,7 @@ export default function Hero() {
             <h3 className="text-2xl font-medium text-center leading-tight pt-2">
               DevOps &amp; Cloud<br />Services
             </h3>
-          </div>
+          </motion.div>
           </div>
         </div>
       </div>

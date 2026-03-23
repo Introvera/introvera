@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 
 import { projectsData } from "@/data/projects";
 
+import { motion } from "framer-motion";
+
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,11 +31,23 @@ export default function Projects() {
   };
 
   return (
-    <section className="w-full bg-black py-16 sm:py-20 overflow-hidden" id="projects">
+    <motion.section 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
+      className="w-full bg-black py-16 sm:py-20 overflow-hidden" 
+      id="projects"
+    >
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Our Projects
             </p>
@@ -41,8 +55,14 @@ export default function Projects() {
               Showcase of<br />
               <span className="text-[var(--color-accent)]">Innovation</span>
             </h2>
-          </div>
-          <div className="flex flex-col items-start md:items-end gap-6 shrink-0 md:pb-4">
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="flex flex-col items-start md:items-end gap-6 shrink-0 md:pb-4"
+          >
             <h3 className="text-xl md:text-2xl font-medium text-white">Our Work Speaks for Itself</h3>
             <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
               <Link
@@ -53,7 +73,7 @@ export default function Projects() {
                 <ArrowUpRight size={22} />
               </Link>
             </span>
-          </div>
+          </motion.div>
         </div>
 
         {/* 3D Offset Carousel */}
@@ -181,6 +201,6 @@ export default function Projects() {
            ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

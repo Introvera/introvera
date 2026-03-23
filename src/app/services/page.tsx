@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
+import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
   title: "Our Services | Introvera",
@@ -130,7 +131,7 @@ export default function ServicesPage() {
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-20 overflow-hidden">
       
-      <section className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
+      <FadeInSection className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-accent)] rounded-full opacity-[0.04] blur-[150px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[40vw] h-[150px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.3)_17.05%,rgba(0,102,255,0.3)_83.46%)] blur-[80px]" />
@@ -147,11 +148,11 @@ export default function ServicesPage() {
             Comprehensive digital solutions tailored to transform your ideas into impactful products. We deliver end-to-end engineering excellence.
           </p>
         </div>
-      </section>
+      </FadeInSection>
 
       <section className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col gap-24 lg:gap-32">
         {detailedServices.map((service) => (
-          <div 
+          <FadeInSection 
             key={service.id} 
             className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${service.imageFirst ? 'lg:flex-row-reverse' : ''}`}
           >
@@ -190,7 +191,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-          </div>
+          </FadeInSection>
         ))}
       </section>
       

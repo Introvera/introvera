@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -29,7 +30,14 @@ const testimonials = [
 export default function Testimonials() {
 
   return (
-    <section className="relative w-full bg-black py-16 sm:py-20 overflow-hidden" id="testimonials">
+    <motion.section 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
+      className="relative w-full bg-black py-16 sm:py-20 overflow-hidden" 
+      id="testimonials"
+    >
       
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[300px] opacity-40 pointer-events-none z-0">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(153,0,255,0.4)_0%,transparent_70%)] blur-[80px]" />
@@ -37,7 +45,12 @@ export default function Testimonials() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full mb-14">
         <div className="flex flex-col md:flex-row flex-wrap md:items-end justify-between gap-8">
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Testimonials
             </p>
@@ -45,10 +58,16 @@ export default function Testimonials() {
               Stories of Trust & <br className="hidden md:block"/>
               Transformation.
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col items-start md:items-end gap-3 shrink-0 pb-2">
-            <p className="text-white font-medium text-sm md:text-base tracking-wide">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="flex flex-col items-start md:items-end gap-3 shrink-0 pb-4"
+          >
+            <p className="text-white font-medium text-xl md:text-2xl tracking-wide">
               Trusted by clients worldwide
             </p>
             <div className="flex -space-x-5">
@@ -68,7 +87,7 @@ export default function Testimonials() {
                 4+
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -85,7 +104,7 @@ export default function Testimonials() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 

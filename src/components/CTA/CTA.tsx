@@ -1,13 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function CTA() {
   return (
-    <section className="relative w-full bg-black py-16 sm:py-20" id="cta">
+    <motion.section 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.1 }}
+      className="relative w-full bg-black py-16 sm:py-20" 
+      id="cta"
+    >
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-20">
         
-        <div className="flex-1 flex flex-col items-start text-left">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="flex-1 flex flex-col items-start text-left"
+        >
           <h2 className="text-4xl sm:text-5xl lg:text-[50px] font-medium leading-[1.15] text-white tracking-tight mb-10 mt-6 lg:mt-0">
             Let&apos;s Build Something<br />
             Great Together
@@ -34,9 +50,15 @@ export default function CTA() {
               </Link>
             </span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="w-full lg:w-1/2 flex justify-start lg:justify-end mb-6 lg:mb-0">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="w-full lg:w-1/2 flex justify-start lg:justify-end mb-6 lg:mb-0"
+        >
           <div className="relative w-full max-w-[600px] aspect-[21/9] sm:aspect-[2/1] rounded-3xl overflow-hidden">
             <Image
               src="/images/backgrounds/cta.png" 
@@ -45,9 +67,9 @@ export default function CTA() {
               className="object-cover object-center"
             />
           </div>
-        </div>
+        </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

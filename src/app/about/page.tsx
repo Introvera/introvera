@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, Clock, MessageSquare, ShieldCheck, Target, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
   title: "About Us | Introvera",
@@ -11,7 +12,7 @@ export default function AboutPage() {
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-20 overflow-hidden">
       
-      <section className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
+      <FadeInSection className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[var(--color-accent)] rounded-full opacity-[0.04] blur-[150px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[40vw] h-[150px] bg-[linear-gradient(265.01deg,rgba(153,0,255,0.3)_17.05%,rgba(0,102,255,0.3)_83.46%)] blur-[80px]" />
@@ -28,9 +29,9 @@ export default function AboutPage() {
             We are a digital innovation studio where creativity meets technology. We design smart, scalable solutions that help businesses grow and people thrive.
           </p>
         </div>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-20 mb-32">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20 mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
@@ -65,9 +66,9 @@ export default function AboutPage() {
           </div>
 
         </div>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-10 mb-40">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center">
           <div className="lg:col-span-6 2xl:col-span-6 flex flex-col gap-2 text-[#e5e7eb] text-base lg:text-lg leading-[1.8] font-light pr-0 lg:pr-8">
              <p>
@@ -114,9 +115,9 @@ export default function AboutPage() {
           </div>
 
         </div>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-10 mb-16">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-16">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
            
            <div className="flex-1 max-w-2xl">
@@ -144,9 +145,9 @@ export default function AboutPage() {
            </div>
 
         </div>
-      </section>
+      </FadeInSection>
 
-      <section className="max-w-7xl mx-auto px-6 relative z-10">
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center">
             
             <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-end order-2 lg:order-1">
@@ -230,7 +231,7 @@ export default function AboutPage() {
             </div>
 
          </div>
-      </section>
+      </FadeInSection>
 
     </div>
   );

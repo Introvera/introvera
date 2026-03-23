@@ -1,6 +1,7 @@
 import { ArrowDown, ChevronRight, CloudLightning, Lock, Users, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import FadeInSection from "@/components/ui/FadeInSection";
 
 export default function About() {
   return (
@@ -8,16 +9,16 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-8 mb-16">
-          <div className="lg:w-1/2">
+          <FadeInSection className="lg:w-1/2">
             <h4 className="text-[var(--color-accent)] font-semibold tracking-wider uppercase text-sm mb-6">
               About Us
             </h4>
             <h2 className="text-5xl md:text-6xl lg:text-[50px] font-medium leading-[1.15] tracking-tight">
               <span className="text-[var(--color-accent)]">Driven by innovation,</span> Built for the future.
             </h2>
-          </div>
+          </FadeInSection>
           
-          <div className="lg:w-6/12 bg-[#121214] rounded-[32px] p-8 md:p-7 flex flex-col justify-between h-full">
+          <FadeInSection className="lg:w-6/12 bg-[#121214] rounded-[32px] p-8 md:p-7 flex flex-col justify-between h-full">
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               Introvera is a digital innovation studio where creativity meets technology. We design smart, scalable solutions.
             </p>
@@ -33,23 +34,23 @@ export default function About() {
                 </Link>
               </span>
             </div>
-          </div>
+          </FadeInSection>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
-          <div className="lg:w-5/12 h-[500px] relative rounded-[32px] overflow-hidden">
+          <FadeInSection className="lg:w-5/12 h-[500px] relative rounded-[32px] overflow-hidden">
             <Image
               src="/images/backgrounds/about-us.webp"
               alt="Team innovating"
               fill
               className="object-cover"
             />
-          </div>
+          </FadeInSection>
 
           <div className="lg:w-7/12 flex flex-col justify-between pt-4">
             
             <div className="space-y-12 mb-16 lg:mb-0">
-              <div className="flex items-start gap-5">
+              <FadeInSection className="flex items-start gap-5">
                 <div className="mt-1 w-7 h-7 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                   <ChevronRight size={14} className="text-white" strokeWidth={2} />
                 </div>
@@ -59,9 +60,9 @@ export default function About() {
                     We offer AI solutions that turn ideas into outcomes, helping businesses thrive.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
               
-              <div className="flex items-start gap-5">
+              <FadeInSection className="flex items-start gap-5">
                 <div className="mt-1 w-7 h-7 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                   <ChevronRight size={14} className="text-white" strokeWidth={2} />
                 </div>
@@ -71,9 +72,9 @@ export default function About() {
                     We work in fast, flexible sprints to deliver results quickly and efficiently.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
 
-              <div className="flex items-start gap-5">
+              <FadeInSection className="flex items-start gap-5">
                 <div className="mt-1 w-7 h-7 rounded-full border border-white/30 flex items-center justify-center shrink-0">
                   <ChevronRight size={14} className="text-white" strokeWidth={2} />
                 </div>
@@ -83,10 +84,10 @@ export default function About() {
                     Our solutions align with your goals, not just the tech. Results matter.
                   </p>
                 </div>
-              </div>
+              </FadeInSection>
             </div>
 
-            <div className="pb-4">
+            <FadeInSection className="pb-4">
               <div className="grid grid-cols-2 md:flex md:items-center md:justify-between gap-y-10">
                 <div className="flex flex-col items-center gap-4 text-center flex-1">
                   <CloudLightning size={32} className="text-white" strokeWidth={1.5} />
@@ -114,7 +115,7 @@ export default function About() {
                   <span className="text-[13px] font-medium text-gray-400">24/7 Support</span>
                 </div>
               </div>
-            </div>
+            </FadeInSection>
             
           </div>
         </div>
