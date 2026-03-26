@@ -24,7 +24,7 @@ export const projectsData: Project[] = [
     slug: "ultracraft",
     title: "Ultracraft",
     images: [
-      "/images/projects/ultracraft/ultracraftmain.png",
+      "/images/projects/ultracraft/ultracraftmain.webp",
       "/images/projects/ultracraft/ultracraft01.webp",
       "/images/projects/ultracraft/ultracraft02.webp",
       "/images/projects/ultracraft/ultracraft03.webp",
@@ -33,7 +33,7 @@ export const projectsData: Project[] = [
       "/images/projects/ultracraft/ultracraft06.webp",
       "/images/projects/ultracraft/ultracraft07.webp"
     ],
-    mainImage: "/images/projects/ultracraft/ultracraftmain.png",
+    mainImage: "/images/projects/ultracraft/ultracraftmain.webp",
     logo: "/images/projects/ultracraft/ultracraft-logo-trans.png",
     gradientColors: ["#1a0533", "#4a1a7a"],
     tags: ["Web", "Backend", "UI/UX"],
@@ -50,7 +50,7 @@ export const projectsData: Project[] = [
     slug: "adeaz",
     title: "ADEaZ",
     images: [
-      "/images/projects/adeaz/adeazmain.png",
+      "/images/projects/adeaz/adeazmain.webp",
       "/images/projects/adeaz/adeaz01.webp",
       "/images/projects/adeaz/adeaz02.webp",
       "/images/projects/adeaz/adeaz03.webp",
@@ -58,7 +58,7 @@ export const projectsData: Project[] = [
       "/images/projects/adeaz/adeaz05.webp",
       "/images/projects/adeaz/adeaz06.webp"
     ],
-    mainImage: "/images/projects/adeaz/adeazmain.png",
+    mainImage: "/images/projects/adeaz/adeazmain.webp",
     logo: "/images/projects/adeaz/adeaz-logo.png",
     gradientColors: ["#1a0533", "#4a1a7a"],
     tags: ["Web", "Backend"],
@@ -75,13 +75,13 @@ export const projectsData: Project[] = [
     slug: "meladetect",
     title: "MelaDetect",
     images: [
-      "/images/projects/mela-detect/meladetectmain.png",
+      "/images/projects/mela-detect/meladetectmain.webp",
       "/images/projects/mela-detect/meladetect01.webp",
       "/images/projects/mela-detect/meladetect02.webp",
       "/images/projects/mela-detect/meladetect03.webp",
       "/images/projects/mela-detect/meladetect04.webp"
     ],
-    mainImage: "/images/projects/mela-detect/meladetectmain.png",
+    mainImage: "/images/projects/mela-detect/meladetectmain.webp",
     logo: "/images/projects/mela-detect/meladetect-logo.png",
     gradientColors: ["#0a1a2f", "#1a3a5f"],
     tags: ["Web", "AI/ML", "Backend"],
@@ -98,14 +98,14 @@ export const projectsData: Project[] = [
     slug: "rapid",
     title: "Rapid",
     images: [
-      "/images/projects/rapid/rapidmain.png",
+      "/images/projects/rapid/rapidmain.webp",
       "/images/projects/rapid/rapid01.webp",
       "/images/projects/rapid/rapid02.webp",
       "/images/projects/rapid/rapid03.webp",
       "/images/projects/rapid/rapid04.webp",
       "/images/projects/rapid/rapid05.webp"
     ],
-    mainImage: "/images/projects/rapid/rapidmain.png",
+    mainImage: "/images/projects/rapid/rapidmain.webp",
     logo: "/images/projects/rapid/rapid-logo.png",
     gradientColors: ["#0f1a0a", "#1a3a1a"],
     tags: ["Web"],

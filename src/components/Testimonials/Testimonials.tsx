@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -24,6 +24,13 @@ const testimonials = [
     name: "Rashen Iddamalgoda",
     role: "Senior System Engineer at Pristine Solutions",
     avatar: "/images/testimonials/rashen.webp"
+  },
+  {
+    id: 4,
+    quote: `“Thanks to the Introvera team for helping us complete a long pending task within the agreed time frame. They did an excellent job and have no hesitation in recommending them for any business. Good Luck introvera team.”`,
+    name: "Riyaz Naleer",
+    role: "Director Ultrcraft(PVT) LTD",
+    avatar: ""
   },
 ];
 
@@ -130,12 +137,18 @@ function TestimonialCard({ data, className = "" }: { data: TestimonialData, clas
 
       <div className="flex items-center gap-4 mt-auto">
         <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 border-[2px] border-white/20">
-          <Image 
-            src={data.avatar}
-            alt={data.name}
-            fill
-            className="object-cover"
-          />
+          {data.avatar ? (
+            <Image 
+              src={data.avatar}
+              alt={data.name}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-[var(--color-accent)] to-purple-800 flex items-center justify-center text-white font-semibold text-sm">
+              {data.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+            </div>
+          )}
         </div>
         
         <div className="flex flex-col">
