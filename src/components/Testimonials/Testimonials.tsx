@@ -29,7 +29,7 @@ const testimonials = [
     id: 4,
     quote: `“Thanks to the Introvera team for helping us complete a long pending task within the agreed time frame. They did an excellent job and have no hesitation in recommending them for any business. Good Luck introvera team.”`,
     name: "Riyaz Naleer",
-    role: "Director Ultrcraft(PVT) LTD",
+    role: "Director at Ultrcraft(PVT) LTD",
     avatar: ""
   },
 ];
