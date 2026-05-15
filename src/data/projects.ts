@@ -47,6 +47,36 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
+    slug: "rainbowweb",
+    title: "Rainbow Website",
+    images: [
+      "/images/projects/rainbowweb/rainbowmain.webp",
+      "/images/projects/rainbowweb/rainbow01.webp",
+      "/images/projects/rainbowweb/rainbow02.webp",
+      "/images/projects/rainbowweb/rainbow03.webp",
+      "/images/projects/rainbowweb/rainbow04.webp",
+      "/images/projects/rainbowweb/rainbow05.webp",
+      "/images/projects/rainbowweb/rainbow06.webp",
+      "/images/projects/rainbowweb/rainbow07.webp",
+      "/images/projects/rainbowweb/rainbow08.webp",
+      "/images/projects/rainbowweb/rainbow09.webp",
+      "/images/projects/rainbowweb/rainbow10.webp",
+      "/images/projects/rainbowweb/rainbow11.webp"
+    ],
+    mainImage: "/images/projects/rainbowweb/rainbowmain.webp",
+    logo: "/images/projects/rainbowweb/rainbow-logo.png",
+    gradientColors: ["#1a0533", "#4a1a7a"],
+    tags: ["Web", "Backend"],
+    link: "https://rainbowcoloursport.com",
+    description: "Rainbow Colour Sport is a Qatar-based inclusive sports academy that provides structured physical education, training, and development programs for children, infants, families, and special needs students. We designed and developed their official website to reflect their inclusive vision and create a welcoming digital platform for all age groups and abilities.\n\nThe website presents the academy’s diverse programs in a clear and accessible structure, making it easy for parents, guardians, and individuals to explore suitable training options. It highlights inclusive coaching methods, developmental activities, and special programs designed to support physical, social, and cognitive growth.\n\nBuilt with a modern, responsive, and user-friendly design, the platform ensures a smooth experience across all devices, allowing users to easily access program details, schedules, and enrollment information while reflecting the academy’s supportive and community-driven identity.",
+    client: "Rainbow Colour Sport Academy",
+    duration: "1-2 Weeks",
+    services: ["Next.js", ".NET", "PostgreSQL"],
+    challenge: "Rainbow Colour Sport needed a professional website that could clearly represent their inclusive sports academy, catering not only to athletes but also to infants, children, families, and special needs students, while making program information easy to understand and access.",
+    solution: "We developed a clean and accessible website that highlights the academy’s inclusive training programs and services. The platform was designed with clarity, usability, and accessibility in mind, ensuring that parents and users of all backgrounds can easily navigate programs, understand offerings, and engage with the academy, while also allowing the team to manage content efficiently."
+  },
+  {
+    id: 3,
     slug: "adeaz",
     title: "ADEaZ",
     images: [
@@ -71,7 +101,7 @@ export const projectsData: Project[] = [
     solution: "We built a performant e commerce platform with advanced filtering, wishlists, size guides, and a streamlined checkout process. The admin panel enables easy inventory and order management."
   },
   {
-    id: 3,
+    id: 4,
     slug: "meladetect",
     title: "MelaDetect",
     images: [
@@ -94,7 +124,7 @@ export const projectsData: Project[] = [
     solution: "We developed a machine learning model trained on dermatological datasets to analyze uploaded skin images and provide preliminary assessments, always recommending professional medical consultation."
   },
   {
-    id: 4,
+    id: 5,
     slug: "rapid",
     title: "Rapid",
     images: [
