@@ -64,7 +64,7 @@ export const projectsData: Project[] = [
       "/images/projects/rainbowweb/rainbow11.webp"
     ],
     mainImage: "/images/projects/rainbowweb/rainbowmain.webp",
-    logo: "/images/projects/rainbowweb/rainbow-logo.png",
+    logo: "/images/projects/rainbowweb/rainbow-logo1.png",
     gradientColors: ["#1a0533", "#4a1a7a"],
     tags: ["Web", "Backend"],
     link: "https://rainbowcoloursport.com",
