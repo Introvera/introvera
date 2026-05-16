@@ -1,6 +1,6 @@
 import ProjectCarousel from "@/components/Projects/ProjectCarousel";
 import { projectsData } from "@/data/projects";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Play } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FadeInSection from "@/components/ui/FadeInSection";
@@ -41,16 +41,32 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight text-white">
               {project.title}
             </h1>
-            <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shrink-0 w-fit">
-              <Link
-                href={project.link}
-                target="_blank"
-                className="inline-flex items-center gap-4 px-6 py-3 bg-white text-black text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
-              >
-                Visit Live Site
-                <ArrowUpRight size={20} className="text-[var(--color-accent)]" />
-              </Link>
-            </span>
+            <div className="flex flex-wrap items-center gap-4">
+              {project.demoUrl && (
+                <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)]/30 bg-[var(--color-accent)]/10 transition-all duration-300 shrink-0 w-fit">
+                  <Link
+                    href={project.demoUrl}
+                    target="_blank"
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:opacity-90"
+                  >
+                    View Demo
+                    <Play size={18} fill="currentColor" />
+                  </Link>
+                </span>
+              )}
+              {project.link !== "#" && (
+                <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shrink-0 w-fit">
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    className="inline-flex items-center gap-4 px-6 py-3 bg-white text-black text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
+                  >
+                    Visit Live Site
+                    <ArrowUpRight size={20} className="text-[var(--color-accent)]" />
+                  </Link>
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </FadeInSection>

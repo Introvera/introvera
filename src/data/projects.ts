@@ -8,6 +8,7 @@ export interface Project {
   gradientColors: [string, string];
   tags: string[];
   link: string;
+  demoUrl?: string;
   description: string;
   client: string;
   duration: string;
@@ -38,6 +39,7 @@ export const projectsData: Project[] = [
     gradientColors: ["#1a0533", "#4a1a7a"],
     tags: ["Web", "Backend", "UI/UX"],
     link: "https://ultracraft.lk",
+    demoUrl: "",
     description: "Ultracraft.lk is a premium furniture and custom interior solutions company based in Sri Lanka. We designed and developed their official website to showcase Ultracraft's craftsmanship, attention to detail, and bespoke interior services through a clean, elegant, and user first design.\n\nThe site highlights curated furniture collections with high quality imagery and provides clear, informative service pages for custom interiors, space planning, and renovations. Every interaction from browsing products to requesting a consultation is fast, intuitive, and optimized for both desktop and mobile users.\n\nBuilt with a focus on performance and ease of management, the website includes streamlined navigation, easy content updates for the Ultracraft team, and smooth visual presentation to reinforce the brand's premium positioning.",
     client: "Ultracraft",
     duration: "2 Months",

@@ -5,12 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { useRouter } from "next/navigation";
 import { projectsData } from "@/data/projects";
 
 import { motion } from "framer-motion";
 
 export default function Projects() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const router = useRouter();
 
   // Auto-slide functionality
   useEffect(() => {
@@ -115,7 +117,13 @@ export default function Projects() {
             return (
               <div 
                 key={project.id}
-                onClick={() => setCurrentIndex(idx)}
+                onClick={() => {
+                  if (isCenter) {
+                    router.push(`/projects/${project.slug}`);
+                  } else {
+                    setCurrentIndex(idx);
+                  }
+                }}
                 className={`absolute w-[220px] sm:w-[300px] lg:w-[400px] h-[320px] sm:h-[420px] lg:h-[550px] transition-all duration-700 ease-out cursor-pointer rounded-2xl overflow-hidden ${transformClasses} ${opacityBlur}`}
                 style={{ zIndex }}
               >
