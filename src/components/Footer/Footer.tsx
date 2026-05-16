@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
           
           <div className="lg:col-span-5 flex flex-col items-start">
-            <Link href="/" className="mb-6">
+            <Link href="/" className="mb-6 cursor-pointer">
               <Image
                 src="/images/logo/logo.png"
                 alt="Introvera"

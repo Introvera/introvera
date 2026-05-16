@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className={`flex items-center justify-between px-8 max-w-7xl mx-auto transition-all duration-500 ${scrolled ? "py-4" : "py-12"}`}>
         <div className="flex items-center gap-6">
 
-        <Link href="/" className="relative shrink-0 group">
+        <Link href="/" className="relative shrink-0 group cursor-pointer">
           <Image
             src="/images/logo/logo.png"
             alt="Introvera"

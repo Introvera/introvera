@@ -1,7 +1,7 @@
-import { ArrowDown, ChevronRight, CloudLightning, Lock, Users, Clock } from "lucide-react";
+import FadeInSection from "@/components/ui/FadeInSection";
+import { ArrowDown, ChevronRight, Clock, CloudLightning, Lock, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInSection from "@/components/ui/FadeInSection";
 
 export default function About() {
   return (
@@ -26,7 +26,7 @@ export default function About() {
             <div className="flex">
               <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/15 transition-all duration-300">
                 <Link
-                  href="/contact"
+                  href="/about"
                   className="group inline-flex items-center gap-3 px-6 py-2.5 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
                 >
                   Learn more
