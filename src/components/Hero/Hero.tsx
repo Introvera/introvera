@@ -115,7 +115,7 @@ export default function Hero() {
                   <Image src="/images/projects/caffissimo/caffissimo-logo.png" alt="Caffissimo" fill className="object-cover" />
                 </div>
                 <div className="w-10 h-10 rounded-full border-2 border-[var(--color-accent)] overflow-hidden relative">
-                  <Image src="/images/projects/rainbow-color-sport/rainbow-logo.png" alt="Rainbow Color Sport" fill className="object-cover" />
+                  <Image src="/images/projects/rainbowweb/rainbow-logo.png" alt="Rainbow Color Sport" fill className="object-cover" />
                 </div>
               </div>
             </div>
