@@ -29,7 +29,7 @@ export default function ProjectsPage() {
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20">
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-min">
-           {projectsData.map((project) => (
+           {[...projectsData].reverse().map((project) => (
                <Link 
                  href={`/projects/${project.slug}`} 
                  key={project.id} 
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                    <div className="flex justify-between items-start mb-4">
                      <div className="flex-1">
                        <h3 className="text-xl lg:text-2xl font-semibold text-white mb-2">
-                         {project.title} Website
+                         {project.title} 
                        </h3>
                        <p className="text-white/60 text-xs lg:text-sm leading-relaxed line-clamp-3">
                          {project.description.split('\n')[0]}

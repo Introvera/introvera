@@ -140,7 +140,7 @@ export default function Projects() {
                      <div className="flex justify-between items-start mb-3 md:mb-4">
                        <div className="flex-1">
                          <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 line-clamp-1">
-                           {project.title} Website
+                           {project.title}
                          </h3>
                          <p className="text-white/60 text-[10px] md:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
                            {project.description.split('\n')[0]}
