@@ -3,8 +3,18 @@ import Image from "next/image";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
-  title: "Our Services | Introvera",
-  description: "Comprehensive digital solutions tailored to transform your ideas into impactful products.",
+  title: "Software Development Services | Web, Mobile, POS & Cloud Solutions",
+  description:
+    "Introvera offers custom software development, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud services. Serving clients in Sri Lanka, Europe, USA, UAE, Australia and worldwide.",
+  alternates: {
+    canonical: "https://introvera.com/services",
+  },
+  openGraph: {
+    title: "Software Development Services | Introvera",
+    description:
+      "Custom software, POS systems, mobile apps, admin panels & cloud solutions for global businesses.",
+    url: "https://introvera.com/services",
+  },
 };
 
 const detailedServices = [

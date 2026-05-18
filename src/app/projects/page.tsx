@@ -4,6 +4,21 @@ import { projectsData } from "@/data/projects";
 import FadeInSection from "@/components/ui/FadeInSection";
 import { ArrowUpRight } from "lucide-react";
 
+export const metadata = {
+  title: "Our Projects & Portfolio | Web, Mobile & Custom Software",
+  description:
+    "Explore Introvera's portfolio of successful projects including websites, mobile apps, POS systems, admin panels, and business automation solutions delivered for clients worldwide.",
+  alternates: {
+    canonical: "https://introvera.com/projects",
+  },
+  openGraph: {
+    title: "Projects & Portfolio | Introvera",
+    description:
+      "See our work — websites, mobile apps, POS systems, admin panels, and custom software solutions built for businesses worldwide.",
+    url: "https://introvera.com/projects",
+  },
+};
+
 export default function ProjectsPage() {
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-20 overflow-hidden">

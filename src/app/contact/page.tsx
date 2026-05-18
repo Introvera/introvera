@@ -6,8 +6,18 @@ import ContactForm from "@/components/Contact/ContactForm";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
-  title: "Contact Us | Introvera",
-  description: "Get in touch with Introvera for your next digital idea.",
+  title: "Contact Introvera | Get a Free Software Development Consultation",
+  description:
+    "Contact Introvera for custom software development, POS systems, mobile apps, admin panels, and business solutions. Free consultation available. Based in Sri Lanka, serving clients worldwide.",
+  alternates: {
+    canonical: "https://introvera.com/contact",
+  },
+  openGraph: {
+    title: "Contact Introvera | Free Consultation",
+    description:
+      "Get in touch with Introvera for your next software project. Custom software, mobile apps, POS systems, and more.",
+    url: "https://introvera.com/contact",
+  },
 };
 
 export default function ContactPage() {
