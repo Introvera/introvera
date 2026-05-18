@@ -84,7 +84,7 @@ export const projectsData: Project[] = [
     logo: "/images/projects/adeaz/adeaz-logo.png",
     gradientColors: ["#1a0533", "#4a1a7a"],
     tags: ["Web", "Backend"],
-    link: "https://adeaz-website.vercel.app",
+    link: "https://adeaz.introvera.com",
     description: "ADEaZ is a premium online fashion destination based in Sri Lanka. We designed and developed their official website to showcase ADEaZ's curated collections, effortless style, and customer first shopping experience through a clean, modern, and visually driven design.\n\nThe site highlights seasonal clothing lines, accessories, and footwear with high quality imagery and clear product detail pages. Every interaction from browsing curated looks to adding items to cart and tracking orders is fast, intuitive, and optimized for both desktop and mobile users.\n\nBuilt with a focus on conversion and ease of management, the website includes streamlined navigation, powerful filters, secure checkout options, and simple content updates for the ADEaZ team.",
     client: "ADEaZ",
     duration: "2 Months",
