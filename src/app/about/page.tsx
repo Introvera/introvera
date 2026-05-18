@@ -4,8 +4,18 @@ import Link from "next/link";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
-  title: "About Us | Introvera",
-  description: "Innovation at the heart of everything we do.",
+  title: "About Introvera | Leading Software Development Company",
+  description:
+    "Introvera is a digital innovation studio specializing in custom software, POS systems, mobile apps, admin panels, and business solutions. Based in Sri Lanka, serving clients globally across Europe, USA, UAE, Australia and beyond.",
+  alternates: {
+    canonical: "https://introvera.com/about",
+  },
+  openGraph: {
+    title: "About Introvera | Software Development Company",
+    description:
+      "Learn about Introvera — a team of engineers and designers building custom software, POS systems, mobile apps, and business solutions for companies worldwide.",
+    url: "https://introvera.com/about",
+  },
 };
 
 export default function AboutPage() {

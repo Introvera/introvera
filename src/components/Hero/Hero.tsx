@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 bottom-0 pointer-events-none overflow-hidden [mask-image:linear-gradient(to_bottom,black_60%,transparent_90%)] [-webkit-mask-image:linear-gradient(to_bottom,black_60%,transparent_90%)]">
         <Image
           src="/images/backgrounds/hero-bg.webp"
-          alt=""
+          alt="Introvera custom software development studio"
           fill
           className="object-cover object-center"
           priority

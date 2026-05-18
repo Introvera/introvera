@@ -1,11 +1,60 @@
 import ProjectCarousel from "@/components/Projects/ProjectCarousel";
+import { BreadcrumbJsonLd } from "@/components/SEO/JsonLd";
 import { projectsData } from "@/data/projects";
 import { ArrowLeft, ArrowUpRight, Play } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FadeInSection from "@/components/ui/FadeInSection";
 
-export const runtime = "edge";
+
+export async function generateStaticParams() {
+  return projectsData.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const project = projectsData.find((p) => p.slug === resolvedParams.slug);
+
+  if (!project) {
+    return { title: "Project Not Found" };
+  }
+
+  const shortDescription = project.description.split("\n")[0].slice(0, 160);
+
+  return {
+    title: `${project.title} | Case Study`,
+    description: shortDescription,
+    alternates: {
+      canonical: `https://introvera.com/projects/${project.slug}`,
+    },
+    openGraph: {
+      title: `${project.title} — Built by Introvera`,
+      description: shortDescription,
+      url: `https://introvera.com/projects/${project.slug}`,
+      images: [
+        {
+          url: project.mainImage,
+          width: 1200,
+          height: 630,
+          alt: `${project.title} project by Introvera`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | Introvera`,
+      description: shortDescription,
+      images: [project.mainImage],
+    },
+  };
+}
 
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
@@ -17,6 +66,13 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
   return (
     <div className="w-full bg-black min-h-screen pt-28 pb-32 overflow-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Projects", href: "/projects" },
+          { name: project.title, href: `/projects/${project.slug}` },
+        ]}
+      />
       
       <FadeInSection className="relative w-full pt-10 pb-8 mb-4 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">

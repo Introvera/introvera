@@ -62,7 +62,7 @@ export default function CTA() {
           <div className="relative w-full max-w-[600px] aspect-[21/9] sm:aspect-[2/1] rounded-3xl overflow-hidden">
             <Image
               src="/images/backgrounds/cta.png" 
-              alt="Bulb Idea"
+              alt="Start your next software project with Introvera"
               fill
               className="object-cover object-center"
             />

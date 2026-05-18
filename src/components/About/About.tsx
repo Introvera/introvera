@@ -41,7 +41,7 @@ export default function About() {
           <FadeInSection className="lg:w-5/12 h-[500px] relative rounded-[32px] overflow-hidden">
             <Image
               src="/images/backgrounds/about-us.webp"
-              alt="Team innovating"
+              alt="Introvera software development team collaborating on projects"
               fill
               className="object-cover"
             />
