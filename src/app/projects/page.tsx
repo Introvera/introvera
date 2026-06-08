@@ -1,8 +1,8 @@
+import FadeInSection from "@/components/ui/FadeInSection";
+import { projectsData } from "@/data/projects";
+import { ArrowRight, ArrowUpRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { projectsData } from "@/data/projects";
-import FadeInSection from "@/components/ui/FadeInSection";
-import { ArrowUpRight, Check, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Our Projects & Portfolio | Web, Mobile & Custom Software",
