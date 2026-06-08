@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     siteName: "Introvera",
     images: [
       {
-        url: "/images/logo/logo.png",
+        url: "/images/logo/og-image.png",
         width: 1200,
         height: 630,
         alt: "Introvera — Custom Software Development Company",

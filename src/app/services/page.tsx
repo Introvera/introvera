@@ -1,7 +1,7 @@
-import { Check, ArrowRight } from "lucide-react";
+import FadeInSection from "@/components/ui/FadeInSection";
+import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
   title: "Software Development Services | Web, Mobile, POS & Cloud Solutions",
