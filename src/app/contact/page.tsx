@@ -6,7 +6,7 @@ import ContactForm from "@/components/Contact/ContactForm";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
-  title: "Contact Introvera | Get a Free Software Development Consultation",
+  title: "Contact Us",
   description:
     "Contact Introvera for custom software development, POS systems, mobile apps, admin panels, and business solutions. Free consultation available. Based in Sri Lanka, serving clients worldwide.",
   alternates: {

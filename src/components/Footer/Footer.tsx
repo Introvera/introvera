@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="absolute inset-0 pointer-events-none z-0">
          <Image
            src="/images/backgrounds/footer-bg.webp"
-           alt=""
+           alt="Introvera abstract background"
            fill
            className="object-cover object-center mix-blend-screen"
          />

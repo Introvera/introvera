@@ -1,0 +1,27 @@
+# Introvera
+
+> Custom software development, websites, POS systems, admin panels, and mobile apps. We build scalable business solutions worldwide.
+
+Introvera is a premium software development agency based in Sri Lanka, serving clients globally including the USA, Europe, UAE, and Australia. We specialize in designing and engineering high-performance digital products that solve real operational challenges.
+
+## Core Services
+- **Web Development**: Custom websites, landing pages, and full-scale web applications.
+- **Mobile App Development**: Cross-platform iOS and Android apps using Flutter.
+- **Custom Business Software**: Tailored POS (Point of Sale) systems, ERP platforms, and Admin Portals.
+- **UI/UX Design**: Wireframing, prototyping, and pixel-perfect interface design.
+- **Backend/API**: RESTful APIs, database optimization, and microservices architecture.
+- **DevOps & Cloud**: Infrastructure setup, CI/CD, and scalable deployments.
+- **Business Process Automation**: Workflow automation and legacy system modernization.
+
+## Our Approach
+We follow a strict, transparent four-step agile methodology:
+1. Discovery & Planning
+2. Design & Prototype
+3. Development & Testing
+4. Launch & Support
+
+## Contact Information
+- **Website**: https://introvera.com
+- **Email**: contact@introvera.com
+- **Services**: https://introvera.com/services
+- **Portfolio**: https://introvera.com/projects
