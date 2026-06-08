@@ -243,6 +243,82 @@ export default function AboutPage() {
          </div>
       </FadeInSection>
 
+
+
+      {/* Stats Section */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mt-20 mb-32">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">10+</h3>
+            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Projects Delivered</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">4+</h3>
+            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Countries Served</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">99%</h3>
+            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Client Satisfaction</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+            <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">24/7</h3>
+            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Support Available</p>
+          </div>
+        </div>
+      </FadeInSection>
+
+      {/* FAQ Section */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-32">
+        <div className="text-center mb-16">
+          <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
+            FAQ
+          </p>
+          <h2 className="text-3xl md:text-4xl font-medium text-white">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">Where is Introvera located?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Our headquarters and primary development center are located in Colombo, Sri Lanka. However, we operate globally and serve clients internationally, regardless of their location.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">What is your development approach?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">We use Agile methodology, breaking projects into actionable sprints. This ensures flexibility, frequent deliverables, and constant feedback loops so you always know the status of your software.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">Do you work with startups or enterprises?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Both! We build scalable MVPs (Minimum Viable Products) for ambitious startups and comprehensive ERP/POS systems for established enterprises looking to automate their operations.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">How do you ensure the quality of your software?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">We have a rigorous Quality Assurance (QA) process. Our engineers conduct thorough code reviews, automated testing, and manual testing to ensure every application we launch is secure, scalable, and bug-free.</p>
+          </div>
+        </div>
+      </FadeInSection>
+
+      {/* Outgoing Internal Links */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <Link href="/services" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Services</h3>
+             <p className="text-white/60 mb-4 text-sm">Discover the engineering services we offer.</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">Explore Services <ArrowRight size={16} /></span>
+          </Link>
+          <Link href="/projects" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Projects</h3>
+             <p className="text-white/60 mb-4 text-sm">See the real world impact of our custom software.</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">View Portfolio <ArrowRight size={16} /></span>
+          </Link>
+          <Link href="/contact" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Contact Us</h3>
+             <p className="text-white/60 mb-4 text-sm">Ready to build? Get a free project consultation.</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">Get in Touch <ArrowRight size={16} /></span>
+          </Link>
+        </div>
+      </FadeInSection>
+
     </div>
   );
 }

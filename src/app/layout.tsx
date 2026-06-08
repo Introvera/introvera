@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Introvera",
   },
   description:
-    "Introvera is a global software development company specializing in custom software, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud services. Based in Sri Lanka, serving businesses worldwide across Europe, USA, UAE, Australia and beyond.",
+    "Introvera is a global software development company specializing in custom software, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud services. Based in Sri Lanka, serving businesses worldwide.",
   keywords: [
     // Core services
     "Custom Software Development",

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projectsData } from "@/data/projects";
 import FadeInSection from "@/components/ui/FadeInSection";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check, ArrowRight } from "lucide-react";
 
 export const metadata = {
   title: "Our Projects & Portfolio | Web, Mobile & Custom Software",
@@ -108,6 +108,82 @@ export default function ProjectsPage() {
            ))}
          </div>
       </FadeInSection>
+
+
+      {/* Key Takeaways */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mt-32 mb-32">
+        <div className="bg-gradient-to-br from-[#1c123d]/60 to-[#0F0F13] border border-white/10 rounded-3xl p-10 md:p-14">
+          <h2 className="text-2xl md:text-3xl font-medium text-white mb-8">What These Projects Show</h2>
+          <ul className="space-y-5">
+            <li className="flex items-start gap-4">
+              <div className="shrink-0 mt-1 rounded-full bg-[var(--color-accent)]/20 p-1.5 flex items-center justify-center">
+                <Check size={14} strokeWidth={3} className="text-[var(--color-accent)]" />
+              </div>
+              <p className="text-white/80 text-base leading-relaxed"><strong className="text-white">Industry Versatility</strong> : We build custom software solutions for diverse sectors including retail, e-commerce, healthcare, furniture, and logistics.</p>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="shrink-0 mt-1 rounded-full bg-[var(--color-accent)]/20 p-1.5 flex items-center justify-center">
+                <Check size={14} strokeWidth={3} className="text-[var(--color-accent)]" />
+              </div>
+              <p className="text-white/80 text-base leading-relaxed"><strong className="text-white">Scalable Architecture</strong> : Every POS system, admin panel, and mobile app in our portfolio is engineered to handle growing user bases and expanding data needs securely.</p>
+            </li>
+            <li className="flex items-start gap-4">
+              <div className="shrink-0 mt-1 rounded-full bg-[var(--color-accent)]/20 p-1.5 flex items-center justify-center">
+                <Check size={14} strokeWidth={3} className="text-[var(--color-accent)]" />
+              </div>
+              <p className="text-white/80 text-base leading-relaxed"><strong className="text-white">User-Centric Design</strong> : We prioritize UI/UX in every build. Complex ERP systems and e-commerce platforms are simplified into intuitive interfaces for end-users.</p>
+            </li>
+          </ul>
+        </div>
+      </FadeInSection>
+
+      {/* FAQ Section */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-32">
+        <div className="text-center mb-16">
+          <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
+            Project FAQ
+          </p>
+          <h2 className="text-3xl md:text-4xl font-medium text-white">
+            Common Questions About Our Work
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">How do you approach a new software project?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">We start with a deep-dive discovery phase. We analyze your business processes, define clear technical requirements, and prototype the user experience before writing any code.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">Can you take over an existing project?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Yes. We frequently conduct code audits and take over legacy projects to modernize tech stacks, fix critical bugs, or add new features like mobile apps or admin panels.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">Do you provide hosting for the software?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Yes. If you need a hassle-free environment, we offer reliable cloud hosting services and infrastructure setup to ensure your web platforms and admin panels run securely and smoothly.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">What happens after the project launches?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">We don&apos;t just build and leave. We offer flexible ongoing maintenance contracts to keep your software updated, secure, and scaling efficiently alongside your business growth.</p>
+          </div>
+        </div>
+      </FadeInSection>
+
+      {/* Outgoing Internal Links */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <Link href="/services" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">How We Did It</h3>
+             <p className="text-white/60 mb-4 text-sm">Explore the specific engineering services used to build these projects.</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">View Services <ArrowRight size={16} /></span>
+          </Link>
+          <Link href="/contact" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Start Your Project</h3>
+             <p className="text-white/60 mb-4 text-sm">Ready to add your success story to our portfolio?</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">Get in Touch <ArrowRight size={16} /></span>
+          </Link>
+        </div>
+      </FadeInSection>
+
     </div>
   );
 }

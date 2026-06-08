@@ -19,13 +19,13 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           
-          <div className="lg:col-span-5 flex flex-col items-start">
+          <div className="lg:col-span-2 flex flex-col items-start lg:pr-12">
             <Link href="/" className="mb-6 cursor-pointer">
               <Image
                 src="/images/logo/logo.png"
-                alt="Introvera"
+                alt="Introvera - Custom Software Development Company"
                 width={160}
                 height={40}
                 className="object-contain"
@@ -53,27 +53,48 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="lg:col-span-3 lg:col-start-7 flex flex-col gap-6 font-medium">
-             <Link href="/" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
+          <div className="flex flex-col gap-5 font-medium">
+             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-1">Navigation</h4>
+             <Link href="/" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Home
              </Link>
-             <Link href="/services" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
-               Service
+             <Link href="/services" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
+               Services
              </Link>
-             <Link href="/projects" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
+             <Link href="/projects" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Projects
              </Link>
-             <Link href="/about" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
+             <Link href="/about" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                About
              </Link>
-             <Link href="/contact" className="text-white hover:text-[var(--color-accent)] transition-colors w-fit">
+             <Link href="/contact" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Contact
              </Link>
           </div>
 
-          <div className="lg:col-span-3 flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
+            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-1">Featured Projects</h4>
+            <Link href="/projects/rainbowmobile" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors w-fit">
+              Rainbow Mobile App
+            </Link>
+            <Link href="/projects/rainbowadmin" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors w-fit">
+              Rainbow Admin Panel
+            </Link>
+            <Link href="/projects/rainbowweb" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors w-fit">
+              Rainbow Website
+            </Link>
+            <Link href="/projects/ultracraft" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors w-fit">
+              Ultracraft Website
+            </Link>
+            <Link href="/projects/adeaz" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors w-fit">
+              ADEaZ E-Commerce
+            </Link>
+            
+          </div>
+
+          <div className="flex flex-col gap-10">
             <div>
-              <h4 className="text-white font-medium mb-3">Contact Us</h4>
+              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Contact Us</h4>
               <p className="text-white/80 text-sm mb-1">+94 78 364 0 894</p>
               <Link href="mailto:contact@introvera.com" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors">
                 contact@introvera.com
@@ -81,7 +102,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-white font-medium mb-3">Location</h4>
+              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Location</h4>
               <p className="text-white/80 text-sm leading-relaxed max-w-[200px]">
                 Introvera Pvt Ltd,<br /> 275/3, New Kandy Road,<br />
                 Biyagama, Sri Lanka

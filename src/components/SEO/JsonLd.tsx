@@ -31,6 +31,7 @@ export function OrganizationJsonLd() {
           { "@type": "Country", name: "Qatar" },
           { "@type": "Country", name: "Germany" },
           { "@type": "Country", name: "Canada" },
+          { "@type": "Place", name: "Worldwide" }
         ],
       },
     ],
@@ -108,10 +109,14 @@ export function LocalBusinessJsonLd() {
     },
     serviceArea: [
       { "@type": "Country", name: "Sri Lanka" },
-      { "@type": "Continent", name: "Europe" },
+      { "@type": "Country", name: "United Kingdom" },
       { "@type": "Country", name: "United States" },
       { "@type": "Country", name: "United Arab Emirates" },
       { "@type": "Country", name: "Australia" },
+      { "@type": "Country", name: "Qatar" },
+      { "@type": "Country", name: "Germany" },
+      { "@type": "Country", name: "Canada" },
+      { "@type": "Place", name: "Worldwide" }
     ],
     knowsAbout: [
       "Custom Software Development",
