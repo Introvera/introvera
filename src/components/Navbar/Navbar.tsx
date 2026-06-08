@@ -51,6 +51,7 @@ export default function Navbar() {
             width={140}
             height={36}
             className="h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            sizes="200px"
             priority
           />
         </Link>
