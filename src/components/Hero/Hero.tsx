@@ -17,7 +17,7 @@ export default function Hero() {
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={100}
+          quality={75}
         />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-accent)] rounded-full opacity-[0.07] blur-[150px]" />
         
@@ -162,7 +162,8 @@ export default function Hero() {
                 height={1000}
                 className="w-auto h-[450px] md:h-[480px] lg:h-[520px] max-w-none"
                 sizes="(max-width: 768px) 400px, 800px"
-                quality={80}
+                quality={60}
+                priority
               />
             </div>
 

@@ -175,6 +175,7 @@ export default function Projects() {
                        src={project.mainImage}
                        alt={`${project.title} mockup`}
                        fill
+                       priority={idx === 0}
                        className="object-contain object-center px-4 md:px-6 transition-transform duration-700"
                      />
                    </div>
@@ -187,6 +188,7 @@ export default function Projects() {
                            src={project.logo}
                            alt={`${project.title} logo`}
                            fill
+                           sizes="100px"
                            className="object-contain p-0.5"
                          />
                        </div>
