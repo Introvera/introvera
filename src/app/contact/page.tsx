@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, ArrowRight, Check } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -133,6 +133,111 @@ export default function ContactPage() {
             </div>
 
          </div>
+      </FadeInSection>
+
+      {/* Global Coverage Section */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mt-20 mb-32">
+        <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-10 md:p-16">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-medium text-white mb-4">Global Software Development Services</h2>
+            <p className="text-white/70 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">While our development center is proudly based in Sri Lanka, we operate on a global scale. We provide overlapping working hours and seamless remote communication for clients worldwide.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div className="p-4 border-t border-white/10">
+              <span className="block text-white font-medium mb-1">North America</span>
+              <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold">Active Clients</span>
+            </div>
+            <div className="p-4 border-t border-white/10">
+              <span className="block text-white font-medium mb-1">Europe</span>
+              <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold">Active Clients</span>
+            </div>
+            <div className="p-4 border-t border-white/10">
+              <span className="block text-white font-medium mb-1">Middle East</span>
+              <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold">Active Clients</span>
+            </div>
+            <div className="p-4 border-t border-white/10">
+              <span className="block text-white font-medium mb-1">Asia Pacific</span>
+              <span className="text-[var(--color-accent)] text-xs uppercase tracking-wider font-semibold">Active Clients</span>
+            </div>
+          </div>
+        </div>
+      </FadeInSection>
+
+      {/* How We Start Process */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-32">
+        <div className="text-center mb-16">
+          <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
+            Next Steps
+          </p>
+          <h2 className="text-3xl md:text-4xl font-medium text-white">
+            What Happens After You Contact Us?
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-col gap-4">
+            <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/20 border border-[var(--color-accent)] flex items-center justify-center text-[var(--color-accent)] font-bold text-lg">1</div>
+            <h3 className="text-xl font-medium text-white">Initial Discovery Call</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Within 24 hours, we&apos;ll schedule a free consultation to understand your business goals, target audience, and the technical requirements of your POS system, mobile app, or custom software.</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/20 border border-[var(--color-accent)] flex items-center justify-center text-[var(--color-accent)] font-bold text-lg">2</div>
+            <h3 className="text-xl font-medium text-white">Scope of Work & Proposal</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Our team will draft a detailed Scope of Work (SOW) including the project timeline, milestones, and a transparent cost estimate. Specific technical architecture details can also be provided upon request.</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="w-12 h-12 rounded-full bg-[var(--color-accent)]/20 border border-[var(--color-accent)] flex items-center justify-center text-[var(--color-accent)] font-bold text-lg">3</div>
+            <h3 className="text-xl font-medium text-white">Project Kickoff</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Once approved, we assemble your dedicated team of developers, designers, and project managers and immediately begin the UI/UX design and agile development process.</p>
+          </div>
+        </div>
+      </FadeInSection>
+
+      {/* FAQ Section */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-32">
+        <div className="text-center mb-16">
+          <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
+            FAQ
+          </p>
+          <h2 className="text-3xl md:text-4xl font-medium text-white">
+            Contact & Partnership Questions
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">Do you sign NDAs (Non-Disclosure Agreements)?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Yes. We take your intellectual property and data security very seriously. We are happy to sign a standard NDA before you share any confidential details about your software project.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">How do you handle time zone differences?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">We optimize our team schedules to ensure a minimum of 3-4 hours of overlapping time with your timezone (no matter where you are located) for daily standups and live collaboration.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">What is the best way to contact support?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">For all inquiries and support, the best way to reach us is by emailing contact@introvera.com, sending us a message on WhatsApp, or calling our mobile line. We prioritize rapid responses across all these channels.</p>
+          </div>
+          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-white mb-3">Do you offer white-label development services?</h3>
+            <p className="text-white/70 text-sm leading-relaxed">Yes, we partner with marketing agencies and IT consultancies globally to provide white-label UI/UX design, mobile app development, and web development services under their brand.</p>
+          </div>
+        </div>
+      </FadeInSection>
+
+      {/* Outgoing Internal Links */}
+      <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <Link href="/services" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Services</h3>
+             <p className="text-white/60 mb-4 text-sm">Discover the engineering services we offer.</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">Explore Services <ArrowRight size={16} /></span>
+          </Link>
+          <Link href="/projects" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Projects</h3>
+             <p className="text-white/60 mb-4 text-sm">See the real-world impact of our custom software.</p>
+             <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">View Portfolio <ArrowRight size={16} /></span>
+          </Link>
+        </div>
       </FadeInSection>
 
     </div>

@@ -152,9 +152,9 @@ function TestimonialCard({ data, className = "" }: { data: TestimonialData, clas
         </div>
         
         <div className="flex flex-col">
-          <h4 className="text-sm md:text-base font-semibold text-white mb-1">
+          <h3 className="text-sm md:text-base font-semibold text-white mb-1">
             {data.name}
-          </h4>
+          </h3>
           <span className="text-[10px] md:text-xs text-white/80 w-fit">
             {data.role}
           </span>

@@ -10,9 +10,9 @@ export default function About() {
         
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-8 mb-16">
           <FadeInSection className="lg:w-1/2">
-            <h4 className="text-[var(--color-accent)] font-semibold tracking-wider uppercase text-sm mb-6">
+            <p className="text-[var(--color-accent)] font-semibold tracking-wider uppercase text-sm mb-6">
               About Us
-            </h4>
+            </p>
             <h2 className="text-5xl md:text-6xl lg:text-[50px] font-medium leading-[1.15] tracking-tight">
               <span className="text-[var(--color-accent)]">Driven by innovation,</span> Built for the future.
             </h2>
@@ -29,7 +29,7 @@ export default function About() {
                   href="/about"
                   className="group inline-flex items-center gap-3 px-6 py-2.5 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:bg-[var(--color-accent-hover)]"
                 >
-                  Learn more
+                  Learn more about us
                   <ArrowDown size={16} className="transition-transform group-hover:translate-y-1" />
                 </Link>
               </span>
