@@ -148,6 +148,7 @@ export default function Projects() {
                        </div>
                        <Link 
                          href={`/projects/${project.slug}`}
+                         aria-label={`View ${project.title} project details`}
                          onClick={(e) => { 
                            if (!isCenter) e.preventDefault(); 
                            e.stopPropagation(); 

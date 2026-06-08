@@ -22,7 +22,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
           
           <div className="lg:col-span-2 flex flex-col items-start lg:pr-12">
-            <Link href="/" className="mb-6 cursor-pointer">
+            <Link href="/" className="mb-6 cursor-pointer" aria-label="Home">
               <Image
                 src="/images/logo/logo.png"
                 alt="Introvera - Custom Software Development Company"
@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-5 font-medium">
-             <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-1">Navigation</h4>
+             <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-1">Navigation</h2>
              <Link href="/" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Home
              </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-1">Featured Projects</h4>
+            <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-1">Featured Projects</h2>
             <Link href="/projects/rainbowmobile" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors w-fit">
               Rainbow Mobile App
             </Link>
@@ -94,7 +94,7 @@ export default function Footer() {
 
           <div className="flex flex-col gap-10">
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Contact Us</h4>
+              <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Contact Us</h2>
               <p className="text-white/80 text-sm mb-1">+94 78 364 0 894</p>
               <Link href="mailto:contact@introvera.com" className="text-white/80 text-sm hover:text-[var(--color-accent)] transition-colors">
                 contact@introvera.com
@@ -102,7 +102,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h4 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Location</h4>
+              <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-3">Location</h2>
               <p className="text-white/80 text-sm leading-relaxed max-w-[200px]">
                 Introvera Pvt Ltd,<br /> 275/3, New Kandy Road,<br />
                 Biyagama, Sri Lanka

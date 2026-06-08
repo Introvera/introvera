@@ -15,6 +15,8 @@ export default function Hero() {
           fill
           className="object-cover object-center"
           priority
+          fetchPriority="high"
+          sizes="100vw"
           quality={100}
         />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--color-accent)] rounded-full opacity-[0.07] blur-[150px]" />
@@ -120,9 +122,9 @@ export default function Hero() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-regular leading-tight">
+            <h2 className="text-2xl font-regular leading-tight">
               Web &amp; Mobile App<br />Development
-            </h3>
+            </h2>
 
             <div className="flex flex-wrap gap-2 lg:gap-3">
               <span className="px-3 lg:px-4 py-1.5 rounded-full border border-white/30 text-xs lg:text-sm text-white/80 whitespace-nowrap">
@@ -159,18 +161,19 @@ export default function Hero() {
                 width={800}
                 height={1000}
                 className="w-auto h-[450px] md:h-[480px] lg:h-[520px] max-w-none"
-                quality={85}
+                sizes="(max-width: 768px) 400px, 800px"
+                quality={80}
               />
             </div>
 
             <div className="absolute inset-0 flex flex-col items-center justify-end rounded-2xl pb-8 z-10">
-              <Link href="/services" className="mb-6 w-12 h-12 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-md hover:bg-white/10 transition-colors cursor-pointer">
+              <Link href="/services" aria-label="View Custom Software Services" className="mb-6 w-12 h-12 rounded-full border border-white/50 flex items-center justify-center bg-black/30 backdrop-blur-md hover:bg-white/10 transition-colors cursor-pointer">
                 <ArrowUpRight size={20} className="text-white" />
               </Link>
 
-              <h3 className="text-2xl font-regular text-center leading-tight">
+              <h2 className="text-2xl font-regular text-center leading-tight">
                 Custom Software<br />Development
-              </h3>
+              </h2>
             </div>
           </motion.div>
 
@@ -230,9 +233,9 @@ export default function Hero() {
               </div>
             </div>
 
-            <h3 className="text-2xl font-medium text-center leading-tight pt-2">
+            <h2 className="text-2xl font-medium text-center leading-tight pt-2">
               DevOps &amp; Cloud<br />Services
-            </h3>
+            </h2>
           </motion.div>
           </div>
         </div>
