@@ -41,8 +41,8 @@ export const projectsData: Project[] = [
     client: "Rapid Tyre Dispatch",
     duration: "3 Days",
     services: ["Wix"],
-    challenge: "The client's manual dispatch process was inefficient, leading to delayed deliveries, poor route planning, and difficulty tracking inventory across multiple warehouses.",
-    solution: "We built a comprehensive dispatch system with real time inventory tracking, automated route optimization, driver mobile apps, and customer delivery notifications."
+    challenge: "The main hurdle was designing a digital platform for stranded motorists facing high-stress roadside emergencies, where any friction means an immediate bounce to a competitor. We had to capture highly accurate technical data—specifically exact tyre dimensions that drivers rarely know offhand—and clearly explain a hybrid payment model, where a fixed dispatch fee is paid online but the tyre and labor costs are settled with the technician offline. Engineering a system that could resolve these cognitive hurdles, establish immediate transactional trust, and gather precise data from frantic users all while they are stuck with poor cellular signals on the side of a highway was our primary obstacle.",
+    solution: "We solved this by building an ultra-lightweight, mobile-first web application optimized for sub-second load times in low-signal areas, utilizing high-contrast UI elements for optimal roadside readability. To eliminate billing confusion, we created a transparent 3-step operational framework right above the fold paired with a secure, single-click Stripe integration for the dispatch fee, and embedded an intuitive, visual Tyre Size Guide to ensure correct data collection on the first try. Finally, we wrapped the entire journey in prominent, single-tap deep links to direct phone and WhatsApp lines, creating a zero-friction lifeline that seamlessly converts stressed visitors into confirmed dispatches."
   },
   {
     id: 2,
@@ -64,8 +64,8 @@ export const projectsData: Project[] = [
     client: "MelaDetect",
     duration: "3 Months",
     services: ["Python", "Next.js"],
-    challenge: "Early detection of skin cancer significantly improves treatment outcomes, but many people lack access to dermatologists or delay seeking medical advice.",
-    solution: "We developed a machine learning model trained on dermatological datasets to analyze uploaded skin images and provide preliminary assessments, always recommending professional medical consultation."
+    challenge: "Early detection of skin cancer significantly improves treatment outcomes, but many people lack access to dermatologists or delay seeking medical advice due to cost, geographical distance, or simple lack of awareness regarding warning signs on their skin.",
+    solution: "We developed a machine learning model trained on vast dermatological datasets to analyze uploaded skin images and provide preliminary assessments. While always recommending professional medical consultation, this rapid screening tool empowers users to take immediate, proactive steps regarding their personal health and wellbeing."
   },
   {
     id: 3,

@@ -15,11 +15,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://introvera.com"),
   title: {
-    default: "Introvera | Custom Software Development, Mobile Apps & POS Systems",
+    default: "Introvera | Custom Software, Website & Mobile Apps",
     template: "%s | Introvera",
   },
   description:
-    "Introvera is a global software development company specializing in custom software, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud services. Based in Sri Lanka, serving businesses worldwide.",
+    "Introvera provides custom software development, websites, POS systems, admin panels, and mobile apps. We build scalable business solutions worldwide.",
   keywords: [
     // Core services
     "Custom Software Development",
@@ -85,8 +85,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Introvera | Custom Software Development, Mobile Apps & POS Systems",
-    description: "Build premium digital experiences with Introvera. Custom software, POS systems, admin panels, mobile apps, and web solutions for businesses worldwide.",
+    title: "Introvera | Custom Software, Website & Mobile Apps",
+    description: "Introvera provides custom software development, websites, POS systems, admin panels, and mobile apps. We build scalable business solutions worldwide.",
     url: "https://introvera.com",
     siteName: "Introvera",
     images: [
@@ -102,8 +102,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Introvera | Custom Software, POS Systems & Mobile Apps",
-    description: "Custom software development, POS systems, admin panels, mobile apps, and business solutions. Serving clients worldwide from Sri Lanka.",
+    title: "Introvera | Custom Software, Website & Mobile Apps",
+    description: "Introvera provides custom software development, websites, POS systems, admin panels, and mobile apps. We build scalable business solutions worldwide.",
     images: ["/images/logo/og-image.png"],
   },
 };

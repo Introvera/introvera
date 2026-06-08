@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Software Development Services | Web, Mobile, POS & Cloud Solutions",
+  title: "Software Services & Cloud Solutions",
   description:
     "Introvera offers custom software development, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud services. Serving clients in Sri Lanka, Europe, USA, UAE, Australia and worldwide.",
   alternates: {
@@ -22,7 +22,7 @@ const detailedServices = [
   {
     id: "ui-ux",
     title: "UI/UX Design",
-    description: "Our design process focuses on understanding your users and creating interfaces that are both beautiful and functional. We conduct user research, create wireframes and prototypes, and deliver pixel-perfect designs.",
+    description: "We design beautiful and easy-to-use interfaces. We study your users to build clear wireframes. Then, we deliver designs that look perfect and work great.",
     features: [
       "User research and personas",
       "Wireframing and prototyping",
@@ -36,7 +36,7 @@ const detailedServices = [
   {
     id: "web-development",
     title: "Web Development",
-    description: "We design and develop modern, high-performance websites that elevate your brand and deliver seamless user experiences. From responsive landing pages to full-scale web applications, we ensure your site is fast, secure, and built to convert.",
+    description: "We build fast and modern websites that grow your brand. We create everything from simple landing pages to large web apps. Your site will be secure, easy to use, and built to get results.",
     features: [
       "Custom website design and development",
       "Responsive and mobile-first UI/UX",
@@ -51,7 +51,7 @@ const detailedServices = [
   {
     id: "mobile-app-development",
     title: "Mobile App Development",
-    description: "We build high-quality mobile applications that deliver smooth performance and exceptional user experiences across iOS and Android. From idea to deployment, we ensure your app is scalable, secure, and optimized for real-world usage.",
+    description: "We build fast mobile apps for iOS and Android. Your app will run smoothly and look great on any phone. We handle everything from the first idea to launching it on the app store.",
     features: [
       "Cross-platform app development (Flutter)",
       "Intuitive UI/UX design for mobile",
@@ -66,7 +66,7 @@ const detailedServices = [
   {
     id: "backend-api",
     title: "Backend/API Development",
-    description: "We architect and build robust backend systems that power your applications. From RESTful APIs to microservices, we ensure your infrastructure is secure, performant, and ready to scale.",
+    description: "We build strong backend systems to power your apps. We create secure APIs and databases. Your system will be fast, safe, and ready to grow.",
     features: [
       "RESTful and GraphQL APIs",
       "Database design and optimization",
@@ -80,7 +80,7 @@ const detailedServices = [
   {
     id: "devops-and-cloud-services",
     title: "DevOps & Cloud Services",
-    description: "We implement scalable DevOps and cloud solutions that streamline your development workflow and ensure reliable, high-performance deployments. From infrastructure setup to continuous delivery, we help you build, deploy, and manage applications with speed, security, and efficiency.",
+    description: "We set up fast and secure cloud systems. This makes your app easy to update and scale. We manage your servers so you can focus entirely on growing your business.",
     features: [
       "Cloud infrastructure setup and management",
       "CI/CD pipeline design and automation",
@@ -111,7 +111,7 @@ const detailedServices = [
   {
     id: "qa",
     title: "Quality Assurance",
-    description: "Quality is built into everything we do. Our QA team employs comprehensive testing strategies to ensure your software is reliable, secure, and performs well under all conditions.",
+    description: "Quality is built into everything we do. Our team runs tests to make sure your software is safe, fast, and ready for users. We find and fix bugs early.",
     features: [
       "Manual and automated testing",
       "Performance testing",
@@ -125,7 +125,7 @@ const detailedServices = [
   {
     id: "consulting-strategy",
     title: "Consulting & Strategy",
-    description: "Our consulting services help you make informed technology decisions. We analyze your current systems, identify opportunities for improvement, and create roadmaps that align technology with your business objectives.",
+    description: "We help you make smart choices about technology. We look at your current systems and find ways to improve them. Then, we create a clear plan to reach your goals.",
     features: [
       "Technology audits",
       "Architecture planning",
@@ -259,28 +259,28 @@ export default function ServicesPage() {
           <article className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8">
             <h3 className="text-xl font-medium text-[var(--color-accent)] mb-4">What Is a POS System?</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              <strong className="text-white/90">A Point of Sale (POS) system is software that manages sales transactions, inventory tracking, and business reporting at the point where a customer makes a purchase.</strong> Modern POS systems go beyond simple cash registers they integrate with payment gateways, manage stock levels in real time, generate sales analytics, and can connect with accounting software. Introvera builds custom POS solutions tailored to retail stores, restaurants, and service businesses.
+              <strong className="text-white/90">A Point of Sale (POS) system handles sales and tracks stock when a customer buys something.</strong> Modern POS systems do much more than a cash register. They connect to online payments, track live stock data, and create sales reports. We build custom POS software for shops, food, and services.
             </p>
           </article>
 
           <article className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8">
             <h3 className="text-xl font-medium text-[var(--color-accent)] mb-4">What Is an ERP System?</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              <strong className="text-white/90">Enterprise Resource Planning (ERP) is software that integrates core business processes finance, HR, supply chain, manufacturing, and operations into a single unified system.</strong> An ERP eliminates data silos and provides real time visibility across your entire organization. Introvera develops custom ERP solutions that fit your unique workflow, unlike rigid off-the-shelf alternatives.
+              <strong className="text-white/90">Enterprise Resource Planning (ERP) connects your whole business into one system.</strong> It links finance, HR, stock, and operations. This stops data getting lost and lets you see everything live. We build custom ERP systems that fit exactly how your team works.
             </p>
           </article>
 
           <article className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8">
             <h3 className="text-xl font-medium text-[var(--color-accent)] mb-4">What Is an Admin Portal?</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              <strong className="text-white/90">An admin portal is a web based dashboard that allows business owners and administrators to manage their application&apos;s data, users, content, and operations from a central interface.</strong> Admin portals provide role based access control, data visualization, reporting tools, and content management capabilities. We build custom admin panels that give your team complete control over your digital products.
+              <strong className="text-white/90">An admin portal is a secure website where you manage your app data and users.</strong> These portals give you tools to view reports, add content, and control who can see what. We build custom admin dashboards that give you full control over your digital products.
             </p>
           </article>
 
           <article className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8">
             <h3 className="text-xl font-medium text-[var(--color-accent)] mb-4">What Is an HR Management System?</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              <strong className="text-white/90">A Human Resource Management System (HRMS) is software that automates employee management including recruitment, payroll, attendance tracking, performance reviews, and leave management.</strong> A custom HR system streamlines HR operations, reduces paperwork, ensures compliance, and provides self service portals for employees. Introvera builds HR systems tailored to your organization&apos;s size and processes.
+              <strong className="text-white/90">A Human Resource System (HRMS) automates managing your staff.</strong> It handles hiring, pay, attendance, reviews, and time off. A custom system cuts down on paperwork and gives staff their own login to manage their details. We build HR software matched to your company size.
             </p>
           </article>
         </div>
