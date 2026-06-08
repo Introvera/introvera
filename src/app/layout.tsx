@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Introvera | Custom Software, POS Systems & Mobile Apps",
     description: "Custom software development, POS systems, admin panels, mobile apps, and business solutions. Serving clients worldwide from Sri Lanka.",
-    images: ["/images/logo/logo.png"],
+    images: ["/images/logo/og-image.png"],
   },
 };
 
