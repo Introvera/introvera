@@ -6,9 +6,9 @@ import ContactForm from "@/components/Contact/ContactForm";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
-  title: "Contact Us",
+  title: "Contact Us | Introvera Software Development",
   description:
-    "Contact Introvera for custom software development, POS systems, mobile apps, admin panels, and business solutions. Free consultation available. Based in Sri Lanka, serving clients worldwide.",
+    "Get a free consultation for your custom software, website, mobile app, or POS system project. Introvera builds robust digital solutions for global businesses.",
   alternates: {
     canonical: "https://introvera.com/contact",
   },
@@ -17,6 +17,14 @@ export const metadata = {
     description:
       "Get in touch with Introvera for your next software project. Custom software, mobile apps, POS systems, and more.",
     url: "https://introvera.com/contact",
+    images: [
+      {
+        url: "/images/logo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Introvera Contact",
+      },
+    ],
   },
 };
 

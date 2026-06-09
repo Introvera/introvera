@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Software Services & Cloud Solutions",
+  title: "Software Services & Cloud Solutions | Introvera",
   description:
-    "Introvera offers custom software development, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud services. Serving clients in Sri Lanka, Europe, USA, UAE, Australia and worldwide.",
+    "Introvera offers custom software development,website development, POS systems, admin panels, mobile apps, web development, UI/UX design, and cloud solutions worldwide.",
   alternates: {
     canonical: "https://introvera.com/services",
   },
@@ -15,6 +15,14 @@ export const metadata = {
     description:
       "Custom software, POS systems, mobile apps, admin panels & cloud solutions for global businesses.",
     url: "https://introvera.com/services",
+    images: [
+      {
+        url: "/images/logo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Introvera Services",
+      },
+    ],
   },
 };
 
