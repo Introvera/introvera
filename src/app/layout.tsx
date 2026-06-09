@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import { LocalBusinessJsonLd, OrganizationJsonLd, ServicesJsonLd, WebSiteJsonLd } from "@/components/SEO/JsonLd";
+import { FAQJsonLd, WebPageJsonLd } from "@/components/SEO/FAQJsonLd";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -120,6 +121,8 @@ export default function RootLayout({
         <WebSiteJsonLd />
         <LocalBusinessJsonLd />
         <ServicesJsonLd />
+        <FAQJsonLd />
+        <WebPageJsonLd title="Introvera | Custom Software, Website & Mobile Apps" description="Introvera provides custom software development, websites, POS systems, admin panels, and mobile apps. We build scalable business solutions worldwide." url="https://introvera.com" />
       </head>
       <body className={`${poppins.variable} font-poppins`}>
         <Navbar />
