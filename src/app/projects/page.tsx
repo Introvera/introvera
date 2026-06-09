@@ -5,9 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Our Projects & Portfolio | Web, Mobile & Custom Software",
+  title: "Our Projects & Portfolio | Introvera",
   description:
-    "Explore Introvera's portfolio of successful projects including websites, mobile apps, POS systems, admin panels, and business automation solutions delivered for clients worldwide.",
+    "Explore Introvera's portfolio of successful websites, mobile apps, POS systems, admin panels, and business automation solutions delivered globally.",
   alternates: {
     canonical: "https://introvera.com/projects",
   },
@@ -16,6 +16,14 @@ export const metadata = {
     description:
       "See our work — websites, mobile apps, POS systems, admin panels, and custom software solutions built for businesses worldwide.",
     url: "https://introvera.com/projects",
+    images: [
+      {
+        url: "/images/logo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Introvera Projects",
+      },
+    ],
   },
 };
 

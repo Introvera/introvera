@@ -4,9 +4,9 @@ import Link from "next/link";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
-  title: "About Introvera | Leading Software Development Company",
+  title: "About Us | Introvera Software Development",
   description:
-    "Introvera is a digital innovation studio specializing in custom software, POS systems, mobile apps, admin panels, and business solutions. Based in Sri Lanka, serving clients globally across Europe, USA, UAE, Australia and beyond.",
+    "Introvera is a digital innovation studio specializing in custom software, website, POS systems, mobile apps, and business solutions for global companies.",
   alternates: {
     canonical: "https://introvera.com/about",
   },
@@ -15,6 +15,14 @@ export const metadata = {
     description:
       "Learn about Introvera — a team of engineers and designers building custom software, POS systems, mobile apps, and business solutions for companies worldwide.",
     url: "https://introvera.com/about",
+    images: [
+      {
+        url: "/images/logo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "About Introvera",
+      },
+    ],
   },
 };
 
