@@ -169,7 +169,7 @@ export const projectsData: Project[] = [
     gradientColors: ["#1a0533", "#4a1a7a"],
     tags: ["Web", "Backend", "UI/UX"],
     link: "https://admin.rainbowcoloursport.com",
-    demoUrl: "",
+    demoUrl: "https://youtu.be/iQV8BXk-22A",
     description: "Rainbow Colour Sport Academy needed a single place to run day-to-day operations not scattered spreadsheets, phone calls, and manual follow-ups. Rainbow Admin is the internal dashboard where staff manage everything behind the academy: people, programs, bookings, sales, and what appears on the public website.\n\nFrom one screen, the team can onboard admins, parents, students, and coaches, set up activities and packages, schedule sessions, handle session and doorstep bookings, review sales and pool bookings, run coach salary reports, manage pools and promotions, and update certificates, blogs, and gallery content for the website.\n\nThe interface is organized around how the academy actually works clear sections, searchable tables, and straightforward flows so non-technical staff can find what they need quickly and keep information accurate as the business grows.",
     client: "Rainbow Coloursport Academy",
     duration: "3 Months",
