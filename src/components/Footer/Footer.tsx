@@ -70,6 +70,9 @@ export default function Footer() {
              <Link href="/contact" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Contact
              </Link>
+             <Link href="/privacy-policy" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
+               Privacy Policy
+             </Link>
           </div>
 
           <div className="flex flex-col gap-5">
