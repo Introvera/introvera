@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { projectsData } from "@/data/projects";
 
+const orderedProjects = [...projectsData].reverse();
+
 import { motion } from "framer-motion";
 
 export default function Projects() {
@@ -17,14 +19,14 @@ export default function Projects() {
   // Auto-slide functionality
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % projectsData.length);
+      setCurrentIndex((prev) => (prev + 1) % orderedProjects.length);
     }, 4000);
     return () => clearInterval(timer);
   }, []);
 
   // Calculate the circular shift for 3D carousel effect
   const getSlideAdjustments = (index: number) => {
-    const len = projectsData.length;
+    const len = orderedProjects.length;
     let shift = (index - currentIndex) % len;
     // Keep shift between -2 and 2 (since len is 5)
     if (shift < -Math.floor(len / 2)) shift += len;
@@ -80,7 +82,7 @@ export default function Projects() {
 
         {/* 3D Offset Carousel */}
         <div className="relative w-full h-[450px] md:h-[600px] flex justify-center items-center mt-10 md:mt-16">
-          {projectsData.map((project, idx) => {
+          {orderedProjects.map((project, idx) => {
             const shift = getSlideAdjustments(idx);
             const isCenter = shift === 0;
             
@@ -180,20 +182,35 @@ export default function Projects() {
                      />
                    </div>
 
-                   {/* Logo below the mockup image */}
-                   <div className="relative z-10 flex items-center gap-2 px-5 md:px-8 py-3 md:py-4 justify-end mt-auto h-[50px] md:h-[70px]">
-                     {project.logo && (
-                       <div className="w-8 h-8 md:w-12 md:h-12 relative shrink-0 rounded-lg overflow-hidden p-1 md:p-1.5 opacity-80">
-                         <Image
-                           src={project.logo}
-                           alt={`${project.title} logo`}
-                           fill
-                           sizes="100px"
-                           className="object-contain p-0.5"
-                         />
-                       </div>
-                     )}
-                   </div>
+                   {/* Logo and Flag below the mockup image */}
+                   {(project.logo || project.countryCode) && (
+                     <div className="relative z-10 flex items-center justify-between gap-2 px-5 md:px-8 py-3 md:py-4 mt-auto h-[50px] md:h-[70px]">
+                       {project.countryCode ? (
+                         <div className="relative flex w-6 h-6 md:w-8 md:h-8 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 opacity-80">
+                           <img
+                             src={`https://flagcdn.com/w40/${project.countryCode.toLowerCase()}.png`}
+                             srcSet={`https://flagcdn.com/w80/${project.countryCode.toLowerCase()}.png 2x`}
+                             alt={`${project.countryCode} flag`}
+                             className="w-full h-full object-cover"
+                           />
+                         </div>
+                       ) : (
+                         <div />
+                       )}
+                       
+                       {project.logo && (
+                         <div className="w-8 h-8 md:w-12 md:h-12 relative shrink-0 rounded-lg overflow-hidden p-1 md:p-1.5 opacity-80 ml-auto">
+                           <Image
+                             src={project.logo}
+                             alt={`${project.title} logo`}
+                             fill
+                             sizes="100px"
+                             className="object-contain p-0.5"
+                           />
+                         </div>
+                       )}
+                     </div>
+                   )}
                  </div>
               </div>
             );
@@ -202,7 +219,7 @@ export default function Projects() {
 
         {/* Dot Pagination */}
         <div className="flex gap-2.5 justify-center mt-6 md:mt-8">
-           {projectsData.map((_, i) => (
+           {orderedProjects.map((_, i) => (
               <button 
                  key={i} 
                  onClick={() => setCurrentIndex(i)}

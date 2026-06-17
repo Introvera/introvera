@@ -149,16 +149,31 @@ export default function ProjectsGrid() {
                 />
               </div>
 
-              {project.logo && (
-                <div className="relative z-10 flex items-center justify-end gap-2.5 px-6 py-4 lg:px-8">
-                  <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg p-1.5 lg:h-12 lg:w-12">
-                    <Image
-                      src={project.logo}
-                      alt={`${project.title} logo`}
-                      fill
-                      className="object-contain p-0.5"
-                    />
-                  </div>
+              {(project.logo || project.countryCode) && (
+                <div className="relative z-10 flex items-center justify-between gap-2.5 px-6 py-4 lg:px-8">
+                  {project.countryCode ? (
+                    <div className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 lg:h-8 lg:w-8">
+                      <img
+                        src={`https://flagcdn.com/w40/${project.countryCode.toLowerCase()}.png`}
+                        srcSet={`https://flagcdn.com/w80/${project.countryCode.toLowerCase()}.png 2x`}
+                        alt={`${project.countryCode} flag`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div />
+                  )}
+
+                  {project.logo && (
+                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg p-1.5 lg:h-12 lg:w-12 ml-auto">
+                      <Image
+                        src={project.logo}
+                        alt={`${project.title} logo`}
+                        fill
+                        className="object-contain p-0.5"
+                      />
+                    </div>
+                  )}
                 </div>
               )}
             </Link>
