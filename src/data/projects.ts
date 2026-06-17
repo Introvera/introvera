@@ -243,6 +243,7 @@ export const projectsData: Project[] = [
     countryCode: "AU",
     title: "Ostro Italian Website",
     images: [
+      "/images/projects/ostroitalian/ostroitalianmain.webp",
       "/images/projects/ostroitalian/ostroitalian01.webp",
       "/images/projects/ostroitalian/ostroitalian02.webp",
       "/images/projects/ostroitalian/ostroitalian03.webp",
