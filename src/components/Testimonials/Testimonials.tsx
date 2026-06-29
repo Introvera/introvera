@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -13,17 +14,17 @@ const testimonials = [
   },
   {
     id: 2,
+    quote: `“We, Rainbow Colour Sports Academy – Qatar, were looking for a reliable team to develop our mobile app and website. After contacting several developer teams, we felt most comfortable with Introvera because of their clear communication and professional approach.\nThe Introvera team explained everything properly, understood our requirements, and handled both the planning and development work very well. Their support, technical knowledge, and way of dealing with clients were excellent.\nWe are very happy with their service and highly recommend Introvera to anyone looking for mobile app or website development.”`,
+    name: "Imshiyas Mohammed",
+    role: "Director at Rainbow Coloursport Academy - Qatar",
+    avatar: ""
+  },
+  {
+    id: 3,
     quote: `“They've always been the kind of team who learn fast and build things that actually work. It's been inspiring watching them grow as developers.”`,
     name: "Sachini Pathinayaka",
     role: "Lead Software Engineer at IFS",
     avatar: "/images/testimonials/sachini.webp"
-  },
-  {
-    id: 3,
-    quote: `“I've seen how passionate they are about learning and improving. They always push themselves to create something better each time.”`,
-    name: "Rashen Iddamalgoda",
-    role: "Senior System Engineer at Pristine Solutions",
-    avatar: "/images/testimonials/rashen.webp"
   },
   {
     id: 4,
@@ -32,9 +33,22 @@ const testimonials = [
     role: "Director at Ultrcraft(PVT) LTD",
     avatar: ""
   },
+  {
+    id: 5,
+    quote: `“I've seen how passionate they are about learning and improving. They always push themselves to create something better each time.”`,
+    name: "Rashen Iddamalgoda",
+    role: "Senior System Engineer at Pristine Solutions",
+    avatar: "/images/testimonials/rashen.webp"
+  },
+  
+  
 ];
 
 export default function Testimonials() {
+  const [isTouched, setIsTouched] = useState(false);
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+
+  const isPaused = isTouched || expandedId !== null;
 
   return (
     <motion.section 
@@ -103,9 +117,20 @@ export default function Testimonials() {
         
         {/* Row 1 -> moving Left */}
         <div className="group flex overflow-hidden w-full relative py-2">
-          <div className="flex animate-marquee-left whitespace-nowrap gap-6 md:gap-8 hover:[animation-play-state:paused] px-4 w-max">
+          <div 
+            className={`flex animate-marquee-left whitespace-nowrap gap-6 md:gap-8 hover:[animation-play-state:paused] px-4 w-max ${isPaused ? '[animation-play-state:paused]' : ''}`}
+            onTouchStart={() => setIsTouched(true)}
+            onTouchEnd={() => setIsTouched(false)}
+            onTouchCancel={() => setIsTouched(false)}
+          >
             {[...testimonials, ...testimonials].map((t, idx) => (
-              <TestimonialCard key={`row1-${idx}`} data={t} className="shrink-0" />
+              <TestimonialCard 
+                key={`row1-${idx}`} 
+                data={t} 
+                className="shrink-0"
+                isExpanded={expandedId === t.id}
+                onToggleExpand={() => setExpandedId(expandedId === t.id ? null : t.id)}
+              />
             ))}
           </div>
         </div>
@@ -123,17 +148,43 @@ type TestimonialData = {
   avatar: string;
 };
 
-function TestimonialCard({ data, className = "" }: { data: TestimonialData, className?: string }) {
+type TestimonialCardProps = {
+  data: TestimonialData;
+  className?: string;
+  isExpanded: boolean;
+  onToggleExpand: () => void;
+};
+
+function TestimonialCard({ data, className = "", isExpanded, onToggleExpand }: TestimonialCardProps) {
+  const maxLength = 180;
+  const isLong = data.quote.length > maxLength;
+
+  const getDisplayText = () => {
+    if (isExpanded || !isLong) return data.quote;
+    const truncated = data.quote.slice(0, maxLength);
+    return truncated.slice(0, truncated.lastIndexOf(" ")) + "...";
+  };
+
   return (
     <div 
-      className={`w-[280px] md:w-[360px] lg:w-[400px] p-6 md:p-8 rounded-[1.5rem] border-[1.5px] border-white/10 bg-[#280566]/80 backdrop-blur-md flex flex-col justify-between whitespace-normal shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:-translate-y-2 ${className}`}
+      className={`w-[280px] md:w-[360px] lg:w-[400px] h-full p-6 md:p-8 rounded-[1.5rem] border-[1.5px] border-white/10 bg-[#280566]/80 backdrop-blur-md flex flex-col justify-between whitespace-normal shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:-translate-y-2 ${className}`}
       style={{
         boxShadow: "inset 0 0 40px rgba(153,0,255,0.2), 0 10px 40px rgba(0,0,0,0.5)"
       }}
     >
-      <p className="text-white text-sm md:text-base font-medium leading-relaxed mb-6">
-        {data.quote}
-      </p>
+      <div className="mb-6">
+        <p className="text-white text-sm md:text-base font-medium leading-relaxed whitespace-pre-wrap">
+          {getDisplayText()}
+        </p>
+        {isLong && (
+          <button 
+            onClick={onToggleExpand}
+            className="text-[var(--color-accent)] text-xs md:text-sm font-semibold mt-3 hover:text-white transition-colors focus:outline-none inline-flex items-center gap-1"
+          >
+            {isExpanded ? "See less" : "See more"}
+          </button>
+        )}
+      </div>
 
       <div className="flex items-center gap-4 mt-auto">
         <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 border-[2px] border-white/20">
