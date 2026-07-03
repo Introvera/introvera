@@ -40,7 +40,13 @@ const testimonials = [
     role: "Senior System Engineer at Pristine Solutions",
     avatar: "/images/testimonials/rashen.webp"
   },
-  
+  {
+    id: 6,
+    quote: `“Working with this team was a fantastic experience from start to finish. They created a professional, modern website that perfectly reflects my restaurant and were always responsive, helpful, and easy to work with. Their attention to detail and willingness to make changes made the whole process smooth. I highly recommend them to anyone looking for a high-quality website.”`,
+    name: "Buddhika Sadaruwan",
+    role: "Owner at Ostro Italian Restaurant - Australia",
+    avatar: ""
+  },
   
 ];
 
