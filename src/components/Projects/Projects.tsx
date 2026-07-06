@@ -40,7 +40,7 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
-      className="w-full bg-black py-16 sm:py-20 overflow-hidden" 
+      className="w-full bg-background py-16 sm:py-20 overflow-hidden" 
       id="projects"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -55,7 +55,7 @@ export default function Projects() {
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Our Projects
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-foreground">
               Showcase of<br />
               <span className="text-[var(--color-accent)]">Innovation</span>
             </h2>
@@ -67,7 +67,7 @@ export default function Projects() {
             viewport={{ once: true, margin: "-50px" }}
             className="flex flex-col items-start md:items-end gap-6 shrink-0 md:pb-4"
           >
-            <h3 className="text-xl md:text-2xl font-medium text-white">Our Work Speaks for Itself</h3>
+            <h3 className="text-xl md:text-2xl font-medium text-foreground">Our Work Speaks for Itself</h3>
             <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
               <Link
                 href="/projects"
@@ -131,7 +131,7 @@ export default function Projects() {
               >
                  {/* Card Wrapper with dynamic border/glow exclusively for active center item */}
                  <div 
-                   className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 flex flex-col ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-white/10'}`}
+                   className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 flex flex-col ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-foreground/10'}`}
                    style={{
                      background: 'linear-gradient(160deg, #2D1D4F 0%, #0C0123 100%)',
                    }}

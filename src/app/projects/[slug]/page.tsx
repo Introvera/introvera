@@ -65,7 +65,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   }
 
   return (
-    <div className="w-full bg-black min-h-screen pt-28 pb-32 overflow-hidden">
+    <div className="w-full bg-background min-h-screen pt-28 pb-32 overflow-hidden">
       <BreadcrumbJsonLd
         items={[
           { name: "Home", href: "/" },
@@ -80,7 +80,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col gap-8">
-          <Link href="/projects" className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors text-sm font-medium w-fit">
+          <Link href="/projects" className="inline-flex items-center gap-2 text-foreground/50 hover:text-foreground transition-colors text-sm font-medium w-fit">
              <ArrowLeft size={16} />
              Back to Projects
           </Link>
@@ -94,7 +94,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           </div>
 
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tight text-foreground">
               {project.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4">
@@ -111,14 +111,14 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 </span>
               )}
               {project.appStoreUrl && (
-                <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shrink-0 w-fit">
+                <span className="inline-flex rounded-full p-[6px] border border-foreground bg-foreground/30 transition-all duration-300 shrink-0 w-fit">
                   <Link
                     href={project.appStoreUrl}
                     target="_blank"
-                    className="inline-flex items-center gap-3 px-6 py-3 bg-white text-black text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
+                    className="inline-flex items-center gap-3 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
                   >
                     App Store
-                    <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor" className="text-black">
+                    <svg viewBox="0 0 384 512" width="20" height="20" fill="currentColor" className="text-background">
                       <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
                     </svg>
                   </Link>
@@ -132,18 +132,18 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                     className="inline-flex items-center gap-3 px-6 py-3 bg-[var(--color-accent)] text-white text-sm font-medium rounded-full transition-all duration-300 hover:opacity-90"
                   >
                     Play Store
-                    <svg viewBox="0 0 512 512" width="20" height="20" fill="currentColor" className="text-white">
+                    <svg viewBox="0 0 512 512" width="20" height="20" fill="currentColor" className="text-foreground">
                       <path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"/>
                     </svg>
                   </Link>
                 </span>
               )}
               {project.link !== "#" && (
-                <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shrink-0 w-fit">
+                <span className="inline-flex rounded-full p-[6px] border border-foreground bg-foreground/30 transition-all duration-300 shrink-0 w-fit">
                   <Link
                     href={project.link}
                     target="_blank"
-                    className="inline-flex items-center gap-4 px-6 py-3 bg-white text-black text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
+                    className="inline-flex items-center gap-4 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
                   >
                     Visit Live Site
                     <ArrowUpRight size={20} className="text-[var(--color-accent)]" />
@@ -160,31 +160,31 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       </FadeInSection>
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-20">
-        <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed whitespace-pre-line">
+        <p className="text-foreground/70 text-lg md:text-xl font-light leading-relaxed whitespace-pre-line">
           {project.description}
         </p>
       </FadeInSection>
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 flex flex-col lg:flex-row gap-16 lg:gap-24">
          <div className="lg:w-1/3 flex flex-col gap-10">
-           <div className="flex flex-col gap-6 bg-[#0F0F13] border border-white/5 rounded-3xl p-8 shadow-2xl">
+           <div className="flex flex-col gap-6 bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 shadow-2xl">
              <div>
-               <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-2">Client</p>
-               <p className="text-white font-medium text-lg">{project.client}</p>
+               <p className="text-foreground/40 text-xs font-semibold uppercase tracking-widest mb-2">Client</p>
+               <p className="text-foreground font-medium text-lg">{project.client}</p>
              </div>
-             <div className="w-full h-[1px] bg-white/5" />
+             <div className="w-full h-[1px] bg-foreground/5" />
              <div>
-               <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-2">Timeline</p>
-               <p className="text-white font-medium text-lg">{project.duration}</p>
+               <p className="text-foreground/40 text-xs font-semibold uppercase tracking-widest mb-2">Timeline</p>
+               <p className="text-foreground font-medium text-lg">{project.duration}</p>
              </div>
-             <div className="w-full h-[1px] bg-white/5" />
+             <div className="w-full h-[1px] bg-foreground/5" />
              <div>
-               <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-4">Tech Stack</p>
+               <p className="text-foreground/40 text-xs font-semibold uppercase tracking-widest mb-4">Tech Stack</p>
                <ul className="flex flex-col gap-3">
                  {project.services.map(s => (
                    <li key={s} className="flex items-center gap-3">
                      <div className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
-                     <span className="text-white/80">{s}</span>
+                     <span className="text-foreground/80">{s}</span>
                    </li>
                  ))}
                </ul>
@@ -194,16 +194,16 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
          <div className="lg:w-2/3 flex flex-col gap-16">
             <div className="flex flex-col gap-6">
-              <h3 className="text-3xl font-medium text-white">The Challenge</h3>
-              <p className="text-white/70 text-lg font-light leading-relaxed">
+              <h3 className="text-3xl font-medium text-foreground">The Challenge</h3>
+              <p className="text-foreground/70 text-lg font-light leading-relaxed">
                 {project.challenge}
               </p>
             </div>
             
             <div className="flex flex-col gap-6">
               <h3 className="text-3xl font-medium text-[var(--color-accent)]">The Solution</h3>
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-500 hover:border-white/20">
-                <p className="text-white/90 text-lg font-light leading-relaxed">
+              <div className="bg-foreground/5 border border-foreground/10 rounded-2xl p-8 hover:-translate-y-1 transition-transform duration-500 hover:border-foreground/20">
+                <p className="text-foreground/90 text-lg font-light leading-relaxed">
                   {project.solution}
                 </p>
               </div>

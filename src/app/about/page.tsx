@@ -1,7 +1,7 @@
+import FadeInSection from "@/components/ui/FadeInSection";
 import { ArrowRight, CheckCircle2, Clock, MessageSquare, ShieldCheck, Target, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInSection from "@/components/ui/FadeInSection";
 
 export const metadata = {
   title: "About Us | Introvera Software Development",
@@ -28,7 +28,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="w-full bg-black min-h-screen pt-28 pb-20 overflow-hidden">
+    <div className="w-full bg-background min-h-screen pt-28 pb-20 overflow-hidden">
       
       <FadeInSection className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -40,10 +40,10 @@ export default function AboutPage() {
           <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
             About Us
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-foreground mb-6">
             Innovation at our<br />core.
           </h1>
-          <p className="max-w-2xl text-white/70 text-base md:text-lg font-light leading-relaxed">
+          <p className="max-w-2xl text-foreground/70 text-base md:text-lg font-light leading-relaxed">
             We are a digital innovation studio where creativity meets technology. We design smart, scalable solutions that help businesses grow and people thrive.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function AboutPage() {
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20 mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-foreground/[0.02] border border-foreground/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
                 src="/images/backgrounds/our-vision.webp"
                 alt="Our Vision"
@@ -67,7 +67,7 @@ export default function AboutPage() {
              </div>
           </div>
 
-          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[#0F0F13] border border-white/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-foreground/[0.02] border border-foreground/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
              <Image
                 src="/images/backgrounds/our-mission.webp"
                 alt="Our Mission"
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mb-40">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-10 items-center">
-          <div className="lg:col-span-6 2xl:col-span-6 flex flex-col gap-2 text-[#e5e7eb] text-base lg:text-lg leading-[1.8] font-light pr-0 lg:pr-8">
+          <div className="lg:col-span-6 2xl:col-span-6 flex flex-col gap-2 text-foreground/80 text-base lg:text-lg leading-[1.8] font-light pr-0 lg:pr-8">
              <p>
                At Introvera, innovation is at the heart of everything we do. We are a team of thinkers, creators, and engineers dedicated to designing digital solutions that help businesses and individuals thrive in a fast changing, connected world.
              </p>
@@ -142,13 +142,13 @@ export default function AboutPage() {
               <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-5">
                  Why Choose Us?
               </p>
-              <h2 className="text-xl font-regular text-white leading-tight">
+              <h2 className="text-xl font-regular text-foreground leading-tight">
                 We don&apos;t just deliver software, we deliver confidence. Our process is built on transparency, efficiency, and technical excellence.
               </h2>
            </div>
 
            <div className="shrink-0 flex flex-col items-start md:items-end gap-6">
-              <h3 className="text-xl md:text-2xl font-medium text-white">What&apos;s Your Next Idea?</h3>
+              <h3 className="text-xl md:text-2xl font-medium text-foreground">What&apos;s Your Next Idea?</h3>
               <div className="flex items-center gap-4">
                  <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
                    <Link 
@@ -168,15 +168,15 @@ export default function AboutPage() {
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center">
             
-            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-end order-2 lg:order-1">
+            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-end order-2 lg:order-1">
                <div className="flex flex-col gap-10">
                   <div className="flex items-start gap-5">
                      <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
                         <CheckCircle2 size={18} />
                      </div>
                      <div>
-                        <h4 className="text-base font-semibold text-white mb-1">Clean Code</h4>
-                        <p className="text-xs text-white/70 leading-relaxed">We write readable, maintainable code that&apos;s easy to scale and built to last.</p>
+                        <h4 className="text-base font-semibold text-foreground mb-1">Clean Code</h4>
+                        <p className="text-xs text-foreground/70 leading-relaxed">We write readable, maintainable code that&apos;s easy to scale and built to last.</p>
                      </div>
                   </div>
 
@@ -185,8 +185,8 @@ export default function AboutPage() {
                         <Target size={18} />
                      </div>
                      <div>
-                        <h4 className="text-base font-semibold text-white mb-1">Agile Process</h4>
-                        <p className="text-xs text-white/70 leading-relaxed">We work in fast, flexible sprints to deliver results quickly and efficiently.</p>
+                        <h4 className="text-base font-semibold text-foreground mb-1">Agile Process</h4>
+                        <p className="text-xs text-foreground/70 leading-relaxed">We work in fast, flexible sprints to deliver results quickly and efficiently.</p>
                      </div>
                   </div>
 
@@ -195,8 +195,8 @@ export default function AboutPage() {
                         <MessageSquare size={18} />
                      </div>
                      <div>
-                        <h4 className="text-base font-semibold text-white mb-1">Clear Communication</h4>
-                        <p className="text-xs text-white/70 leading-relaxed">We keep you updated every step of the way, no surprises, just transparency.</p>
+                        <h4 className="text-base font-semibold text-foreground mb-1">Clear Communication</h4>
+                        <p className="text-xs text-foreground/70 leading-relaxed">We keep you updated every step of the way, no surprises, just transparency.</p>
                      </div>
                   </div>
                </div>
@@ -214,15 +214,15 @@ export default function AboutPage() {
                
             </div>
 
-            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-start order-3">
+            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-start order-3">
                <div className="flex flex-col gap-10">
                   <div className="flex items-start gap-5">
                      <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
                         <ShieldCheck size={18} />
                      </div>
                      <div>
-                        <h4 className="text-base font-semibold text-white mb-1">Business Focused</h4>
-                        <p className="text-xs text-white/70 leading-relaxed">Our solutions align with your goals, not just the tech. Results matter.</p>
+                        <h4 className="text-base font-semibold text-foreground mb-1">Business Focused</h4>
+                        <p className="text-xs text-foreground/70 leading-relaxed">Our solutions align with your goals, not just the tech. Results matter.</p>
                      </div>
                   </div>
 
@@ -231,8 +231,8 @@ export default function AboutPage() {
                         <Clock size={18} />
                      </div>
                      <div>
-                        <h4 className="text-base font-semibold text-white mb-1">On Time Delivery</h4>
-                        <p className="text-xs text-white/70 leading-relaxed">We plan realistically and hit deadlines without drama or excuses.</p>
+                        <h4 className="text-base font-semibold text-foreground mb-1">On Time Delivery</h4>
+                        <p className="text-xs text-foreground/70 leading-relaxed">We plan realistically and hit deadlines without drama or excuses.</p>
                      </div>
                   </div>
                   
@@ -241,8 +241,8 @@ export default function AboutPage() {
                         <Users size={18} />
                      </div>
                      <div>
-                        <h4 className="text-base font-semibold text-white mb-1">Skilled Team</h4>
-                        <p className="text-xs text-white/70 leading-relaxed">Experienced developers, designers, and strategists on every project.</p>
+                        <h4 className="text-base font-semibold text-foreground mb-1">Skilled Team</h4>
+                        <p className="text-xs text-foreground/70 leading-relaxed">Experienced developers, designers, and strategists on every project.</p>
                      </div>
                   </div>
                </div>
@@ -256,21 +256,21 @@ export default function AboutPage() {
       {/* Stats Section */}
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10 mt-20 mb-32">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
             <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">10+</h3>
-            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Projects Delivered</p>
+            <p className="text-foreground/70 text-sm font-medium uppercase tracking-wider">Projects Delivered</p>
           </div>
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
             <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">4+</h3>
-            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Countries Served</p>
+            <p className="text-foreground/70 text-sm font-medium uppercase tracking-wider">Countries Served</p>
           </div>
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
             <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">99%</h3>
-            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Client Satisfaction</p>
+            <p className="text-foreground/70 text-sm font-medium uppercase tracking-wider">Client Satisfaction</p>
           </div>
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 text-center flex flex-col items-center justify-center">
             <h3 className="text-4xl md:text-5xl font-bold text-[var(--color-accent)] mb-2">24/7</h3>
-            <p className="text-white/70 text-sm font-medium uppercase tracking-wider">Support Available</p>
+            <p className="text-foreground/70 text-sm font-medium uppercase tracking-wider">Support Available</p>
           </div>
         </div>
       </FadeInSection>
@@ -281,27 +281,27 @@ export default function AboutPage() {
           <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
             FAQ
           </p>
-          <h2 className="text-3xl md:text-4xl font-medium text-white">
+          <h2 className="text-3xl md:text-4xl font-medium text-foreground">
             Frequently Asked Questions
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
-            <h3 className="text-lg font-medium text-white mb-3">Where is Introvera located?</h3>
-            <p className="text-white/70 text-sm leading-relaxed">Our headquarters and primary development center are located in Colombo, Sri Lanka. However, we operate globally and serve clients internationally, regardless of their location.</p>
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-foreground mb-3">Where is Introvera located?</h3>
+            <p className="text-foreground/70 text-sm leading-relaxed">Our headquarters and primary development center are located in Colombo, Sri Lanka. However, we operate globally and serve clients internationally, regardless of their location.</p>
           </div>
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
-            <h3 className="text-lg font-medium text-white mb-3">What is your development approach?</h3>
-            <p className="text-white/70 text-sm leading-relaxed">We use Agile methodology, breaking projects into actionable sprints. This ensures flexibility, frequent deliverables, and constant feedback loops so you always know the status of your software.</p>
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-foreground mb-3">What is your development approach?</h3>
+            <p className="text-foreground/70 text-sm leading-relaxed">We use Agile methodology, breaking projects into actionable sprints. This ensures flexibility, frequent deliverables, and constant feedback loops so you always know the status of your software.</p>
           </div>
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
-            <h3 className="text-lg font-medium text-white mb-3">Do you work with startups or enterprises?</h3>
-            <p className="text-white/70 text-sm leading-relaxed">Both! We build scalable MVPs (Minimum Viable Products) for ambitious startups and comprehensive ERP/POS systems for established enterprises looking to automate their operations.</p>
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-foreground mb-3">Do you work with startups or enterprises?</h3>
+            <p className="text-foreground/70 text-sm leading-relaxed">Both! We build scalable MVPs (Minimum Viable Products) for ambitious startups and comprehensive ERP/POS systems for established enterprises looking to automate their operations.</p>
           </div>
-          <div className="bg-[#0F0F13] border border-white/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
-            <h3 className="text-lg font-medium text-white mb-3">How do you ensure the quality of your software?</h3>
-            <p className="text-white/70 text-sm leading-relaxed">We have a rigorous Quality Assurance (QA) process. Our engineers conduct thorough code reviews, automated testing, and manual testing to ensure every application we launch is secure, scalable, and bug-free.</p>
+          <div className="bg-foreground/[0.02] border border-foreground/5 rounded-2xl p-8 hover:border-[var(--color-accent)]/30 transition-all duration-300">
+            <h3 className="text-lg font-medium text-foreground mb-3">How do you ensure the quality of your software?</h3>
+            <p className="text-foreground/70 text-sm leading-relaxed">We have a rigorous Quality Assurance (QA) process. Our engineers conduct thorough code reviews, automated testing, and manual testing to ensure every application we launch is secure, scalable, and bug-free.</p>
           </div>
         </div>
       </FadeInSection>
@@ -309,19 +309,19 @@ export default function AboutPage() {
       {/* Outgoing Internal Links */}
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row gap-6 justify-center">
-          <Link href="/services" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
-             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Services</h3>
-             <p className="text-white/60 mb-4 text-sm">Discover the engineering services we offer.</p>
+          <Link href="/services" className="group relative overflow-hidden bg-foreground/[0.02] border border-foreground/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-foreground mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Services</h3>
+             <p className="text-foreground/60 mb-4 text-sm">Discover the engineering services we offer.</p>
              <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">Explore Services <ArrowRight size={16} /></span>
           </Link>
-          <Link href="/projects" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
-             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Projects</h3>
-             <p className="text-white/60 mb-4 text-sm">See the real world impact of our custom software.</p>
+          <Link href="/projects" className="group relative overflow-hidden bg-foreground/[0.02] border border-foreground/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-foreground mb-2 group-hover:text-[var(--color-accent)] transition-colors">Our Projects</h3>
+             <p className="text-foreground/60 mb-4 text-sm">See the real world impact of our custom software.</p>
              <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">View Portfolio <ArrowRight size={16} /></span>
           </Link>
-          <Link href="/contact" className="group relative overflow-hidden bg-[#0F0F13] border border-white/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
-             <h3 className="text-2xl font-medium text-white mb-2 group-hover:text-[var(--color-accent)] transition-colors">Contact Us</h3>
-             <p className="text-white/60 mb-4 text-sm">Ready to build? Get a free project consultation.</p>
+          <Link href="/contact" className="group relative overflow-hidden bg-foreground/[0.02] border border-foreground/10 rounded-2xl p-8 hover:border-[var(--color-accent)] transition-all flex-1 text-center">
+             <h3 className="text-2xl font-medium text-foreground mb-2 group-hover:text-[var(--color-accent)] transition-colors">Contact Us</h3>
+             <p className="text-foreground/60 mb-4 text-sm">Ready to build? Get a free project consultation.</p>
              <span className="inline-flex items-center gap-2 text-[var(--color-accent)] font-medium text-sm">Get in Touch <ArrowRight size={16} /></span>
           </Link>
         </div>

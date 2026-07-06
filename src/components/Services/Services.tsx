@@ -1,9 +1,9 @@
 "use client";
 
+import FadeInSection from "@/components/ui/FadeInSection";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInSection from "@/components/ui/FadeInSection";
 
 const services = [
   {
@@ -11,7 +11,7 @@ const services = [
     title: "Backend/API\nDevelopment",
     description: "Developing secure and scalable backend systems with robust APIs that power seamless digital experiences.",
     image: "/images/backgrounds/services-backend.webp", // Placeholder until exact image is known/provided
-    colSpan: "col-span-1 border border-white/5",
+    colSpan: "col-span-1 border border-foreground/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square md:aspect-[4/3] lg:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
@@ -21,7 +21,7 @@ const services = [
     title: "UI/UX\nDesign",
     description: "Designing intuitive and engaging user experiences that turn ideas into meaningful digital products.",
     image: "/images/backgrounds/services-uiux.webp",
-    colSpan: "col-span-1 border border-white/5",
+    colSpan: "col-span-1 border border-foreground/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square md:aspect-[4/3] lg:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
@@ -31,7 +31,7 @@ const services = [
     title: "Web\nDevelopment",
     description: "Building fast, responsive, and modern websites that perform seamlessly across all devices.",
     image: "/images/backgrounds/services-web.webp",
-    colSpan: "col-span-1 border border-white/5",
+    colSpan: "col-span-1 border border-foreground/5",
     rowSpan: "row-span-2",
     aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[3/4] lg:aspect-auto h-full",
     titleColor: "text-[var(--color-accent)]",
@@ -41,7 +41,7 @@ const services = [
     title: "Quality\nAssurance",
     description: "Ensuring every product is reliable, polished, and ready for launch through careful testing and validation.",
     image: "/images/backgrounds/services-qa.webp",
-    colSpan: "col-span-1 border border-white/5 flex-row", // Different visual layout
+    colSpan: "col-span-1 border border-foreground/5 flex-row", // Different visual layout
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[2/1] lg:aspect-[3/1] xl:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
@@ -51,7 +51,7 @@ const services = [
     title: "Mobile App\nDevelopment",
     description: "Creating user-friendly mobile applications that deliver smooth experiences on iOS and Android platforms.",
     image: "/images/backgrounds/services-mobile.webp",
-    colSpan: "col-span-1 border border-white/5",
+    colSpan: "col-span-1 border border-foreground/5",
     rowSpan: "row-span-2",
     aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[3/4] lg:aspect-auto min-h-[350px]", // Aligning correctly to cover specific area
     titleColor: "text-[var(--color-accent)]",
@@ -61,7 +61,7 @@ const services = [
     title: "DevOps &\nCloud Services",
     description: "Optimizing deployment, infrastructure, and cloud environments for performance, reliability, and growth.",
     image: "/images/backgrounds/services-devops.webp",
-    colSpan: "col-span-1 md:col-span-2 border border-white/5",
+    colSpan: "col-span-1 md:col-span-2 border border-foreground/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[2/1] lg:aspect-[4/1] xl:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
@@ -71,7 +71,7 @@ const services = [
     title: "Consulting &\nStrategy",
     description: "Helping businesses shape clear digital strategies and practical solutions that support long-term success.",
     image: "/images/backgrounds/services-consults.webp",
-    colSpan: "col-span-1 md:col-span-2 lg:col-span-1 border border-white/5",
+    colSpan: "col-span-1 md:col-span-2 lg:col-span-1 border border-foreground/5",
     rowSpan: "row-span-1",
     aspectRatio: "aspect-square max-h-[320px] md:max-h-none md:aspect-[2/1] lg:aspect-[4/1] xl:aspect-auto min-h-[280px]",
     titleColor: "text-[var(--color-accent)]",
@@ -80,7 +80,7 @@ const services = [
 
 export default function Services() {
   return (
-    <FadeInSection className="relative w-full bg-[#050505] py-16 sm:py-20 overflow-hidden" id="services">
+    <FadeInSection className="relative w-full bg-background py-16 sm:py-20 overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
@@ -157,7 +157,7 @@ type ServiceData = {
 function ServiceCard({ data, className = "" }: { data: ServiceData, className?: string }) {
   return (
     <div 
-      className={`group relative overflow-hidden rounded-2xl bg-[#0F0F13] ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
+      className={`group relative overflow-hidden rounded-2xl bg-background border border-border-subtle ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
     >
       {/* Background Image layer with Masking Gradient */}
       {data.image && (
@@ -178,7 +178,7 @@ function ServiceCard({ data, className = "" }: { data: ServiceData, className?: 
         <h3 className={`text-2xl font-medium whitespace-pre-line ${data.titleColor}`}>
           {data.title}
         </h3>
-        <p className="text-sm text-white/60 leading-relaxed max-w-[85%]">
+        <p className="text-sm text-white/80 leading-relaxed max-w-[85%]">
           {data.description}
         </p>
       </div>

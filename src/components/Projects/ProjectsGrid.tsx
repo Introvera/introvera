@@ -91,7 +91,7 @@ export default function ProjectsGrid() {
               className={`rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 sm:px-5 ${
                 isActive
                   ? "bg-[var(--color-accent)] text-white shadow-[0_0_24px_rgba(153,0,255,0.28)]"
-                  : "text-white/70 hover:bg-white/10 hover:text-white"
+                  : "text-foreground/70 hover:bg-foreground/10 hover:text-foreground"
               }`}
               aria-pressed={isActive}
             >
@@ -179,7 +179,7 @@ export default function ProjectsGrid() {
             </Link>
           ))
         ) : (
-          <div className="rounded-3xl border border-white/10 bg-[#0F0F13] p-8 text-white/70 md:col-span-2 lg:col-span-3">
+          <div className="rounded-3xl border border-foreground/10 bg-background p-8 text-foreground/70 md:col-span-2 lg:col-span-3">
             No projects found for this category.
           </div>
         )}

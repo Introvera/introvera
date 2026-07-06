@@ -63,7 +63,7 @@ const sections: Section[] = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="w-full bg-black min-h-screen pt-28 pb-20 overflow-hidden">
+    <div className="w-full bg-background min-h-screen pt-28 pb-20 overflow-hidden">
       {/* Hero */}
       <FadeInSection className="relative w-full py-16 md:py-24 mb-12 md:mb-16 overflow-visible">
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -75,16 +75,16 @@ export default function PrivacyPolicyPage() {
           <p className="text-[var(--color-accent)] text-sm font-semibold tracking-widest uppercase mb-4">
             Legal
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-foreground mb-6">
             Privacy Policy
           </h1>
-          <p className="max-w-2xl text-white/70 text-base md:text-lg font-light leading-relaxed">
+          <p className="max-w-2xl text-foreground/70 text-base md:text-lg font-light leading-relaxed">
             Your privacy matters to us. This policy explains what data Introvera
             collects, why we collect it, how we use and protect it, and the
             rights you have over your personal information.
           </p>
-          <p className="mt-6 text-white/50 text-sm">
-            Last updated: <span className="text-white/70">{LAST_UPDATED}</span>
+          <p className="mt-6 text-foreground/50 text-sm">
+            Last updated: <span className="text-foreground/70">{LAST_UPDATED}</span>
           </p>
         </div>
       </FadeInSection>
@@ -93,8 +93,8 @@ export default function PrivacyPolicyPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* Table of contents */}
           <aside className="lg:col-span-4 xl:col-span-3 lg:sticky lg:top-28 self-start">
-            <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-6 lg:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
-              <h2 className="text-white font-semibold text-sm uppercase tracking-wider mb-5">
+            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-6 lg:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+              <h2 className="text-foreground font-semibold text-sm uppercase tracking-wider mb-5">
                 On This Page
               </h2>
               <nav className="flex flex-col gap-1">
@@ -102,7 +102,7 @@ export default function PrivacyPolicyPage() {
                   <a
                     key={s.id}
                     href={`#${s.id}`}
-                    className="group flex items-center gap-3 px-3 py-2 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all text-sm"
+                    className="group flex items-center gap-3 px-3 py-2 rounded-xl text-foreground/60 hover:text-foreground hover:bg-foreground/5 transition-all text-sm"
                   >
                     <span className="text-[var(--color-accent)] opacity-70 group-hover:opacity-100 transition-opacity">
                       {s.icon}
@@ -117,14 +117,14 @@ export default function PrivacyPolicyPage() {
           {/* Content */}
           <main className="lg:col-span-8 xl:col-span-9 flex flex-col gap-12">
             <FadeInSection>
-              <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 text-white/75 leading-[1.8] font-light">
+              <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 text-foreground/75 leading-[1.8] font-light">
                 <p>
                   This Privacy Policy describes how{" "}
-                  <span className="text-white">Introvera Pvt Ltd</span>{" "}
+                  <span className="text-foreground">Introvera Pvt Ltd</span>{" "}
                   (&quot;Introvera&quot;, &quot;we&quot;, &quot;us&quot;, or
                   &quot;our&quot;) collects, uses, discloses, and safeguards your
                   information when you visit{" "}
-                  <span className="text-white">introvera.com</span>, contact us,
+                  <span className="text-foreground">introvera.com</span>, contact us,
                   request a consultation, or use any product, application, or
                   service that links to this policy (collectively, the
                   &quot;Services&quot;). By using our Services, you agree to the
@@ -141,24 +141,24 @@ export default function PrivacyPolicyPage() {
               <p>We collect the following categories of information:</p>
               <ul>
                 <li>
-                  <span className="text-white">Information you provide.</span>{" "}
+                  <span className="text-foreground">Information you provide.</span>{" "}
                   Name, email address, phone number, company name, project
                   details, and any message you send through our contact forms,
                   email, or scheduling tools.
                 </li>
                 <li>
-                  <span className="text-white">Usage &amp; device data.</span>{" "}
+                  <span className="text-foreground">Usage &amp; device data.</span>{" "}
                   IP address, browser type, operating system, referring pages,
                   pages viewed, and timestamps, collected automatically when you
                   browse our site.
                 </li>
                 <li>
-                  <span className="text-white">Cookies &amp; analytics.</span>{" "}
+                  <span className="text-foreground">Cookies &amp; analytics.</span>{" "}
                   Identifiers and preferences stored through cookies and similar
                   technologies (see Section&nbsp;6).
                 </li>
                 <li>
-                  <span className="text-white">
+                  <span className="text-foreground">
                     Third-party platform data.
                   </span>{" "}
                   When you connect a social or business account (for example,
@@ -231,25 +231,25 @@ export default function PrivacyPolicyPage() {
               </p>
               <ul>
                 <li>
-                  <span className="text-white">Scope.</span> We request only the
+                  <span className="text-foreground">Scope.</span> We request only the
                   permissions needed for the feature you use (for example, page
                   details, public profile, messaging, or content you explicitly
                   authorize). You may revoke access at any time in your Meta
                   account settings.
                 </li>
                 <li>
-                  <span className="text-white">Use.</span> Meta data is used only
+                  <span className="text-foreground">Use.</span> Meta data is used only
                   to deliver the requested functionality. We do not use it for
                   advertising profiles, nor sell or transfer it to data brokers.
                 </li>
                 <li>
-                  <span className="text-white">Storage.</span> Where data must be
+                  <span className="text-foreground">Storage.</span> Where data must be
                   cached to operate a feature, it is stored securely and kept no
                   longer than necessary, then deleted in line with Section&nbsp;7
                   and Meta&apos;s data-handling requirements.
                 </li>
                 <li>
-                  <span className="text-white">Deletion.</span> You can request
+                  <span className="text-foreground">Deletion.</span> You can request
                   removal of all Meta-derived data at any time (see
                   Section&nbsp;9). Revoking the app&apos;s permissions on Meta
                   also triggers deletion of the associated data.
@@ -279,17 +279,17 @@ export default function PrivacyPolicyPage() {
               <p>We share information only in these limited situations:</p>
               <ul>
                 <li>
-                  <span className="text-white">Service providers.</span> Vetted
+                  <span className="text-foreground">Service providers.</span> Vetted
                   vendors (hosting, analytics, email, scheduling) that process
                   data on our behalf under confidentiality obligations.
                 </li>
                 <li>
-                  <span className="text-white">Legal &amp; safety.</span> When
+                  <span className="text-foreground">Legal &amp; safety.</span> When
                   required by law, regulation, legal process, or to protect
                   rights, property, or safety.
                 </li>
                 <li>
-                  <span className="text-white">Business transfers.</span> In
+                  <span className="text-foreground">Business transfers.</span> In
                   connection with a merger, acquisition, or sale of assets, with
                   notice where required.
                 </li>
@@ -434,8 +434,8 @@ export default function PrivacyPolicyPage() {
                 If you have questions, requests, or concerns about this policy or
                 your data, reach us at:
               </p>
-              <div className="mt-4 not-prose text-white/80 text-sm leading-relaxed">
-                <p className="text-white font-medium">Introvera Pvt Ltd</p>
+              <div className="mt-4 not-prose text-foreground/80 text-sm leading-relaxed">
+                <p className="text-foreground font-medium">Introvera Pvt Ltd</p>
                 <p>275/3, New Kandy Road, Biyagama, Sri Lanka</p>
                 <p>
                   Email:{" "}
@@ -452,12 +452,12 @@ export default function PrivacyPolicyPage() {
 
             {/* CTA */}
             <FadeInSection>
-              <div className="bg-[#0F0F13] border border-white/5 rounded-3xl p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+              <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
                 <div>
-                  <h3 className="text-xl md:text-2xl font-medium text-white mb-2">
+                  <h3 className="text-xl md:text-2xl font-medium text-foreground mb-2">
                     Have a question about your data?
                   </h3>
-                  <p className="text-white/60 text-sm">
+                  <p className="text-foreground/60 text-sm">
                     Our team is happy to help with any privacy enquiry.
                   </p>
                 </div>
@@ -497,11 +497,11 @@ function PolicySection({
           <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
             {icon}
           </div>
-          <h2 className="text-2xl md:text-3xl font-medium text-white">
+          <h2 className="text-2xl md:text-3xl font-medium text-foreground">
             {title}
           </h2>
         </div>
-        <div className="policy-prose text-white/75 leading-[1.8] font-light text-base flex flex-col gap-4 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-3 [&_ul]:pl-1 [&_li]:relative [&_li]:pl-6 [&_li]:before:content-[''] [&_li]:before:absolute [&_li]:before:left-0 [&_li]:before:top-[0.7em] [&_li]:before:w-2 [&_li]:before:h-2 [&_li]:before:rounded-full [&_li]:before:bg-[var(--color-accent)]/60">
+        <div className="policy-prose text-foreground/75 leading-[1.8] font-light text-base flex flex-col gap-4 [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-3 [&_ul]:pl-1 [&_li]:relative [&_li]:pl-6 [&_li]:before:content-[''] [&_li]:before:absolute [&_li]:before:left-0 [&_li]:before:top-[0.7em] [&_li]:before:w-2 [&_li]:before:h-2 [&_li]:before:rounded-full [&_li]:before:bg-[var(--color-accent)]/60">
           {children}
         </div>
       </section>
