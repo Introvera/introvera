@@ -177,6 +177,7 @@ export default function Projects() {
                        src={project.mainImage}
                        alt={`${project.title} mockup`}
                        fill
+                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                        priority={idx === 0}
                        className="object-contain object-center px-4 md:px-6 transition-transform duration-700"
                      />

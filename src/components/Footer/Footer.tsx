@@ -29,6 +29,7 @@ export default function Footer() {
                 width={160}
                 height={40}
                 className="object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </Link>
             
@@ -69,6 +70,9 @@ export default function Footer() {
              </Link>
              <Link href="/contact" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Contact
+             </Link>
+             <Link href="/blog" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
+               Blog
              </Link>
              <Link href="/privacy-policy" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Privacy Policy

@@ -99,16 +99,16 @@ export default function Testimonials() {
             </p>
             <div className="flex -space-x-5">
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
-                <Image src="/images/backgrounds/countries/united-kingdom.png" alt="United Kingdom" fill className="object-cover" />
+                <Image src="/images/backgrounds/countries/united-kingdom.png" alt="United Kingdom" fill sizes="48px" className="object-cover" />
               </div>
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
-                <Image src="/images/backgrounds/countries/sri-lanka.png" alt="Sri Lanka" fill className="object-cover" />
+                <Image src="/images/backgrounds/countries/sri-lanka.png" alt="Sri Lanka" fill sizes="48px" className="object-cover" />
               </div>
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
-                <Image src="/images/backgrounds/countries/qatar.png" alt="Qatar" fill className="object-cover" />
+                <Image src="/images/backgrounds/countries/qatar.png" alt="Qatar" fill sizes="48px" className="object-cover" />
               </div>
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
-                <Image src="/images/backgrounds/countries/australia.png" alt="Australia" fill className="object-cover" />
+                <Image src="/images/backgrounds/countries/australia.png" alt="Australia" fill sizes="48px" className="object-cover" />
               </div>
               <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full border-[3px] border-background bg-[var(--color-accent)] flex items-center justify-center text-white font-semibold text-sm duration-300 cursor-default">
                 4+
@@ -197,6 +197,7 @@ function TestimonialCard({ data, className = "", isExpanded, onToggleExpand }: T
               src={data.avatar}
               alt={data.name}
               fill
+              sizes="48px"
               className="object-cover"
             />
           ) : (
