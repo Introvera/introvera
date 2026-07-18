@@ -1,32 +1,77 @@
+import FadeInSection from "@/components/ui/FadeInSection";
 import { blogPosts } from "@/data/blog";
-import { notFound } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import FadeInSection from "@/components/ui/FadeInSection";
-import { ArrowLeft } from "lucide-react";
+import { notFound } from "next/navigation";
 
 const renderContent = (content: string) => {
   return content.split("\n\n").map((paragraph, index) => {
+
+    // H2 headings ##
     if (paragraph.startsWith("## ")) {
-      return <h2 key={index} className="text-2xl font-bold mt-8 mb-4 text-foreground">{paragraph.replace("## ", "")}</h2>;
+      return (
+        <h2 
+          key={index} 
+          className="text-3xl font-bold mt-10 mb-5 text-foreground"
+        >
+          {paragraph.replace("## ", "")}
+        </h2>
+      );
     }
-    
+
+    // H3 headings ###
+    if (paragraph.startsWith("### ")) {
+      return (
+        <h3 
+          key={index} 
+          className="text-lg md:text-xl font-semibold mt-8 mb-4 text-foreground"
+        >
+          {paragraph.replace("### ", "")}
+        </h3>
+      );
+    }
+
     const renderBold = (text: string) => {
       const parts = text.split(/\*\*(.*?)\*\*/g);
-      return parts.map((part, i) => (i % 2 === 1 ? <strong key={i} className="text-foreground">{part}</strong> : part));
+
+      return parts.map((part, i) =>
+        i % 2 === 1 ? (
+          <strong key={i} className="text-foreground font-bold">
+            {part}
+          </strong>
+        ) : (
+          part
+        )
+      );
     };
 
+
+    // Bullet lists
     if (paragraph.startsWith("- ")) {
       return (
-        <ul key={index} className="list-disc pl-6 mb-4 text-foreground/80">
+        <ul 
+          key={index} 
+          className="list-disc pl-6 mb-6 text-foreground/80"
+        >
           {paragraph.split("\n").map((item, i) => (
-            <li key={i}>{renderBold(item.replace("- ", ""))}</li>
+            <li key={i}>
+              {renderBold(item.replace("- ", ""))}
+            </li>
           ))}
         </ul>
       );
     }
 
-    return <p key={index} className="mb-4 text-foreground/80 leading-relaxed">{renderBold(paragraph)}</p>;
+
+    return (
+      <p 
+        key={index} 
+        className="mb-5 text-foreground/80 leading-relaxed"
+      >
+        {renderBold(paragraph)}
+      </p>
+    );
   });
 };
 
@@ -58,7 +103,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <main className="min-h-screen bg-background pt-44 pb-24">
       {/* Header Image Section */}
-      <FadeInSection className="max-w-4xl mx-auto px-6 mb-12 relative z-10">
+      <FadeInSection className="max-w-6xl mx-auto px-6 mb-12 relative z-10">
         <Link 
           href="/blog"
           className="inline-flex items-center gap-2 text-sm font-medium text-foreground/60 hover:text-[var(--color-accent)] transition-colors mb-8 group"
@@ -103,7 +148,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </FadeInSection>
 
       {/* Content Section */}
-      <FadeInSection className="max-w-3xl mx-auto px-6 relative z-10">
+      <FadeInSection className="max-w-6xl mx-auto px-4 relative z-10">
         <article className="prose prose-lg prose-headings:font-medium prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-[var(--color-accent)] hover:prose-a:text-purple-400 prose-strong:text-foreground prose-ul:text-foreground/80 dark:prose-invert max-w-none">
           {renderContent(post.content)}
         </article>

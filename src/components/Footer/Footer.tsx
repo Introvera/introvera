@@ -42,7 +42,7 @@ export default function Footer() {
               <Link href="https://www.linkedin.com/company/introvera/" target="_blank" rel="noopener noreferrer" aria-label="Introvera on LinkedIn" className="text-white hover:text-[var(--color-accent)] transition-colors">
                 <Linkedin size={24} strokeWidth={1.5} />
               </Link>
-              <Link href="https://web.facebook.com/profile.php?id=61577711031531&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" aria-label="Introvera on Facebook" className="text-white hover:text-[var(--color-accent)] transition-colors">
+              <Link href="https://web.facebook.com/introvera" target="_blank" rel="noopener noreferrer" aria-label="Introvera on Facebook" className="text-white hover:text-[var(--color-accent)] transition-colors">
                 <Facebook size={24} strokeWidth={1.5} />
               </Link>
               <Link href="https://www.instagram.com/team_introvera/" target="_blank" rel="noopener noreferrer" aria-label="Introvera on Instagram" className="text-white hover:text-[var(--color-accent)] transition-colors">

@@ -37,7 +37,7 @@ export function OrganizationJsonLd() {
     ],
     sameAs: [
       "https://www.linkedin.com/company/introvera/",
-      "https://web.facebook.com/profile.php?id=61577711031531",
+      "https://web.facebook.com/introvera",
       "https://www.instagram.com/team_introvera/",
       "https://www.fiverr.com/s/XL5o0l2",
     ],
