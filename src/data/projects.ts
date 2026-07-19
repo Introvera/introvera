@@ -50,33 +50,6 @@ export const projectsData: Project[] = [
       "We solved this by building an ultra-lightweight, mobile-first web application optimized for sub-second load times in low-signal areas, utilizing high-contrast UI elements for optimal roadside readability. To eliminate billing confusion, we created a transparent 3-step operational framework right above the fold paired with a secure, single-click Stripe integration for the dispatch fee, and embedded an intuitive, visual Tyre Size Guide to ensure correct data collection on the first try. Finally, we wrapped the entire journey in prominent, single-tap deep links to direct phone and WhatsApp lines, creating a zero-friction lifeline that seamlessly converts stressed visitors into confirmed dispatches.",
   },
   {
-    id: 2,
-    slug: "meladetect",
-    countryCode: "LK",
-    title: "MelaDetect Website",
-    images: [
-      "/images/projects/mela-detect/meladetectmain.webp",
-      "/images/projects/mela-detect/meladetect01.webp",
-      "/images/projects/mela-detect/meladetect02.webp",
-      "/images/projects/mela-detect/meladetect03.webp",
-      "/images/projects/mela-detect/meladetect04.webp",
-    ],
-    mainImage: "/images/projects/mela-detect/meladetectmain.webp",
-    logo: "/images/projects/mela-detect/meladetect-logo.png",
-    gradientColors: ["#0a1a2f", "#1a3a5f"],
-    tags: ["Web", "AI/ML", "Backend"],
-    link: "#",
-    description:
-      "MelaDetect is designed to help people take control of their skin health with ease and confidence. Using advanced AI and image analysis, the platform allows users to upload images of their skin and receive quick, reliable insights about potential risks.\n\nThe system is built to be user friendly and educational, guiding users through each step of the process while explaining results in simple terms. It analyzes patterns, marks suspicious areas, and even suggests follow up actions, empowering users to make informed decisions about their health.\n\nWhether you're monitoring moles, concerned about sunspots, or simply staying proactive, our platform makes early detection accessible and stress free.",
-    client: "MelaDetect",
-    duration: "3 Months",
-    services: ["Python", "Next.js"],
-    challenge:
-      "Early detection of skin cancer significantly improves treatment outcomes, but many people lack access to dermatologists or delay seeking medical advice due to cost, geographical distance, or simple lack of awareness regarding warning signs on their skin.",
-    solution:
-      "We developed a machine learning model trained on vast dermatological datasets to analyze uploaded skin images and provide preliminary assessments. While always recommending professional medical consultation, this rapid screening tool empowers users to take immediate, proactive steps regarding their personal health and wellbeing.",
-  },
-  {
     id: 3,
     slug: "adeaz",
     countryCode: "LK",
