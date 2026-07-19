@@ -12,7 +12,7 @@ export default function CTA() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
-      className="relative w-full bg-black py-16 sm:py-20" 
+      className="relative w-full bg-background py-16 sm:py-20" 
       id="cta"
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-12 lg:gap-20">
@@ -24,7 +24,7 @@ export default function CTA() {
           viewport={{ once: true, margin: "-50px" }}
           className="flex-1 flex flex-col items-start text-left"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-[50px] font-medium leading-[1.15] text-white tracking-tight mb-10 mt-6 lg:mt-0">
+          <h2 className="text-4xl sm:text-5xl lg:text-[50px] font-medium leading-[1.15] text-foreground tracking-tight mb-10 mt-6 lg:mt-0">
             Let&apos;s Build Something<br />
             Great Together
           </h2>
@@ -40,10 +40,10 @@ export default function CTA() {
               </Link>
             </span>
 
-            <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300">
+            <span className="inline-flex rounded-full p-[6px] border border-foreground/20 bg-foreground/5 transition-all duration-300">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300"
+                className="inline-flex items-center gap-4 px-4 py-2 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-foreground/90"
               >
                 Start Your Project Now
                 <ArrowUpRight size={22} />

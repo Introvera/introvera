@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -62,12 +62,12 @@ export default function Testimonials() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
-      className="relative w-full bg-black py-16 sm:py-20 overflow-hidden" 
+      className="relative w-full bg-background py-16 sm:py-20 overflow-hidden" 
       id="testimonials"
     >
       
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] h-[300px] opacity-40 pointer-events-none z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(153,0,255,0.4)_0%,transparent_70%)] blur-[80px]" />
+        <div className="absolute inset-0 blur-[80px]" style={{ background: "var(--theme-testimonial-glow)" }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full mb-14">
@@ -81,7 +81,7 @@ export default function Testimonials() {
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Testimonials
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-white mb-2">
+            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-foreground mb-2">
               Stories of Trust & <br className="hidden md:block"/>
               Transformation.
             </h2>
@@ -94,23 +94,23 @@ export default function Testimonials() {
             viewport={{ once: true, margin: "-50px" }}
             className="flex flex-col items-start md:items-end gap-3 shrink-0 pb-4"
           >
-            <p className="text-white font-medium text-xl md:text-2xl tracking-wide">
+            <p className="text-foreground font-medium text-xl md:text-2xl tracking-wide">
               Trusted by clients worldwide
             </p>
             <div className="flex -space-x-5">
-              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
-                <Image src="/images/backgrounds/countries/united-kingdom.png" alt="United Kingdom" fill className="object-cover" />
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
+                <Image src="/images/backgrounds/countries/united-kingdom.png" alt="United Kingdom" fill sizes="48px" className="object-cover" />
               </div>
-              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
-                <Image src="/images/backgrounds/countries/sri-lanka.png" alt="Sri Lanka" fill className="object-cover" />
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
+                <Image src="/images/backgrounds/countries/sri-lanka.png" alt="Sri Lanka" fill sizes="48px" className="object-cover" />
               </div>
-              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
-                <Image src="/images/backgrounds/countries/qatar.png" alt="Qatar" fill className="object-cover" />
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
+                <Image src="/images/backgrounds/countries/qatar.png" alt="Qatar" fill sizes="48px" className="object-cover" />
               </div>
-              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-black duration-300">
-                <Image src="/images/backgrounds/countries/australia.png" alt="Australia" fill className="object-cover" />
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-[3px] border-background duration-300">
+                <Image src="/images/backgrounds/countries/australia.png" alt="Australia" fill sizes="48px" className="object-cover" />
               </div>
-              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full border-[3px] border-black bg-[var(--color-accent)] flex items-center justify-center text-white font-semibold text-sm duration-300 cursor-default">
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full border-[3px] border-background bg-[var(--color-accent)] flex items-center justify-center text-white font-semibold text-sm duration-300 cursor-default">
                 4+
               </div>
             </div>
@@ -123,6 +123,10 @@ export default function Testimonials() {
         
         {/* Row 1 -> moving Left */}
         <div className="group flex overflow-hidden w-full relative py-2">
+          {/* Left and Right fade gradients */}
+          <div className="absolute top-0 bottom-0 left-0 w-8 md:w-24 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-8 md:w-24 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+          
           <div 
             className={`flex animate-marquee-left whitespace-nowrap gap-6 md:gap-8 hover:[animation-play-state:paused] px-4 w-max ${isPaused ? '[animation-play-state:paused]' : ''}`}
             onTouchStart={() => setIsTouched(true)}
@@ -173,19 +177,22 @@ function TestimonialCard({ data, className = "", isExpanded, onToggleExpand }: T
 
   return (
     <div 
-      className={`w-[280px] md:w-[360px] lg:w-[400px] h-full p-6 md:p-8 rounded-[1.5rem] border-[1.5px] border-white/10 bg-[#280566]/80 backdrop-blur-md flex flex-col justify-between whitespace-normal shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-transform duration-300 hover:-translate-y-2 ${className}`}
-      style={{
-        boxShadow: "inset 0 0 40px rgba(153,0,255,0.2), 0 10px 40px rgba(0,0,0,0.5)"
+      className={`w-[280px] md:w-[360px] lg:w-[400px] h-full p-6 md:p-8 rounded-[1.5rem] border-[1.5px] border-foreground/12 flex flex-col justify-between whitespace-normal transition-transform duration-300 hover:-translate-y-2 ${className}`}
+      style={{ 
+        background: "var(--theme-testimonial-bg)",
+        backdropFilter: "var(--theme-testimonial-blur)",
+        WebkitBackdropFilter: "var(--theme-testimonial-blur)",
+        boxShadow: "var(--theme-testimonial-shadow)"
       }}
     >
       <div className="mb-6">
-        <p className="text-white text-sm md:text-base font-medium leading-relaxed whitespace-pre-wrap">
+        <p className="text-foreground text-sm md:text-base font-medium leading-relaxed whitespace-pre-wrap">
           {getDisplayText()}
         </p>
         {isLong && (
           <button 
             onClick={onToggleExpand}
-            className="text-[var(--color-accent)] text-xs md:text-sm font-semibold mt-3 hover:text-white transition-colors focus:outline-none inline-flex items-center gap-1"
+            className="text-[var(--color-accent)] text-xs md:text-sm font-semibold mt-3 hover:text-foreground transition-colors focus:outline-none inline-flex items-center gap-1"
           >
             {isExpanded ? "See less" : "See more"}
           </button>
@@ -193,12 +200,13 @@ function TestimonialCard({ data, className = "", isExpanded, onToggleExpand }: T
       </div>
 
       <div className="flex items-center gap-4 mt-auto">
-        <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 border-[2px] border-white/20">
+        <div className="relative w-10 h-10 md:w-11 md:h-11 rounded-full overflow-hidden shrink-0 border-[2px] border-foreground/10">
           {data.avatar ? (
             <Image 
               src={data.avatar}
               alt={data.name}
               fill
+              sizes="48px"
               className="object-cover"
             />
           ) : (
@@ -209,10 +217,10 @@ function TestimonialCard({ data, className = "", isExpanded, onToggleExpand }: T
         </div>
         
         <div className="flex flex-col">
-          <h3 className="text-sm md:text-base font-semibold text-white mb-1">
+          <h3 className="text-sm md:text-base font-semibold text-foreground mb-1">
             {data.name}
           </h3>
-          <span className="text-[10px] md:text-xs text-white/80 w-fit">
+          <span className="text-[10px] md:text-xs text-foreground/70 w-fit">
             {data.role}
           </span>
         </div>

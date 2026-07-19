@@ -29,6 +29,7 @@ export default function Footer() {
                 width={160}
                 height={40}
                 className="object-contain"
+                style={{ width: "auto", height: "auto" }}
               />
             </Link>
             
@@ -41,7 +42,7 @@ export default function Footer() {
               <Link href="https://www.linkedin.com/company/introvera/" target="_blank" rel="noopener noreferrer" aria-label="Introvera on LinkedIn" className="text-white hover:text-[var(--color-accent)] transition-colors">
                 <Linkedin size={24} strokeWidth={1.5} />
               </Link>
-              <Link href="https://web.facebook.com/profile.php?id=61577711031531&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer" aria-label="Introvera on Facebook" className="text-white hover:text-[var(--color-accent)] transition-colors">
+              <Link href="https://web.facebook.com/introvera" target="_blank" rel="noopener noreferrer" aria-label="Introvera on Facebook" className="text-white hover:text-[var(--color-accent)] transition-colors">
                 <Facebook size={24} strokeWidth={1.5} />
               </Link>
               <Link href="https://www.instagram.com/team_introvera/" target="_blank" rel="noopener noreferrer" aria-label="Introvera on Instagram" className="text-white hover:text-[var(--color-accent)] transition-colors">
@@ -69,6 +70,9 @@ export default function Footer() {
              </Link>
              <Link href="/contact" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Contact
+             </Link>
+             <Link href="/blog" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
+               Blog
              </Link>
              <Link href="/privacy-policy" className="text-white/80 hover:text-[var(--color-accent)] transition-colors w-fit text-sm">
                Privacy Policy

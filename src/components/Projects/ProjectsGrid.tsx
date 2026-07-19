@@ -91,7 +91,7 @@ export default function ProjectsGrid() {
               className={`rounded-full px-4 py-2 text-sm font-medium tracking-wide transition-all duration-300 sm:px-5 ${
                 isActive
                   ? "bg-[var(--color-accent)] text-white shadow-[0_0_24px_rgba(153,0,255,0.28)]"
-                  : "text-white/70 hover:bg-white/10 hover:text-white"
+                  : "text-foreground/70 hover:bg-foreground/10 hover:text-foreground"
               }`}
               aria-pressed={isActive}
             >
@@ -109,21 +109,30 @@ export default function ProjectsGrid() {
               key={project.id}
               className="group relative block w-full overflow-hidden rounded-[2rem] transition-all duration-500 hover:shadow-[0_0_50px_rgba(153,0,255,0.2)]"
               style={{
-                background: "linear-gradient(160deg, #2D1D4F 0%, #0C0123 100%)",
+                background: "var(--theme-project-card-bg)",
               }}
             >
               <div className="relative z-10 p-6 lg:p-8">
                 <div className="mb-4 flex items-start justify-between">
                   <div className="flex-1">
-                    <h3 className="mb-2 text-xl font-semibold text-white lg:text-2xl">
+                    <h3 
+                      className="mb-2 text-xl font-semibold lg:text-2xl"
+                      style={{ color: 'var(--theme-project-card-text)' }}
+                    >
                       {project.title}
                     </h3>
-                    <p className="line-clamp-3 text-xs leading-relaxed text-white/60 lg:text-sm">
+                    <p 
+                      className="line-clamp-3 text-xs leading-relaxed lg:text-sm"
+                      style={{ color: 'var(--theme-project-card-text-subtle)' }}
+                    >
                       {project.description.split("\n")[0]}
                     </p>
                   </div>
-                  <span className="ml-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/30 transition-all duration-300 group-hover:border-white/50 group-hover:bg-white/10 lg:h-12 lg:w-12">
-                    <ArrowUpRight size={18} className="text-white" />
+                  <span 
+                    className="ml-3 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-all duration-300 lg:h-12 lg:w-12"
+                    style={{ borderColor: 'var(--theme-project-card-btn-border)' }}
+                  >
+                    <ArrowUpRight size={18} style={{ color: 'var(--theme-project-card-btn-text)' }} />
                   </span>
                 </div>
 
@@ -131,7 +140,12 @@ export default function ProjectsGrid() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-white/25 bg-white/5 px-3 py-1 text-[11px] text-white/80 backdrop-blur-sm"
+                      className="rounded-full border px-3 py-1 text-[11px] backdrop-blur-sm"
+                      style={{ 
+                        borderColor: 'var(--theme-project-card-tag-border)', 
+                        backgroundColor: 'var(--theme-project-card-tag-bg)',
+                        color: 'var(--theme-project-card-tag-text)'
+                      }}
                     >
                       {tag}
                     </span>
@@ -152,7 +166,13 @@ export default function ProjectsGrid() {
               {(project.logo || project.countryCode) && (
                 <div className="relative z-10 flex items-center justify-between gap-2.5 px-6 py-4 lg:px-8">
                   {project.countryCode ? (
-                    <div className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 lg:h-8 lg:w-8">
+                    <div 
+                      className="relative flex h-6 w-6 shrink-0 items-center justify-center overflow-hidden rounded-full border lg:h-8 lg:w-8"
+                      style={{ 
+                        borderColor: 'var(--theme-project-card-border)',
+                        backgroundColor: 'var(--theme-project-card-tag-bg)'
+                      }}
+                    >
                       <img
                         src={`https://flagcdn.com/w40/${project.countryCode.toLowerCase()}.png`}
                         srcSet={`https://flagcdn.com/w80/${project.countryCode.toLowerCase()}.png 2x`}
@@ -179,7 +199,7 @@ export default function ProjectsGrid() {
             </Link>
           ))
         ) : (
-          <div className="rounded-3xl border border-white/10 bg-[#0F0F13] p-8 text-white/70 md:col-span-2 lg:col-span-3">
+          <div className="rounded-3xl border border-foreground/10 bg-background p-8 text-foreground/70 md:col-span-2 lg:col-span-3">
             No projects found for this category.
           </div>
         )}

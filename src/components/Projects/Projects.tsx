@@ -40,7 +40,7 @@ export default function Projects() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.1 }}
-      className="w-full bg-black py-16 sm:py-20 overflow-hidden" 
+      className="w-full bg-background py-16 sm:py-20 overflow-hidden" 
       id="projects"
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -55,7 +55,7 @@ export default function Projects() {
             <p className="text-[var(--color-accent)] text-sm font-semibold tracking-wider uppercase mb-4">
               Our Projects
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-[50px] font-medium leading-tight text-foreground">
               Showcase of<br />
               <span className="text-[var(--color-accent)]">Innovation</span>
             </h2>
@@ -67,7 +67,7 @@ export default function Projects() {
             viewport={{ once: true, margin: "-50px" }}
             className="flex flex-col items-start md:items-end gap-6 shrink-0 md:pb-4"
           >
-            <h3 className="text-xl md:text-2xl font-medium text-white">Our Work Speaks for Itself</h3>
+            <h3 className="text-xl md:text-2xl font-medium text-foreground">Our Work Speaks for Itself</h3>
             <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
               <Link
                 href="/projects"
@@ -131,9 +131,9 @@ export default function Projects() {
               >
                  {/* Card Wrapper with dynamic border/glow exclusively for active center item */}
                  <div 
-                   className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 flex flex-col ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-white/10'}`}
+                   className={`w-full h-full relative rounded-2xl overflow-hidden transition-all duration-700 flex flex-col ${isCenter ? 'border-[3px] border-[var(--color-accent)] shadow-[0_0_40px_rgba(153,0,255,0.35)]' : 'border border-foreground/10'}`}
                    style={{
-                     background: 'linear-gradient(160deg, #2D1D4F 0%, #0C0123 100%)',
+                     background: 'var(--theme-project-card-bg)',
                    }}
                  >
                    {/* Top Content Area */}
@@ -141,10 +141,16 @@ export default function Projects() {
                      {/* Arrow Button - top right */}
                      <div className="flex justify-between items-start mb-3 md:mb-4">
                        <div className="flex-1">
-                         <h3 className="text-lg md:text-2xl font-semibold text-white mb-2 line-clamp-1">
+                         <h3 
+                           className="text-lg md:text-2xl font-semibold mb-2 line-clamp-1"
+                           style={{ color: 'var(--theme-project-card-text)' }}
+                         >
                            {project.title}
                          </h3>
-                         <p className="text-white/60 text-[10px] md:text-sm leading-relaxed line-clamp-2 md:line-clamp-3">
+                         <p 
+                           className="text-[10px] md:text-sm leading-relaxed line-clamp-2 md:line-clamp-3"
+                           style={{ color: 'var(--theme-project-card-text-subtle)' }}
+                         >
                            {project.description.split('\n')[0]}
                          </p>
                        </div>
@@ -155,16 +161,25 @@ export default function Projects() {
                            if (!isCenter) e.preventDefault(); 
                            e.stopPropagation(); 
                          }}
-                         className="shrink-0 ml-3 w-8 h-8 md:w-12 md:h-12 rounded-full border border-white/30 flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-white/50 pointer-events-auto"
+                         className="shrink-0 ml-3 w-8 h-8 md:w-12 md:h-12 rounded-full border flex items-center justify-center transition-all duration-300 hover:bg-white/10 hover:border-white/50 pointer-events-auto"
+                         style={{ borderColor: 'var(--theme-project-card-btn-border)' }}
                        >
-                         <ArrowUpRight size={16} className="text-white" />
+                         <ArrowUpRight size={16} style={{ color: 'var(--theme-project-card-btn-text)' }} />
                        </Link>
                      </div>
 
                      {/* Tags */}
                      <div className="flex flex-wrap gap-2 mb-2 md:mb-6">
                        {project.tags.slice(0, 3).map(tag => (
-                         <span key={tag} className="px-2 py-1 md:px-3 rounded-full border border-white/25 text-[9px] md:text-[11px] text-white/80 bg-white/5 backdrop-blur-sm">
+                         <span 
+                           key={tag} 
+                           className="px-2 py-1 md:px-3 rounded-full border text-[9px] md:text-[11px] backdrop-blur-sm"
+                           style={{ 
+                             borderColor: 'var(--theme-project-card-tag-border)', 
+                             backgroundColor: 'var(--theme-project-card-tag-bg)',
+                             color: 'var(--theme-project-card-tag-text)'
+                           }}
+                         >
                            {tag}
                          </span>
                        ))}
@@ -177,6 +192,7 @@ export default function Projects() {
                        src={project.mainImage}
                        alt={`${project.title} mockup`}
                        fill
+                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                        priority={idx === 0}
                        className="object-contain object-center px-4 md:px-6 transition-transform duration-700"
                      />
@@ -186,7 +202,13 @@ export default function Projects() {
                    {(project.logo || project.countryCode) && (
                      <div className="relative z-10 flex items-center justify-between gap-2 px-5 md:px-8 py-3 md:py-4 mt-auto h-[50px] md:h-[70px]">
                        {project.countryCode ? (
-                         <div className="relative flex w-6 h-6 md:w-8 md:h-8 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/10 bg-white/5 opacity-80">
+                         <div 
+                           className="relative flex w-6 h-6 md:w-8 md:h-8 shrink-0 items-center justify-center overflow-hidden rounded-full border opacity-80"
+                           style={{ 
+                             borderColor: 'var(--theme-project-card-border)',
+                             backgroundColor: 'var(--theme-project-card-tag-bg)'
+                           }}
+                         >
                            <img
                              src={`https://flagcdn.com/w40/${project.countryCode.toLowerCase()}.png`}
                              srcSet={`https://flagcdn.com/w80/${project.countryCode.toLowerCase()}.png 2x`}

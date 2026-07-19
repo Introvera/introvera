@@ -50,47 +50,47 @@ export default function ContactForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
-        <label htmlFor="name" className="text-white/80 text-sm font-medium">Name</label>
+        <label htmlFor="name" className="text-foreground/80 text-sm font-medium">Name</label>
         <input
           type="text"
           id="name"
           name="name"
           required
           placeholder="Your Name"
-          className="w-full bg-white/5 border border-white/10 focus:border-[var(--color-accent)] rounded-xl px-5 py-4 text-white text-sm outline-none transition-all placeholder:text-white/30"
+          className="w-full bg-foreground/5 border border-foreground/10 focus:border-[var(--color-accent)] rounded-xl px-5 py-4 text-foreground text-sm outline-none transition-all placeholder:text-foreground/30"
         />
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="email" className="text-white/80 text-sm font-medium">Email</label>
+        <label htmlFor="email" className="text-foreground/80 text-sm font-medium">Email</label>
         <input
           type="email"
           id="email"
           name="email"
           required
           placeholder="your@gmail.com"
-          className="w-full bg-white/5 border border-white/10 focus:border-[var(--color-accent)] rounded-xl px-5 py-4 text-white text-sm outline-none transition-all placeholder:text-white/30"
+          className="w-full bg-foreground/5 border border-foreground/10 focus:border-[var(--color-accent)] rounded-xl px-5 py-4 text-foreground text-sm outline-none transition-all placeholder:text-foreground/30"
         />
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="text-white/80 text-sm font-medium">Message</label>
+        <label htmlFor="message" className="text-foreground/80 text-sm font-medium">Message</label>
         <textarea
           id="message"
           name="message"
           required
           rows={4}
           placeholder="Tell us about your project..."
-          className="w-full bg-white/5 border border-white/10 focus:border-[var(--color-accent)] rounded-xl px-5 py-4 text-white text-sm outline-none transition-all placeholder:text-white/30 resize-none"
+          className="w-full bg-foreground/5 border border-foreground/10 focus:border-[var(--color-accent)] rounded-xl px-5 py-4 text-foreground text-sm outline-none transition-all placeholder:text-foreground/30 resize-none"
         />
       </div>
 
       <div className="flex items-center gap-4 mt-2">
-        <span className="inline-flex rounded-full p-[6px] border border-white bg-white/30 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+        <span className="inline-flex rounded-full p-[6px] border border-foreground/20 bg-foreground/5 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
           <button
             type="submit"
             disabled={status === "Sending..."}
-            className="inline-flex items-center gap-4 px-4 py-2 bg-white text-[var(--color-accent)] text-sm font-medium rounded-full transition-all duration-300 group disabled:opacity-70"
+            className="inline-flex items-center gap-4 px-4 py-2 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 group disabled:opacity-70 hover:bg-foreground/90"
           >
             {status === "Sending..." ? "Sending..." : "Send Message"}
             {status !== "Sending..." && <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
