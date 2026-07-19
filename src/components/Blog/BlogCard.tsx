@@ -4,7 +4,7 @@ import { BlogPost } from "@/data/blog";
 
 export default function BlogCard({ post }: { post: BlogPost }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full rounded-[1rem] bg-foreground/[0.02] border border-foreground/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.8)] hover:border-foreground/10">
+    <Link href={`/blog/${post.slug}`} className="group flex flex-col h-full rounded-[1rem] bg-foreground/[0.02] border border-foreground/5 overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-foreground/10">
       
       {/* Image Section */}
       <div className="relative w-full h-[240px] overflow-hidden">

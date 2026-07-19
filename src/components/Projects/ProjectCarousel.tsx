@@ -57,7 +57,7 @@ export default function ProjectCarousel({ images, title }: ProjectCarouselProps)
          <>
             <button 
                onClick={handlePrevious}
-               className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-background/50 hover:bg-[var(--color-accent)] text-white/80 hover:text-foreground backdrop-blur-md border border-foreground/10 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
+               className="absolute left-3 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-background/50 hover:bg-[var(--color-accent)] text-foreground/80 hover:text-white backdrop-blur-md border border-foreground/10 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
                aria-label="Previous slide"
             >
                <ChevronLeft size={24} />
@@ -65,7 +65,7 @@ export default function ProjectCarousel({ images, title }: ProjectCarouselProps)
             
             <button 
                onClick={handleNext}
-               className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-background/50 hover:bg-[var(--color-accent)] text-white/80 hover:text-foreground backdrop-blur-md border border-foreground/10 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
+               className="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-background/50 hover:bg-[var(--color-accent)] text-foreground/80 hover:text-white backdrop-blur-md border border-foreground/10 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 z-10"
                aria-label="Next slide"
             >
                <ChevronRight size={24} />
