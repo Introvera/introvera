@@ -51,7 +51,10 @@ export default function AboutPage() {
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20 mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[var(--color-surface)] border border-border-subtle">
+          <div 
+            className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end border border-border-subtle"
+            style={{ background: "var(--theme-service-card-bg)" }}
+          >
              <Image
                 src="/images/backgrounds/our-vision.webp"
                 alt="Our Vision"
@@ -68,13 +71,16 @@ export default function AboutPage() {
              />
              <div className="relative z-10 w-full max-w-md">
                 <h3 className="text-3xl font-medium text-[var(--color-accent)] mb-4">Our Vision</h3>
-                <p className="text-foreground/80 leading-relaxed text-[15px]">
+                <p className="text-white/80 leading-relaxed text-[15px]">
                   To be a global leader in tech innovation, recognized for our commitment to quality, creativity, and customer success. We aim to shape a smarter, more connected future through transformative technology and meaningful digital experiences.
                 </p>
              </div>
           </div>
 
-          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[var(--color-surface)] border border-border-subtle">
+          <div 
+            className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end border border-border-subtle"
+            style={{ background: "var(--theme-service-card-bg)" }}
+          >
              <Image
                 src="/images/backgrounds/our-mission.webp"
                 alt="Our Mission"
@@ -91,7 +97,7 @@ export default function AboutPage() {
              />
              <div className="relative z-10 w-full max-w-md">
                 <h3 className="text-3xl font-medium text-[var(--color-accent)] mb-4">Our Mission</h3>
-                <p className="text-foreground/80 leading-relaxed text-[15px]">
+                <p className="text-white/80 leading-relaxed text-[15px]">
                   To drive digital transformation by providing cutting edge technology solutions that are reliable, scalable, and user friendly. We strive to help our clients achieve their goals through innovation, collaboration, and excellence.
                 </p>
              </div>

@@ -157,7 +157,8 @@ type ServiceData = {
 function ServiceCard({ data, className = "" }: { data: ServiceData, className?: string }) {
   return (
     <div 
-      className={`group relative overflow-hidden rounded-2xl bg-[var(--color-surface)] border border-border-subtle ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
+      className={`group relative overflow-hidden rounded-2xl border border-border-subtle ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
+      style={{ background: "var(--theme-service-card-bg)" }}
     >
       {/* Background Image layer with Masking Gradient */}
       {data.image && (
@@ -185,7 +186,7 @@ function ServiceCard({ data, className = "" }: { data: ServiceData, className?: 
         <h3 className={`text-2xl font-medium whitespace-pre-line ${data.titleColor}`}>
           {data.title}
         </h3>
-        <p className="text-sm text-foreground/80 leading-relaxed max-w-[85%]">
+        <p className="text-sm text-white/80 leading-relaxed max-w-[85%]">
           {data.description}
         </p>
       </div>
