@@ -18,8 +18,8 @@ export default function About() {
             </h2>
           </FadeInSection>
           
-          <FadeInSection className="lg:w-6/12 bg-[#121214] rounded-[32px] p-8 md:p-7 flex flex-col justify-between h-full">
-            <p className="text-white/80 text-lg leading-relaxed mb-6">
+          <FadeInSection className="lg:w-6/12 bg-[var(--color-elevated)] rounded-[32px] p-8 md:p-7 flex flex-col justify-between h-full">
+            <p className="text-foreground/80 text-lg leading-relaxed mb-6">
               Introvera is a digital innovation studio where creativity meets technology. We design smart, scalable solutions.
             </p>
             

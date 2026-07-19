@@ -123,6 +123,10 @@ export default function Testimonials() {
         
         {/* Row 1 -> moving Left */}
         <div className="group flex overflow-hidden w-full relative py-2">
+          {/* Left and Right fade gradients */}
+          <div className="absolute top-0 bottom-0 left-0 w-8 md:w-24 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-8 md:w-24 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+          
           <div 
             className={`flex animate-marquee-left whitespace-nowrap gap-6 md:gap-8 hover:[animation-play-state:paused] px-4 w-max ${isPaused ? '[animation-play-state:paused]' : ''}`}
             onTouchStart={() => setIsTouched(true)}
@@ -173,8 +177,13 @@ function TestimonialCard({ data, className = "", isExpanded, onToggleExpand }: T
 
   return (
     <div 
-      className={`w-[280px] md:w-[360px] lg:w-[400px] h-full p-6 md:p-8 rounded-[1.5rem] border-[1.5px] border-foreground/10 backdrop-blur-md flex flex-col justify-between whitespace-normal shadow-[0_4px_30px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-2 ${className}`}
-      style={{ background: "var(--theme-testimonial-bg)" }}
+      className={`w-[280px] md:w-[360px] lg:w-[400px] h-full p-6 md:p-8 rounded-[1.5rem] border-[1.5px] border-foreground/12 flex flex-col justify-between whitespace-normal transition-transform duration-300 hover:-translate-y-2 ${className}`}
+      style={{ 
+        background: "var(--theme-testimonial-bg)",
+        backdropFilter: "var(--theme-testimonial-blur)",
+        WebkitBackdropFilter: "var(--theme-testimonial-blur)",
+        boxShadow: "var(--theme-testimonial-shadow)"
+      }}
     >
       <div className="mb-6">
         <p className="text-foreground text-sm md:text-base font-medium leading-relaxed whitespace-pre-wrap">

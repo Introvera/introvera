@@ -157,7 +157,7 @@ type ServiceData = {
 function ServiceCard({ data, className = "" }: { data: ServiceData, className?: string }) {
   return (
     <div 
-      className={`group relative overflow-hidden rounded-2xl bg-background border border-border-subtle ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
+      className={`group relative overflow-hidden rounded-2xl bg-[var(--color-surface)] border border-border-subtle ${data.colSpan} ${data.aspectRatio} ${className} flex flex-col justify-end p-6 md:p-8 w-full max-w-[100vw] overflow-x-hidden max-h-[350px] md:max-h-none`}
     >
       {/* Background Image layer with Masking Gradient */}
       {data.image && (
@@ -166,10 +166,17 @@ function ServiceCard({ data, className = "" }: { data: ServiceData, className?: 
             src={data.image}
             alt={data.title.replace('\n', ' ')}
             fill
-            className="object-cover object-center opacity-60 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
+            className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+            style={{
+              opacity: "var(--theme-service-image-opacity)",
+              mixBlendMode: "var(--theme-service-image-blend)" as any,
+            }}
           />
           {/* Overlay gradient to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-[#000000]/60 to-transparent"></div>
+          <div 
+            className="absolute inset-0" 
+            style={{ backgroundImage: "var(--theme-service-gradient)" }}
+          />
         </div>
       )}
 
@@ -178,7 +185,7 @@ function ServiceCard({ data, className = "" }: { data: ServiceData, className?: 
         <h3 className={`text-2xl font-medium whitespace-pre-line ${data.titleColor}`}>
           {data.title}
         </h3>
-        <p className="text-sm text-white/80 leading-relaxed max-w-[85%]">
+        <p className="text-sm text-foreground/80 leading-relaxed max-w-[85%]">
           {data.description}
         </p>
       </div>

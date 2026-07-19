@@ -122,7 +122,7 @@ export default function Hero() {
           >
             <div className="flex items-center justify-between">
               <div className="w-12 h-12 rounded-full bg-[var(--color-accent)] flex items-center justify-center">
-                <CalendarRange size={22} className="text-foreground" />
+                <CalendarRange size={22} className="text-white" />
               </div>
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full border-2 border-[var(--color-accent)] overflow-hidden relative">

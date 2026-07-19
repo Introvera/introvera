@@ -52,7 +52,7 @@ export default function ContactPage() {
       </FadeInSection>
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20">
-         <div className="w-full bg-foreground/[0.02] border border-foreground/10 rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.8)]">
+         <div className="w-full bg-foreground/[0.02] border border-foreground/10 rounded-[2.5rem] p-8 md:p-12 lg:p-16">
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 mb-16">
                

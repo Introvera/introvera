@@ -51,33 +51,47 @@ export default function AboutPage() {
 
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-20 mb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-foreground/[0.02] border border-foreground/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[var(--color-surface)] border border-border-subtle">
              <Image
                 src="/images/backgrounds/our-vision.webp"
                 alt="Our Vision"
                 fill
-                className="object-cover object-center opacity-40 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                style={{
+                  opacity: "var(--theme-service-image-opacity)",
+                  mixBlendMode: "var(--theme-service-image-blend)" as any,
+                }}
              />
-             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+             <div 
+                className="absolute inset-0" 
+                style={{ backgroundImage: "var(--theme-service-gradient)" }}
+             />
              <div className="relative z-10 w-full max-w-md">
                 <h3 className="text-3xl font-medium text-[var(--color-accent)] mb-4">Our Vision</h3>
-                <p className="text-white/80 leading-relaxed text-[15px]">
+                <p className="text-foreground/80 leading-relaxed text-[15px]">
                   To be a global leader in tech innovation, recognized for our commitment to quality, creativity, and customer success. We aim to shape a smarter, more connected future through transformative technology and meaningful digital experiences.
                 </p>
              </div>
           </div>
 
-          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-foreground/[0.02] border border-foreground/5 shadow-[0_10px_40px_rgba(0,0,0,0.6)]">
+          <div className="group relative overflow-hidden rounded-[2rem] p-10 h-[400px] flex flex-col justify-end bg-[var(--color-surface)] border border-border-subtle">
              <Image
                 src="/images/backgrounds/our-mission.webp"
                 alt="Our Mission"
                 fill
-                className="object-cover object-center opacity-40 mix-blend-screen transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                style={{
+                  opacity: "var(--theme-service-image-opacity)",
+                  mixBlendMode: "var(--theme-service-image-blend)" as any,
+                }}
              />
-             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+             <div 
+                className="absolute inset-0" 
+                style={{ backgroundImage: "var(--theme-service-gradient)" }}
+             />
              <div className="relative z-10 w-full max-w-md">
                 <h3 className="text-3xl font-medium text-[var(--color-accent)] mb-4">Our Mission</h3>
-                <p className="text-white/80 leading-relaxed text-[15px]">
+                <p className="text-foreground/80 leading-relaxed text-[15px]">
                   To drive digital transformation by providing cutting edge technology solutions that are reliable, scalable, and user friendly. We strive to help our clients achieve their goals through innovation, collaboration, and excellence.
                 </p>
              </div>
@@ -168,7 +182,7 @@ export default function AboutPage() {
       <FadeInSection className="max-w-7xl mx-auto px-6 relative z-10">
          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-center">
             
-            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-end order-2 lg:order-1">
+            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-end order-1 lg:order-1">
                <div className="flex flex-col gap-10">
                   <div className="flex items-start gap-5">
                      <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
@@ -202,7 +216,7 @@ export default function AboutPage() {
                </div>
             </div>
 
-            <div className="relative w-full aspect-[3/4] lg:h-[500px] rounded-3xl overflow-hidden order-1 lg:order-2">
+            <div className="relative w-full aspect-[3/4] lg:h-[500px] rounded-3xl overflow-hidden order-2 lg:order-2">
                <Image
                  src="/images/backgrounds/about-choose-us.webp"
                  alt="Robot Concept"
@@ -214,7 +228,7 @@ export default function AboutPage() {
                
             </div>
 
-            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-start order-3">
+            <div className="bg-foreground/[0.02] border border-foreground/5 rounded-3xl p-8 lg:p-10 shadow-lg h-fit lg:self-start order-3 lg:order-3">
                <div className="flex flex-col gap-10">
                   <div className="flex items-start gap-5">
                      <div className="shrink-0 w-10 h-10 rounded-full border border-[var(--color-accent)]/30 flex items-center justify-center bg-[var(--color-accent)]/10 text-[var(--color-accent)]">
