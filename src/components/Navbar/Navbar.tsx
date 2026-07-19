@@ -91,22 +91,6 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-4">
-          <button
-            onClick={() => {
-              if (document.documentElement.classList.contains('force-light')) {
-                document.documentElement.classList.remove('force-light');
-                document.documentElement.classList.add('force-dark');
-              } else if (document.documentElement.classList.contains('force-dark')) {
-                document.documentElement.classList.remove('force-dark');
-                document.documentElement.classList.remove('force-light');
-              } else {
-                document.documentElement.classList.add('force-light');
-              }
-            }}
-            className="px-4 py-2 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300"
-          >
-            Toggle Theme
-          </button>
           
           <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
             <button
