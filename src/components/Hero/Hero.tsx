@@ -182,7 +182,10 @@ export default function Hero() {
               />
             </div>
 
-            <div className="absolute inset-0 flex flex-col items-center justify-end rounded-2xl pb-8 z-10">
+            {/* Gradient Overlay for Text Readability */}
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none z-10 rounded-b-2xl" />
+
+            <div className="absolute inset-0 flex flex-col items-center justify-end rounded-2xl pb-8 z-20">
               <Link href="/services" aria-label="View Custom Software Services" className="mb-6 w-12 h-12 rounded-full border border-foreground/50 flex items-center justify-center bg-background/30 backdrop-blur-md hover:bg-foreground/10 transition-colors cursor-pointer">
                 <ArrowUpRight size={20} className="text-foreground" />
               </Link>

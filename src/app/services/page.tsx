@@ -410,7 +410,7 @@ export default function ServicesPage() {
             <span className="inline-flex rounded-full p-[6px] border border-foreground bg-foreground/30 transition-all duration-300">
               <Link
                 href="/projects"
-                className="inline-flex items-center gap-4 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
+                className="inline-flex items-center gap-4 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-foreground/80"
               >
                 View Our Projects
                 <ArrowRight size={18} />

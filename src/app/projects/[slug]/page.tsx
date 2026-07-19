@@ -143,7 +143,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                   <Link
                     href={project.link}
                     target="_blank"
-                    className="inline-flex items-center gap-4 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-gray-200"
+                    className="inline-flex items-center gap-4 px-6 py-3 bg-foreground text-background text-sm font-medium rounded-full transition-all duration-300 hover:bg-foreground/80"
                   >
                     Visit Live Site
                     <ArrowUpRight size={20} className="text-[var(--color-accent)]" />
