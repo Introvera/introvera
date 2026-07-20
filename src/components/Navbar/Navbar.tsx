@@ -91,6 +91,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-4">
+{/*
           <button
             onClick={() => {
               if (document.documentElement.classList.contains('force-light')) {
@@ -107,6 +108,7 @@ export default function Navbar() {
           >
             Toggle Theme
           </button>
+          */}
           
           <span className="inline-flex rounded-full p-[6px] border border-[var(--color-accent)] bg-[var(--color-accent)]/40 transition-all duration-300">
             <button
