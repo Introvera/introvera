@@ -49,35 +49,35 @@ export const projectsData: Project[] = [
     solution:
       "We solved this by building an ultra-lightweight, mobile-first web application optimized for sub-second load times in low-signal areas, utilizing high-contrast UI elements for optimal roadside readability. To eliminate billing confusion, we created a transparent 3-step operational framework right above the fold paired with a secure, single-click Stripe integration for the dispatch fee, and embedded an intuitive, visual Tyre Size Guide to ensure correct data collection on the first try. Finally, we wrapped the entire journey in prominent, single-tap deep links to direct phone and WhatsApp lines, creating a zero-friction lifeline that seamlessly converts stressed visitors into confirmed dispatches.",
   },
-  {
-    id: 3,
-    slug: "adeaz",
-    countryCode: "LK",
-    title: "ADEaZ Website",
-    images: [
-      "/images/projects/adeaz/adeazmain.webp",
-      "/images/projects/adeaz/adeaz01.webp",
-      "/images/projects/adeaz/adeaz02.webp",
-      "/images/projects/adeaz/adeaz03.webp",
-      "/images/projects/adeaz/adeaz04.webp",
-      "/images/projects/adeaz/adeaz05.webp",
-      "/images/projects/adeaz/adeaz06.webp",
-    ],
-    mainImage: "/images/projects/adeaz/adeazmain.webp",
-    logo: "/images/projects/adeaz/adeaz-logo.png",
-    gradientColors: ["#1a0533", "#4a1a7a"],
-    tags: ["Web", "Backend"],
-    link: "https://adeaz.introvera.com",
-    description:
-      "ADEaZ is a premium online fashion destination based in Sri Lanka. We designed and developed their official website to showcase ADEaZ's curated collections, effortless style, and customer first shopping experience through a clean, modern, and visually driven design.\n\nThe site highlights seasonal clothing lines, accessories, and footwear with high quality imagery and clear product detail pages. Every interaction from browsing curated looks to adding items to cart and tracking orders is fast, intuitive, and optimized for both desktop and mobile users.\n\nBuilt with a focus on conversion and ease of management, the website includes streamlined navigation, powerful filters, secure checkout options, and simple content updates for the ADEaZ team.",
-    client: "ADEaZ",
-    duration: "2 Months",
-    services: ["MongoDB", "Express.js", "React", "Node.js"],
-    challenge:
-      "The ADEaZ fashion brand needed to establish a commanding online presence with a bespoke e-commerce store that could seamlessly handle massive spikes in high-volume traffic during seasonal sales, flash discounts, and major product drops. Their primary obstacle was poor mobile optimization—over 80% of their target demographic shops exclusively on mobile devices, yet their legacy systems were sluggish, prone to cart abandonment, and failed to effectively showcase high-resolution product photography. Furthermore, the absence of an integrated, real-time inventory management system meant that stock levels were frequently inaccurate, leading to oversold items, frustrated customers, and a severely bottlenecked logistics pipeline. We were tasked with completely overhauling their digital architecture to build a highly scalable, conversion-optimized platform that could deliver sub-second page loads, intuitive navigation, and flawless mobile responsiveness, all while providing the internal operations team with a unified dashboard to manage thousands of SKUs effortlessly.",
-    solution:
-      "We engineered a cutting-edge, high-performance e-commerce platform built on a robust MERN stack (MongoDB, Express.js, React, Node.js), specifically optimized for speed, security, and scalability. To resolve the mobile bounce rate crisis, we implemented a mobile-first UI framework with advanced gesture-based navigation, lightning-fast image lazy loading, and an ultra-streamlined one-click checkout process that reduced cart abandonment by 40%. We integrated powerful dynamic filtering algorithms, allowing users to effortlessly sort thousands of items by size, color, material, and seasonal collection in milliseconds. For the administrative backend, we developed a comprehensive, custom-built dashboard featuring real-time inventory synchronization, automated low-stock alerts, and integrated secure payment gateways, completely eliminating the risk of overselling. This complete digital transformation not only elevated the ADEaZ brand aesthetic with pixel-perfect design but also fundamentally modernized their supply chain, enabling them to scale their operations exponentially and dominate the highly competitive online fashion market.",
-  },
+  // {
+  //   id: 3,
+  //   slug: "adeaz",
+  //   countryCode: "LK",
+  //   title: "ADEaZ Website",
+  //   images: [
+  //     "/images/projects/adeaz/adeazmain.webp",
+  //     "/images/projects/adeaz/adeaz01.webp",
+  //     "/images/projects/adeaz/adeaz02.webp",
+  //     "/images/projects/adeaz/adeaz03.webp",
+  //     "/images/projects/adeaz/adeaz04.webp",
+  //     "/images/projects/adeaz/adeaz05.webp",
+  //     "/images/projects/adeaz/adeaz06.webp",
+  //   ],
+  //   mainImage: "/images/projects/adeaz/adeazmain.webp",
+  //   logo: "/images/projects/adeaz/adeaz-logo.png",
+  //   gradientColors: ["#1a0533", "#4a1a7a"],
+  //   tags: ["Web", "Backend"],
+  //   link: "https://adeaz.introvera.com",
+  //   description:
+  //     "ADEaZ is a premium online fashion destination based in Sri Lanka. We designed and developed their official website to showcase ADEaZ's curated collections, effortless style, and customer first shopping experience through a clean, modern, and visually driven design.\n\nThe site highlights seasonal clothing lines, accessories, and footwear with high quality imagery and clear product detail pages. Every interaction from browsing curated looks to adding items to cart and tracking orders is fast, intuitive, and optimized for both desktop and mobile users.\n\nBuilt with a focus on conversion and ease of management, the website includes streamlined navigation, powerful filters, secure checkout options, and simple content updates for the ADEaZ team.",
+  //   client: "ADEaZ",
+  //   duration: "2 Months",
+  //   services: ["MongoDB", "Express.js", "React", "Node.js"],
+  //   challenge:
+  //     "The ADEaZ fashion brand needed to establish a commanding online presence with a bespoke e-commerce store that could seamlessly handle massive spikes in high-volume traffic during seasonal sales, flash discounts, and major product drops. Their primary obstacle was poor mobile optimization—over 80% of their target demographic shops exclusively on mobile devices, yet their legacy systems were sluggish, prone to cart abandonment, and failed to effectively showcase high-resolution product photography. Furthermore, the absence of an integrated, real-time inventory management system meant that stock levels were frequently inaccurate, leading to oversold items, frustrated customers, and a severely bottlenecked logistics pipeline. We were tasked with completely overhauling their digital architecture to build a highly scalable, conversion-optimized platform that could deliver sub-second page loads, intuitive navigation, and flawless mobile responsiveness, all while providing the internal operations team with a unified dashboard to manage thousands of SKUs effortlessly.",
+  //   solution:
+  //     "We engineered a cutting-edge, high-performance e-commerce platform built on a robust MERN stack (MongoDB, Express.js, React, Node.js), specifically optimized for speed, security, and scalability. To resolve the mobile bounce rate crisis, we implemented a mobile-first UI framework with advanced gesture-based navigation, lightning-fast image lazy loading, and an ultra-streamlined one-click checkout process that reduced cart abandonment by 40%. We integrated powerful dynamic filtering algorithms, allowing users to effortlessly sort thousands of items by size, color, material, and seasonal collection in milliseconds. For the administrative backend, we developed a comprehensive, custom-built dashboard featuring real-time inventory synchronization, automated low-stock alerts, and integrated secure payment gateways, completely eliminating the risk of overselling. This complete digital transformation not only elevated the ADEaZ brand aesthetic with pixel-perfect design but also fundamentally modernized their supply chain, enabling them to scale their operations exponentially and dominate the highly competitive online fashion market.",
+  // },
   {
     id: 4,
     slug: "ultracraft",
